@@ -22,7 +22,7 @@ from time import sleep_ms
 
 class ClassicController(object):
     # I2C Client Address
-    bus_addr = 0x52
+    bus_addr: int = 0x52
 
     # The buffer stores the controller output
     buffer = bytearray(8)
@@ -31,27 +31,36 @@ class ClassicController(object):
     # DUNDER METHODS #
     ##################
 
-    def __init__(self, sda: int, scl: int, freq: int) -> None:
+    def __init__(self, id: int, sda: int, scl: int, freq: int) -> None:
         """ Initialize ClassicController Object.
 
         Args
+            id:   i2c ID
             sda:  SDA pin
             scl:  SCL pin
             freq: frequency for I2C device
         """
         # Create I2C client
-        self.i2c = I2C(id=0, sda=Pin(sda), scl=Pin(scl), freq=freq)
+        self.i2c = I2C(id=id, sda=Pin(sda), scl=Pin(scl), freq=freq)
+        sleep_ms(10)
+        print(self.i2c.scan())
 
         # Decrypt Controller and set Data Mode 3
+        print("Decrypting Controller")
         self.decrypt_controller()
+        print("Setting Data Mode 3")
         self.set_data_mode_3()
 
         # Calibrate Joysticks and Triggers
+        print("Calibrating")
         self.calibrate_joysticks()
         self.calibrate_triggers()
+        print("Calibration Complete")
 
     def __str__(self):
         # Return string representation of current button status
+        self.update()
+        print(f"Left Joy X: {self.joy_LX()}")
 
     #####################
     # UTILITY FUNCTIONS #
@@ -59,23 +68,24 @@ class ClassicController(object):
 
     def decrypt_controller(self) -> None:
         # Decrypt the controller
-        # write 0x55 to 0xF0 and 0x00 to 0xFB
-        self.i2c.writeto(addr=self.bus_addr, buf=b'\xF0\x55')
-        sleep_ms(10)
-        self.i2c.writeto(addr=self.bus_addr, buf=b'\xFB\x00')
-        sleep_ms(10)
+        print("writing 0x55 to 0xF0")
+        self.i2c.writeto(self.bus_addr, b'\xF0\x55')
+        sleep_ms(50)
+        print("writing 0x00 to 0xFB")
+        self.i2c.writeto(self.bus_addr, b'\xFB\x00')
+        sleep_ms(50)
 
     def set_data_mode_3(self) -> None:
         # Set controller to data mode 3
         # write 0x03 to 0xFE
-        self.i2c.writeto(addr=self.bus_addr, buf=b'\xFE\x03')
-        sleep_ms(10)
+        self.i2c.writeto(self.bus_addr, b'\xFE\x03')
+        sleep_ms(50)
 
     def update(self) -> None:
         # Read data from controller and update the output buffer
         # From wiibrew.org: Data is reported in 8 bytes at 0x08 when decrypted
-        self.i2c.writeto(addr=self.bus_addr, buf=b'\x08')
-        self.i2c.readfrom_into(addr=self.bus_addr, buf=self.buffer)
+        self.i2c.writeto(self.bus_addr, b'\x08')
+        self.i2c.readfrom_into(self.bus_addr, self.buffer)
 
     def calibrate_joysticks(self) -> None:
         # Calibrate joysticks (store initial value as a 'center' value)
@@ -97,55 +107,55 @@ class ClassicController(object):
 
     def button_A(self) -> int:
         # Get value of button A
-        return int((buffer[7] >> 4) & 1)
+        return int((self.buffer[7] >> 4) & 1)
 
     def button_B(self) -> int:
         # Get value of button B
-        return int((buffer[7] >> 6) & 1)
+        return int((self.buffer[7] >> 6) & 1)
 
     def button_X(self) -> int:
         # Get value of button X
-        return int((buffer[7] >> 3) & 1)
+        return int((self.buffer[7] >> 3) & 1)
 
     def button_Y(self) -> int:
         # Get value of button Y
-        return int((buffer[7] >> 5) & 1)
+        return int((self.buffer[7] >> 5) & 1)
 
     def button_HOME(self) -> int:
         # Get value of button HOME
-        return int((buffer[6] >> 3) & 1)
+        return int((self.buffer[6] >> 3) & 1)
 
     def button_START(self) -> int:
         # Get value of button START
-        return int((buffer[6] >> 2) & 1)
+        return int((self.buffer[6] >> 2) & 1)
 
     def button_SELECT(self) -> int:
         # Get value of button SELECT
-        return int((buffer[6] >> 4) & 1)
+        return int((self.buffer[6] >> 4) & 1)
 
     def button_UP(self) -> int:
         # Get value of button DPAD UP
-        return int(buffer[7] & 1)
+        return int(self.buffer[7] & 1)
 
     def button_DOWN(self) -> int:
         # Get value of button DPAD DOWN
-        return int((buffer[6] >> 6) & 1)
+        return int((self.buffer[6] >> 6) & 1)
 
     def button_LEFT(self) -> int:
         # Get value of button DPAD LEFT
-        return int((buffer[7] >> 1) & 1)
+        return int((self.buffer[7] >> 1) & 1)
 
     def button_RIGHT(self) -> int:
         # Get value of button DPAD RIGHT
-        return int((buffer[6] >> 7) & 1)
+        return int((self.buffer[6] >> 7) & 1)
 
     def button_ZL(self) -> int:
         # Get value of button ZL
-        return int((buffer[7] >> 7) & 1)
+        return int((self.buffer[7] >> 7) & 1)
 
     def button_ZR(self) -> int:
         # Get value of button ZR
-        return int((buffer[7] >> 2) & 1)
+        return int((self.buffer[7] >> 2) & 1)
 
     def trigger_L(self) -> int:
         # Get value of Left trigger
@@ -170,3 +180,11 @@ class ClassicController(object):
     def joy_RY(self) -> int:
         # Get value of Right joystick y-axis
         return int(self.buffer[3])
+
+
+# Debug: create instance and print controller output
+if __name__ == '__main__':
+    controller = ClassicController(id=0, sda=8, scl=9, freq=100000)
+    while (True):
+        print(controller)
+        sleep_ms(100)
