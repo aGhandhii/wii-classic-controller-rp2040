@@ -125,7 +125,7 @@ class ClassicController(object):
 
     def button_UP(self) -> int:
         # Get value of button DPAD UP
-        return int((buffer[7] >> 1) & 1)
+        return int(buffer[7] & 1)
 
     def button_DOWN(self) -> int:
         # Get value of button DPAD DOWN
