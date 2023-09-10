@@ -95,65 +95,78 @@ class ClassicController(object):
     # BUTTON GETTERS #
     ##################
 
-    def button_A(self):
+    def button_A(self) -> int:
         # Get value of button A
+        return int((buffer[7] >> 4) & 1)
 
-    def button_B(self):
+    def button_B(self) -> int:
         # Get value of button B
+        return int((buffer[7] >> 6) & 1)
 
-    def button_X(self):
+    def button_X(self) -> int:
         # Get value of button X
+        return int((buffer[7] >> 3) & 1)
 
-    def button_Y(self):
+    def button_Y(self) -> int:
         # Get value of button Y
+        return int((buffer[7] >> 5) & 1)
 
-    def button_HOME(self):
+    def button_HOME(self) -> int:
         # Get value of button HOME
+        return int((buffer[6] >> 3) & 1)
 
-    def button_START(self):
+    def button_START(self) -> int:
         # Get value of button START
+        return int((buffer[6] >> 2) & 1)
 
-    def button_SELECT(self):
+    def button_SELECT(self) -> int:
         # Get value of button SELECT
+        return int((buffer[6] >> 4) & 1)
 
-    def button_UP(self):
+    def button_UP(self) -> int:
         # Get value of button DPAD UP
+        return int((buffer[7] >> 1) & 1)
 
-    def button_DOWN(self):
+    def button_DOWN(self) -> int:
         # Get value of button DPAD DOWN
+        return int((buffer[6] >> 6) & 1)
 
-    def button_LEFT(self):
+    def button_LEFT(self) -> int:
         # Get value of button DPAD LEFT
+        return int((buffer[7] >> 1) & 1)
 
-    def button_RIGHT(self):
+    def button_RIGHT(self) -> int:
         # Get value of button DPAD RIGHT
+        return int((buffer[6] >> 7) & 1)
 
-    def button_ZL(self):
+    def button_ZL(self) -> int:
         # Get value of button ZL
+        return int((buffer[7] >> 7) & 1)
 
-    def button_ZR(self):
+    def button_ZR(self) -> int:
         # Get value of button ZR
+        return int((buffer[7] >> 2) & 1)
 
-    def trigger_L(self):
+    def trigger_L(self) -> int:
         # Get value of Left trigger
         return int(self.buffer[4])
 
-    def trigger_R(self):
+    def trigger_R(self) -> int:
         # Get value of Right trigger
         return int(self.buffer[5])
 
-    def joy_LX(self):
+    def joy_LX(self) -> int:
         # Get value of Left joystick x-axis
         return int(self.buffer[0])
 
-    def joy_LY(self):
+    def joy_LY(self) -> int:
         # Get value of Left joystick y-axis
         return int(self.buffer[2])
 
-    def joy_RX(self):
+    def joy_RX(self) -> int:
         # Get value of Right joystick x-axis
         return int(self.buffer[1])
 
-    def joy_RY(self):
+    def joy_RY(self) -> int:
         # Get value of Right joystick y-axis
         return int(self.buffer[3])
