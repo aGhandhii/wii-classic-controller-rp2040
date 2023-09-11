@@ -1,21 +1,21 @@
-/*
-This code will read i2c input from the controller and confirm that
-a signal is being sent.
+// Author: Alex Ghandhi
+// Last Modified: 11 September 2023
 
-INIT, from the 'new' method at the wiibrew wiki: http://wiibrew.org/wiki/Wiimote/Extension_Controllers
+/*
+This code reads I2C input from a Wii Classic Controller.
+
+Before data can be read, the device must first be decrypted.
+This is accomplished with the 'new' method at the wiibrew wiki: http://wiibrew.org/wiki/Wiimote/Extension_Controllers
     write 0x55 to 0xF0
     write 0x00 to 0xFB
-    set device into data format 0x03: http://wiibrew.org/wiki/Wiimote/Extension_Controllers/Classic_Controller
-        write 0x03 to 0xFE
 
-Controller Client i2c info:
-    i2c bus addr: 0x52
+Set device into data format 0x03: http://wiibrew.org/wiki/Wiimote/Extension_Controllers/Classic_Controller
+    write 0x03 to 0xFE
+
+Controller Client I2C info:
+    I2C bus address: 0x52
 */
 
-
-/////////////
-// IMPORTS //
-/////////////
 
 #include <stdio.h>
 #include "pico/stdlib.h"
@@ -31,20 +31,22 @@ Controller Client i2c info:
 static const uint8_t SDA = 8;
 static const uint8_t SCL = 9;
 
+// I2C Frequency
+static const int BAUDRATE = 100000;
+
 // Device I2C Addresses
-static const uint8_t I2C_ADDR = 0x52;
-static const uint8_t REGISTER_WRITE_ADDR = 0xFE;
-uint8_t DATA_MODE_3_MSG = 0x03;
-static const uint8_t REGISTER_READ_ADDR = 0x08;
+static const uint8_t I2C_BUS_ADDR = 0x52;
+static const uint8_t REGISTER_READ_ADDR = 0x00;
 
-// Controller Initialization I2C Addresses
+// Controller Decryption I2C Addresses and Write Values
 static const uint8_t INIT_ADDR_0 = 0xF0;
-uint8_t INIT_MSG_0 = 0x55;
+static const uint8_t INIT_MSG_0 = 0x55;
 static const uint8_t INIT_ADDR_1 = 0xFB;
-uint8_t INIT_MSG_1 = 0x00;
+static const uint8_t INIT_MSG_1 = 0x00;
 
-// I2C 'Fast' Speed
-static const int BAUDRATE = 400000;
+// Set Device to Data Mode 3
+static const uint8_t DATA_MODE_ADDR = 0xFE;
+static const uint8_t DATA_MODE_MSG = 0x03;
 
 
 ///////////////
@@ -65,16 +67,27 @@ uint8_t LT_ANALOG, RT_ANALOG;
 uint8_t LX, LY, RX, RY;
 
 
+///////////////////////////
+// FUNCTION DECLARATIONS //
+///////////////////////////
+
+void i2c_reg_write(i2c_inst_t *i2c, const uint addr, const uint8_t reg, uint8_t *buf, const uint8_t nbytes);
+int i2c_reg_read(i2c_inst_t *i2c, const uint addr, const uint8_t reg, uint8_t *buf, const uint8_t nbytes);
+void controller_init();
+void update();
+void print_button_report();
+
+
 ///////////////////////
 // UTILITY FUNCTIONS //
 ///////////////////////
 
 // Write byte(s) to the specified register
-void i2c_reg_write(i2c_inst_t *i2c, const uint addr, const uint8_t* reg, uint8_t *buf, const uint8_t nbytes) {
+void i2c_reg_write(i2c_inst_t *i2c, const uint addr, const uint8_t reg, uint8_t *buf, const uint8_t nbytes) {
     // Create data packet
     uint8_t msg[nbytes + 1];
     // Append register address to start of data packet
-    msg[0] = *reg;
+    msg[0] = reg;
     // Append message bytes after register address
     for (int i = 0; i < nbytes; i++) {
         msg[i + 1] = buf[i];
@@ -82,17 +95,16 @@ void i2c_reg_write(i2c_inst_t *i2c, const uint addr, const uint8_t* reg, uint8_t
     printf("Writing 0x%02X to Register 0x%02X at Client Address 0x%02X\n", msg[1], msg[0], addr);
     // Write data to register
     i2c_write_blocking(i2c, addr, msg, (nbytes + 1), false);
-    printf("Done writing data\n");
 }
 
 // Read byte(s) from specified register address
-int i2c_reg_read(i2c_inst_t *i2c, const uint addr, const uint8_t* reg, uint8_t *buf, const uint8_t nbytes) {
+int i2c_reg_read(i2c_inst_t *i2c, const uint addr, const uint8_t reg, uint8_t *buf, const uint8_t nbytes) {
     int num_bytes_read = 0;
     if (nbytes < 1) {
         return 0;
     }
     // Read data from register
-    i2c_write_blocking(i2c, addr, reg, 1, true);
+    i2c_write_blocking(i2c, addr, &reg, 1, true);
     num_bytes_read = i2c_read_blocking(i2c, addr, buf, nbytes, false);
     if (num_bytes_read != nbytes) {
         printf("Failed to read correct number of bytes from register!\n");
@@ -104,28 +116,28 @@ int i2c_reg_read(i2c_inst_t *i2c, const uint addr, const uint8_t* reg, uint8_t *
 // Initialize the controller
 // Use the 'new' method from wiibrew, and set device data report to 0x03
 void controller_init() {
-    // Set device to unencryped mode
+    // Decrypt Controller
     printf("\n\n\nStarting Device Decryption\n");
-    sleep_ms(100);
-    i2c_reg_write(i2c0, I2C_ADDR, &INIT_ADDR_0, &INIT_MSG_0, 1);
-    sleep_ms(100);
-    i2c_reg_write(i2c0, I2C_ADDR, &INIT_ADDR_1, &INIT_MSG_1, 1);
+    sleep_ms(10);
+    i2c_reg_write(i2c0, I2C_BUS_ADDR, INIT_ADDR_0, &INIT_MSG_0, 1);
+    sleep_ms(10);
+    i2c_reg_write(i2c0, I2C_BUS_ADDR, INIT_ADDR_1, &INIT_MSG_1, 1);
 
     // Set controller to data report mode 0x03
     printf("Setting data report mode to 0x03\n");
-    sleep_ms(500);
-    i2c_reg_write(i2c0, I2C_ADDR, &REGISTER_WRITE_ADDR, &DATA_MODE_3_MSG, 1);
+    sleep_ms(10);
+    i2c_reg_write(i2c0, I2C_BUS_ADDR, DATA_MODE_ADDR, &DATA_MODE_MSG, 1);
     printf("Data report mode set to 0x03\n");
-    sleep_ms(100);
+    sleep_ms(10);
 }
 
 // Reads data from the controller and updates the button variables to reflect that data
-void update_buttons() {
+void update() {
     // Array to store output
     uint8_t controller_out[8];
     
     // Read 8 bytes of data and return an array of those bytes
-    if (i2c_reg_read(i2c0, I2C_ADDR, &REGISTER_READ_ADDR, controller_out, 8) != 8) {
+    if (i2c_reg_read(i2c0, I2C_BUS_ADDR, REGISTER_READ_ADDR, controller_out, 8) != 8) {
         printf("\nFailed to read button data from controller\n");
     }
 
@@ -154,7 +166,7 @@ void update_buttons() {
 }
 
 // Print currently pressed buttons
-void print_debug() {
+void print_button_report() {
     printf("Button Report:\n");
     // Report Joystick Values
     printf("Left Joy:\tX: %d\tY: %d\nRight Joy:\tX: %d\tY: %d\n", LX, LY, RX, RY);
@@ -221,10 +233,10 @@ int main() {
         sleep_ms(50);
 
         // Read controller data
-        update_buttons();
+        update();
 
         // Print debug
-        print_debug();
+        print_button_report();
 
         // Wait for a short time
         gpio_put(25, 0);

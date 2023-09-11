@@ -1,4 +1,4 @@
-C:/Users/ghand/Documents/Codes/Pico/wii-classic-controller-rp2040/C/build/CMakeFiles/read_controller_i2c.dir
+C:/Users/ghand/Documents/Codes/Pico/wii-classic-controller-rp2040/C/build/CMakeFiles/wiiClassic.dir
 C:/Users/ghand/Documents/Codes/Pico/wii-classic-controller-rp2040/C/build/CMakeFiles/edit_cache.dir
 C:/Users/ghand/Documents/Codes/Pico/wii-classic-controller-rp2040/C/build/CMakeFiles/rebuild_cache.dir
 C:/Users/ghand/Documents/Codes/Pico/wii-classic-controller-rp2040/C/build/pico-sdk/CMakeFiles/edit_cache.dir

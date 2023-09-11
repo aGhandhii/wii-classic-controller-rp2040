@@ -6,7 +6,7 @@
 # It is included in the main 'build.ninja'.
 
 # =============================================================================
-# Project: read_controller_i2c
+# Project: wiiClassic
 # Configurations: Debug
 # =============================================================================
 # =============================================================================
@@ -14,7 +14,7 @@
 #############################################
 # Rule for compiling ASM files.
 
-rule ASM_COMPILER__read_controller_i2c_Debug
+rule ASM_COMPILER__wiiClassic_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = C:\Users\ghand\Documents\Codes\Pico\Pico_SDK_1.5.1\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -o $out   -c $in
@@ -24,7 +24,7 @@ rule ASM_COMPILER__read_controller_i2c_Debug
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__read_controller_i2c_Debug
+rule C_COMPILER__wiiClassic_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = C:\Users\ghand\Documents\Codes\Pico\Pico_SDK_1.5.1\gcc-arm-none-eabi\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -34,7 +34,7 @@ rule C_COMPILER__read_controller_i2c_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__read_controller_i2c_Debug
+rule CXX_COMPILER__wiiClassic_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = C:\Users\ghand\Documents\Codes\Pico\Pico_SDK_1.5.1\gcc-arm-none-eabi\bin\arm-none-eabi-g++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -44,7 +44,7 @@ rule CXX_COMPILER__read_controller_i2c_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__read_controller_i2c_Debug
+rule CXX_EXECUTABLE_LINKER__wiiClassic_Debug
   command = cmd.exe /C "$PRE_LINK && C:\Users\ghand\Documents\Codes\Pico\Pico_SDK_1.5.1\gcc-arm-none-eabi\bin\arm-none-eabi-g++.exe $FLAGS -Wl,--build-id=none $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE  && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   rspfile = $RSP_FILE
