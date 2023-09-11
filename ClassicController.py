@@ -43,7 +43,9 @@ class ClassicController(object):
         # Create I2C client
         self.i2c = I2C(id=id, sda=Pin(sda), scl=Pin(scl), freq=freq)
         sleep_ms(10)
+        print("Performing bus scan")
         print(self.i2c.scan())
+        print("Bus scan complete")
 
         # Decrypt Controller and set Data Mode 3
         print("Decrypting Controller")
@@ -58,7 +60,6 @@ class ClassicController(object):
         print("Calibration Complete")
 
     def __str__(self):
-        # Return string representation of current button status
         self.update()
         print(f"Left Joy X: {self.joy_LX()}")
 
@@ -67,7 +68,6 @@ class ClassicController(object):
     #####################
 
     def decrypt_controller(self) -> None:
-        # Decrypt the controller
         print("writing 0x55 to 0xF0")
         self.i2c.writeto(self.bus_addr, b'\xF0\x55')
         sleep_ms(50)
@@ -76,19 +76,22 @@ class ClassicController(object):
         sleep_ms(50)
 
     def set_data_mode_3(self) -> None:
-        # Set controller to data mode 3
-        # write 0x03 to 0xFE
+        print("writing 0x03 to 0xFE")
         self.i2c.writeto(self.bus_addr, b'\xFE\x03')
         sleep_ms(50)
 
     def update(self) -> None:
         # Read data from controller and update the output buffer
         # From wiibrew.org: Data is reported in 8 bytes at 0x08 when decrypted
+        print("Requesting data from bus")
         self.i2c.writeto(self.bus_addr, b'\x08')
+        print("Reading button data")
         self.i2c.readfrom_into(self.bus_addr, self.buffer)
+        print("Done updating")
+        sleep_ms(50)
 
     def calibrate_joysticks(self) -> None:
-        # Calibrate joysticks (store initial value as a 'center' value)
+        # Find center values for joysticks
         self.update()
         self.joy_LX_center = self.joy_LX()
         self.joy_LY_center = self.joy_LY()
@@ -96,7 +99,7 @@ class ClassicController(object):
         self.joy_RY_center = self.joy_RY()
 
     def calibrate_triggers(self) -> None:
-        # Calibrate analogue triggers (same method as joysticks)
+        # Find initial values for the analogue triggers
         self.update()
         self.trigger_L_initial = self.trigger_L()
         self.trigger_R_initial = self.trigger_R()
@@ -184,7 +187,8 @@ class ClassicController(object):
 
 # Debug: create instance and print controller output
 if __name__ == '__main__':
-    controller = ClassicController(id=0, sda=8, scl=9, freq=100000)
+    print("Creating Controller Object")
+    controller = ClassicController(id=0, sda=8, scl=9, freq=400000)
     while (True):
         print(controller)
         sleep_ms(100)
