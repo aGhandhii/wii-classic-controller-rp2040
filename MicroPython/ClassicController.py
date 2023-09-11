@@ -1,5 +1,5 @@
 # Author: Alex Ghandhi
-# Last Modified: 10 September 2023
+# Last Modified: 11 September 2023
 
 """
 This code reads I2C input from a Wii Classic Controller.
@@ -96,25 +96,21 @@ class ClassicController(object):
 
     def decrypt_controller(self) -> None:
         print("writing 0x55 to 0x(4)A400F0")
-        #self.i2c.writeto_mem(self.bus_addr, 0x4A400F0, b'\x55')
         self.i2c.writeto(self.bus_addr, b'\xF0\x55')
         sleep_ms(10)
 
         print("writing 0x00 to 0x(4)A400FB")
-        #self.i2c.writeto_mem(self.bus_addr, 0x4A400FB, b'\x00')
         self.i2c.writeto(self.bus_addr, b'\xFB\x00')
         sleep_ms(10)
 
     def set_data_mode_3(self) -> None:
         print("writing 0x03 to 0x(4)A400FE")
-        #self.i2c.writeto_mem(self.bus_addr, 0x4A400FE, b'\x03')
         self.i2c.writeto(self.bus_addr, b'\xFE\x03')
         sleep_ms(10)
 
     def update(self) -> None:
         # Read data from controller and update the output buffer
-        # From wiibrew.org: Data is reported in 8 bytes at 0x08 when decrypted
-        #self.i2c.readfrom_mem_into(self.bus_addr, 0xA40008, self.buffer)
+        # From wiibrew.org: Data is reported in 8 bytes when decrypted
         self.i2c.writeto(self.bus_addr, b'\x00\x00')
         sleep_ms(5)
         self.i2c.readfrom_into(self.bus_addr, self.buffer)
@@ -226,7 +222,7 @@ class ClassicController(object):
 # Debug: create instance and print controller output
 if __name__ == '__main__':
     print("Creating Controller Object")
-    controller = ClassicController(id=0, sda=8, scl=9, freq=100000)
+    controller = ClassicController(id=1, sda=6, scl=7, freq=100000)
     while (True):
         print(controller)
         sleep_ms(100)
