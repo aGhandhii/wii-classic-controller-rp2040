@@ -70,11 +70,25 @@ class ClassicController(object):
         print("Complete!")
 
     def __str__(self):
-        #print(f"Raw Output: {self.buffer}")
         self.update()
         print(f"Left Joy: {self.joy_LX()}, {self.joy_LY()}")
         print(f"Right Joy: {self.joy_RX()}, {self.joy_RY()}")
         print(f"Triggers: L {self.trigger_L()}, R {self.trigger_R()}")
+        if (self.button_A() is 1): print("A ", end="")
+        if (self.button_B() is 1): print("B ", end="")
+        if (self.button_X() is 1): print("X ", end="")
+        if (self.button_Y() is 1): print("Y ", end="")
+        if (self.button_UP() is 1): print("up ", end="")
+        if (self.button_DOWN() is 1): print("down ", end="")
+        if (self.button_LEFT() is 1): print("left ", end="")
+        if (self.button_RIGHT() is 1): print("right ", end="")
+        if (self.button_ZL() is 1): print("ZL ", end="")
+        if (self.button_ZR() is 1): print("ZR ", end="")
+        if (self.button_L() is 1): print("L ", end="")
+        if (self.button_R() is 1): print("R ", end="")
+        if (self.button_START() is 1): print("start ", end="")
+        if (self.button_SELECT() is 1): print("select ", end="")
+        if (self.button_HOME() is 1): print("home ", end="")
 
     #####################
     # UTILITY FUNCTIONS #
@@ -126,55 +140,63 @@ class ClassicController(object):
 
     def button_A(self) -> int:
         # Get value of button A
-        return int((self.buffer[7] >> 4) & 1)
+        return int(~(self.buffer[7] >> 4) & 1)
 
     def button_B(self) -> int:
         # Get value of button B
-        return int((self.buffer[7] >> 6) & 1)
+        return int(~(self.buffer[7] >> 6) & 1)
 
     def button_X(self) -> int:
         # Get value of button X
-        return int((self.buffer[7] >> 3) & 1)
+        return int(~(self.buffer[7] >> 3) & 1)
 
     def button_Y(self) -> int:
         # Get value of button Y
-        return int((self.buffer[7] >> 5) & 1)
+        return int(~(self.buffer[7] >> 5) & 1)
 
     def button_HOME(self) -> int:
         # Get value of button HOME
-        return int((self.buffer[6] >> 3) & 1)
+        return int(~(self.buffer[6] >> 3) & 1)
 
     def button_START(self) -> int:
         # Get value of button START
-        return int((self.buffer[6] >> 2) & 1)
+        return int(~(self.buffer[6] >> 2) & 1)
 
     def button_SELECT(self) -> int:
         # Get value of button SELECT
-        return int((self.buffer[6] >> 4) & 1)
+        return int(~(self.buffer[6] >> 4) & 1)
 
     def button_UP(self) -> int:
         # Get value of button DPAD UP
-        return int(self.buffer[7] & 1)
+        return int(~self.buffer[7] & 1)
 
     def button_DOWN(self) -> int:
         # Get value of button DPAD DOWN
-        return int((self.buffer[6] >> 6) & 1)
+        return int(~(self.buffer[6] >> 6) & 1)
 
     def button_LEFT(self) -> int:
         # Get value of button DPAD LEFT
-        return int((self.buffer[7] >> 1) & 1)
+        return int(~(self.buffer[7] >> 1) & 1)
 
     def button_RIGHT(self) -> int:
         # Get value of button DPAD RIGHT
-        return int((self.buffer[6] >> 7) & 1)
+        return int(~(self.buffer[6] >> 7) & 1)
 
     def button_ZL(self) -> int:
         # Get value of button ZL
-        return int((self.buffer[7] >> 7) & 1)
+        return int(~(self.buffer[7] >> 7) & 1)
 
     def button_ZR(self) -> int:
         # Get value of button ZR
-        return int((self.buffer[7] >> 2) & 1)
+        return int(~(self.buffer[7] >> 2) & 1)
+
+    def button_L(self) -> int:
+        # Get value of button L (bottom-out for trigger)
+        return int(~(self.buffer[6] >> 5) & 1)
+
+    def button_R(self) -> int:
+        # Get value of button R (bottom-out for trigger)
+        return int(~(self.buffer[6] >> 1) & 1)
 
     def trigger_L(self) -> int:
         # Get value of Left trigger
