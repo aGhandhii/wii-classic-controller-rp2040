@@ -69,8 +69,7 @@ class ClassicController(object):
 
         # Calibrate Joysticks and Triggers
         print("Calibrating...", end="")
-        self.calibrate_joysticks()
-        self.calibrate_triggers()
+        self.calibrate()
         print("Complete!")
 
     def __str__(self):
@@ -117,19 +116,16 @@ class ClassicController(object):
         self.i2c.readfrom_into(self.bus_addr, self.buffer)
         sleep_us(100)
 
-    def calibrate_joysticks(self) -> None:
-        # Find center values for joysticks
+    def calibrate(self) -> None:
+        # Find center values for joysticks and triggers
         self.update()
         self.joy_LX_center = self.joy_LX()
         self.joy_LY_center = self.joy_LY()
         self.joy_RX_center = self.joy_RX()
         self.joy_RY_center = self.joy_RY()
-
-    def calibrate_triggers(self) -> None:
-        # Find initial values for the analogue triggers
-        self.update()
         self.trigger_L_initial = self.trigger_L()
         self.trigger_R_initial = self.trigger_R()
+
 
     ##################
     # BUTTON GETTERS #
