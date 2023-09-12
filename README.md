@@ -2,7 +2,8 @@
 
 ![Static Badge](https://img.shields.io/badge/License-The_Unlicense-red)
 
-Use a Wii Classic Controller with the Raspberry Pi Pico and RP2040 microcontrollers. Implemented in C and MicroPython.
+Use a Wii Classic Controller with the Raspberry Pi Pico and RP2040 microcontrollers.  
+Implemented in C and MicroPython.
 
 ## C
 
@@ -30,7 +31,7 @@ int main() {
 
 | Command | Description |
 | --- | --- |
-| `void ClassicController_init(i2c_inst_t *i2c, uint SDA, uint SCL, uint BAUDRATE)` | Initialize I2C connection, then Decrypt and Calibrate the controller |
+| `void ClassicController_init(i2c_inst_t *i2c, uint sda, uint scl, uint baudrate)` | Initialize I2C connection, then Decrypt and Calibrate the controller |
 | `void ClassicController_update(i2c_inst_t *i2c)` | Update the Button Values |
 | `void ClassicController_calibrate(i2c_inst_t *i2c)` | Calibrate the Joysticks and Analog Triggers |
 | `void ClassicController_button_report()` | Print a readable Input Report to the Console |
