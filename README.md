@@ -109,6 +109,8 @@ controller = ClassicController(id=1, sda=6, scl=7, freq=100000)
 When connecting the Controller to the Pico, the SDA and SCL pins require pullup resistors to $3.3V$.
 I used $5k\Omega$ resistors for each line.
 
+![image](https://github.com/aGhandhii/wii-classic-controller-rp2040/assets/110639969/11e3e7a2-ff6f-4619-b1b0-60a964100337)
+
 
 ## References
 
