@@ -17,7 +17,7 @@ Controller Client I2C info:
 """
 
 from machine import Pin, I2C
-from time import sleep_ms
+from time import sleep_ms, sleep_us
 
 
 class ClassicController(object):
@@ -48,20 +48,24 @@ class ClassicController(object):
         print(f"Bus Scan Results: {self.i2c.scan()}")
         sleep_ms(10)
 
-        # Decrypt Controller and set Data Mode 3
-        print("Decrypting Controller")
+        # Decrypt Controller, check the Extension ID and set Data Mode 3
         self.decrypt_controller()
-
-        # Check extension ID
         extensionID = bytearray(6)
         self.i2c.writeto(self.bus_addr, b'\xFA')
         sleep_ms(10)
         self.i2c.readfrom_into(self.bus_addr, extensionID)
         sleep_ms(10)
         print(f"Extension ID: {extensionID}")
-
         print("Setting Data Mode 3")
         self.set_data_mode_3()
+
+        # Set initial values for calibration variables
+        self.joy_LX_center = 0
+        self.joy_LY_center = 0
+        self.joy_RX_center = 0
+        self.joy_RY_center = 0
+        self.trigger_L_initial = 0
+        self.trigger_R_initial = 0
 
         # Calibrate Joysticks and Triggers
         print("Calibrating...", end="")
@@ -71,6 +75,7 @@ class ClassicController(object):
 
     def __str__(self):
         self.update()
+        print("\033c", end='')
         print(f"Left Joy: {self.joy_LX()}, {self.joy_LY()}")
         print(f"Right Joy: {self.joy_RX()}, {self.joy_RY()}")
         print(f"Triggers: L {self.trigger_L()}, R {self.trigger_R()}")
@@ -95,16 +100,12 @@ class ClassicController(object):
     #####################
 
     def decrypt_controller(self) -> None:
-        print("writing 0x55 to 0x(4)A400F0")
         self.i2c.writeto(self.bus_addr, b'\xF0\x55')
         sleep_ms(10)
-
-        print("writing 0x00 to 0x(4)A400FB")
         self.i2c.writeto(self.bus_addr, b'\xFB\x00')
         sleep_ms(10)
 
     def set_data_mode_3(self) -> None:
-        print("writing 0x03 to 0x(4)A400FE")
         self.i2c.writeto(self.bus_addr, b'\xFE\x03')
         sleep_ms(10)
 
@@ -112,9 +113,9 @@ class ClassicController(object):
         # Read data from controller and update the output buffer
         # From wiibrew.org: Data is reported in 8 bytes when decrypted
         self.i2c.writeto(self.bus_addr, b'\x00\x00')
-        sleep_ms(5)
+        sleep_us(100)
         self.i2c.readfrom_into(self.bus_addr, self.buffer)
-        sleep_ms(5)
+        sleep_us(100)
 
     def calibrate_joysticks(self) -> None:
         # Find center values for joysticks
@@ -196,33 +197,32 @@ class ClassicController(object):
 
     def trigger_L(self) -> int:
         # Get value of Left trigger
-        return int(self.buffer[4])
+        return int(self.buffer[4]) if self.buffer[4] > self.trigger_L_initial else 0
 
     def trigger_R(self) -> int:
         # Get value of Right trigger
-        return int(self.buffer[5])
+        return int(self.buffer[5]) if self.buffer[5] > self.trigger_R_initial else 0
 
     def joy_LX(self) -> int:
         # Get value of Left joystick x-axis
-        return int(self.buffer[0])
+        return int(self.buffer[0]) - self.joy_LX_center
 
     def joy_LY(self) -> int:
         # Get value of Left joystick y-axis
-        return int(self.buffer[2])
+        return int(self.buffer[2]) - self.joy_LY_center
 
     def joy_RX(self) -> int:
         # Get value of Right joystick x-axis
-        return int(self.buffer[1])
+        return int(self.buffer[1]) - self.joy_RX_center
 
     def joy_RY(self) -> int:
         # Get value of Right joystick y-axis
-        return int(self.buffer[3])
+        return int(self.buffer[3]) - self.joy_RY_center
 
 
 # Debug: create instance and print controller output
 if __name__ == '__main__':
-    print("Creating Controller Object")
     controller = ClassicController(id=1, sda=6, scl=7, freq=100000)
     while (True):
         print(controller)
-        sleep_ms(100)
+        sleep_us(100)
