@@ -1,4 +1,6 @@
 # Wii Classic Controller RP2040
+![Static Badge](https://img.shields.io/badge/License-The_Unlicense-red)
+
 Use a Wii Classic Controller with the Raspberry Pi Pico and RP2040 microcontrollers. Implemented in C and MicroPython.
 
 ## C
