@@ -77,7 +77,6 @@ controller = ClassicController(id=1, sda=6, scl=7, freq=100000)
 
 | Command | Description |
 | --- | --- |
-| `void ClassicController_init(i2c_inst_t *i2c, uint SDA, uint SCL, uint BAUDRATE)` | Initialize I2C connection, then Decrypt and Calibrate the controller |
 | `update()` | Update the Button Values |
 | `calibrate()` | Calibrate the Joysticks and Analog Triggers |
 | `int joy_LX()` | Get value for Left Joystick x-axis $\in[-128,127]$ |
@@ -104,13 +103,19 @@ controller = ClassicController(id=1, sda=6, scl=7, freq=100000)
 
 </details>
 
+
 ## Hardware Notes
 
 When connecting the Controller to the Pico, the SDA and SCL pins require pullup resistors to $3.3V$.
 I used $5k\Omega$ resistors for each line.
 
+<details>
+<summary>Sample Circuit</summary>
+<br>
+
 ![image](https://github.com/aGhandhii/wii-classic-controller-rp2040/assets/110639969/11e3e7a2-ff6f-4619-b1b0-60a964100337)
 
+</details>
 
 ## References
 
