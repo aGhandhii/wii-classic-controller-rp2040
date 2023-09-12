@@ -50,6 +50,9 @@ Discarded input sections
  .ARM.exidx     0x00000000       0x10 c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
  .ARM.attributes
                 0x00000000       0x1b c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .text          0x00000000        0x0 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .data          0x00000000        0x0 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
  .text          0x00000000        0x0 CMakeFiles/wiiClassic.dir/main.c.obj
  .data          0x00000000        0x0 CMakeFiles/wiiClassic.dir/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/wiiClassic.dir/main.c.obj
@@ -1415,9 +1418,9 @@ Discarded input sections
                 0x00000000       0x3e CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .text.i2c_read_timeout_per_char_us
                 0x00000000       0x3e CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
- .text          0x00000000        0x0 C:\Users\ghand\AppData\Local\Temp\cc4FfIXf.o
- .data          0x00000000        0x0 C:\Users\ghand\AppData\Local\Temp\cc4FfIXf.o
- .bss           0x00000000        0x0 C:\Users\ghand\AppData\Local\Temp\cc4FfIXf.o
+ .text          0x00000000        0x0 C:\Users\ghand\AppData\Local\Temp\cc4txSdB.o
+ .data          0x00000000        0x0 C:\Users\ghand\AppData\Local\Temp\cc4txSdB.o
+ .bss           0x00000000        0x0 C:\Users\ghand\AppData\Local\Temp\cc4txSdB.o
  .data          0x00000000        0x0 c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg.a(lib_a-calloc.o)
@@ -1633,7 +1636,7 @@ LOAD c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/..
 .boot2          0x10000000      0x100
                 0x10000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 C:\Users\ghand\AppData\Local\Temp\cc4FfIXf.o
+ .boot2         0x10000000      0x100 C:\Users\ghand\AppData\Local\Temp\cc4txSdB.o
                 0x10000100                __boot2_end__ = .
                 0x00000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
@@ -1698,80 +1701,80 @@ LOAD c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/..
                 0x100002b8                _init
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .text*)
  .text          0x100002bc       0x48 c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
- .text.ClassicController_update
-                0x10000304      0x15c CMakeFiles/wiiClassic.dir/main.c.obj
-                0x10000304                ClassicController_update
- .text.ClassicController_calibrate
-                0x10000460       0x68 CMakeFiles/wiiClassic.dir/main.c.obj
-                0x10000460                ClassicController_calibrate
- .text.ClassicController_init
-                0x100004c8       0x90 CMakeFiles/wiiClassic.dir/main.c.obj
-                0x100004c8                ClassicController_init
  .text.ClassicController_joy_LX
-                0x10000558       0x14 CMakeFiles/wiiClassic.dir/main.c.obj
-                0x10000558                ClassicController_joy_LX
+                0x10000304       0x14 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x10000304                ClassicController_joy_LX
  .text.ClassicController_joy_LY
-                0x1000056c       0x14 CMakeFiles/wiiClassic.dir/main.c.obj
-                0x1000056c                ClassicController_joy_LY
+                0x10000318       0x14 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x10000318                ClassicController_joy_LY
  .text.ClassicController_joy_RX
-                0x10000580       0x14 CMakeFiles/wiiClassic.dir/main.c.obj
-                0x10000580                ClassicController_joy_RX
+                0x1000032c       0x14 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x1000032c                ClassicController_joy_RX
  .text.ClassicController_joy_RY
-                0x10000594       0x14 CMakeFiles/wiiClassic.dir/main.c.obj
-                0x10000594                ClassicController_joy_RY
+                0x10000340       0x14 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x10000340                ClassicController_joy_RY
  .text.ClassicController_LT_analog
-                0x100005a8       0x1c CMakeFiles/wiiClassic.dir/main.c.obj
-                0x100005a8                ClassicController_LT_analog
+                0x10000354       0x1c CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x10000354                ClassicController_LT_analog
  .text.ClassicController_RT_analog
-                0x100005c4       0x1c CMakeFiles/wiiClassic.dir/main.c.obj
-                0x100005c4                ClassicController_RT_analog
+                0x10000370       0x1c CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x10000370                ClassicController_RT_analog
  .text.ClassicController_button_A
-                0x100005e0        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x100005e0                ClassicController_button_A
+                0x1000038c        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x1000038c                ClassicController_button_A
  .text.ClassicController_button_B
-                0x100005ec        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x100005ec                ClassicController_button_B
+                0x10000398        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x10000398                ClassicController_button_B
  .text.ClassicController_button_X
-                0x100005f8        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x100005f8                ClassicController_button_X
+                0x100003a4        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x100003a4                ClassicController_button_X
  .text.ClassicController_button_Y
-                0x10000604        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x10000604                ClassicController_button_Y
+                0x100003b0        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x100003b0                ClassicController_button_Y
  .text.ClassicController_button_UP
-                0x10000610        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x10000610                ClassicController_button_UP
+                0x100003bc        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x100003bc                ClassicController_button_UP
  .text.ClassicController_button_DOWN
-                0x1000061c        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x1000061c                ClassicController_button_DOWN
+                0x100003c8        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x100003c8                ClassicController_button_DOWN
  .text.ClassicController_button_LEFT
-                0x10000628        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x10000628                ClassicController_button_LEFT
+                0x100003d4        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x100003d4                ClassicController_button_LEFT
  .text.ClassicController_button_RIGHT
-                0x10000634        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x10000634                ClassicController_button_RIGHT
+                0x100003e0        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x100003e0                ClassicController_button_RIGHT
  .text.ClassicController_button_ZL
-                0x10000640        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x10000640                ClassicController_button_ZL
+                0x100003ec        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x100003ec                ClassicController_button_ZL
  .text.ClassicController_button_ZR
-                0x1000064c        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x1000064c                ClassicController_button_ZR
+                0x100003f8        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x100003f8                ClassicController_button_ZR
  .text.ClassicController_button_LT
-                0x10000658        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x10000658                ClassicController_button_LT
+                0x10000404        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x10000404                ClassicController_button_LT
  .text.ClassicController_button_RT
-                0x10000664        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x10000664                ClassicController_button_RT
+                0x10000410        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x10000410                ClassicController_button_RT
  .text.ClassicController_button_START
-                0x10000670        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x10000670                ClassicController_button_START
+                0x1000041c        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x1000041c                ClassicController_button_START
  .text.ClassicController_button_SELECT
-                0x1000067c        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x1000067c                ClassicController_button_SELECT
+                0x10000428        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x10000428                ClassicController_button_SELECT
  .text.ClassicController_button_HOME
-                0x10000688        0xc CMakeFiles/wiiClassic.dir/main.c.obj
-                0x10000688                ClassicController_button_HOME
+                0x10000434        0xc CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x10000434                ClassicController_button_HOME
+ .text.ClassicController_update
+                0x10000440      0x15c CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x10000440                ClassicController_update
+ .text.ClassicController_calibrate
+                0x1000059c       0x68 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x1000059c                ClassicController_calibrate
+ .text.ClassicController_init
+                0x10000604       0x90 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                0x10000604                ClassicController_init
  .text.ClassicController_button_report
-                0x10000694      0x194 CMakeFiles/wiiClassic.dir/main.c.obj
+                0x10000694      0x194 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
                 0x10000694                ClassicController_button_report
  .text.main     0x10000828       0x84 CMakeFiles/wiiClassic.dir/main.c.obj
                 0x10000828                main
@@ -2518,20 +2521,20 @@ LOAD c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/..
 .rodata         0x100076e8     0x1934
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.ClassicController_update.str1.4
-                0x100076e8       0x2c CMakeFiles/wiiClassic.dir/main.c.obj
+                0x100076e8       0x2c CMakeFiles/wiiClassic.dir/ClassicController.c.obj
  .rodata.ClassicController_button_report.str1.4
-                0x10007714       0xd4 CMakeFiles/wiiClassic.dir/main.c.obj
- .rodata.main.str1.4
-                0x100077e8       0x11 CMakeFiles/wiiClassic.dir/main.c.obj
- *fill*         0x100077f9        0x3 
+                0x10007714       0xd4 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
  .rodata.INIT_MSG_0
-                0x100077fc        0x2 CMakeFiles/wiiClassic.dir/main.c.obj
- *fill*         0x100077fe        0x2 
+                0x100077e8        0x2 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ *fill*         0x100077ea        0x2 
  .rodata.INIT_MSG_1
-                0x10007800        0x2 CMakeFiles/wiiClassic.dir/main.c.obj
+                0x100077ec        0x2 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
  .rodata.REGISTER_READ_ADDR
-                0x10007802        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- *fill*         0x10007803        0x1 
+                0x100077ee        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ *fill*         0x100077ef        0x1 
+ .rodata.main.str1.4
+                0x100077f0       0x11 CMakeFiles/wiiClassic.dir/main.c.obj
+ *fill*         0x10007801        0x3 
  .rodata.spin_lock_claim_unused.str1.4
                 0x10007804       0x1b CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
  *fill*         0x1000781f        0x1 
@@ -2925,7 +2928,7 @@ LOAD c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/..
                 0x20000bb0                . = ALIGN (0x4)
  *(.data*)
  .data.DATA_MODE_MSG
-                0x20000bb0        0x2 CMakeFiles/wiiClassic.dir/main.c.obj
+                0x20000bb0        0x2 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
  .data.striped_spin_lock_num
                 0x20000bb2        0x1 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
  *fill*         0x20000bb3        0x1 
@@ -3100,39 +3103,39 @@ LOAD c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/..
                 0x20001a18       0x10 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.usbd_serial_str
                 0x20001a28       0x11 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- .bss.BA        0x20001a39        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.BB        0x20001a3a        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.BDD       0x20001a3b        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.BDL       0x20001a3c        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.BDR       0x20001a3d        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.BDU       0x20001a3e        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.BH        0x20001a3f        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.BSELECT   0x20001a40        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.BSTART    0x20001a41        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.BX        0x20001a42        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.BY        0x20001a43        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.LT        0x20001a44        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
+ .bss.BA        0x20001a39        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.BB        0x20001a3a        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.BDD       0x20001a3b        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.BDL       0x20001a3c        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.BDR       0x20001a3d        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.BDU       0x20001a3e        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.BH        0x20001a3f        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.BSELECT   0x20001a40        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.BSTART    0x20001a41        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.BX        0x20001a42        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.BY        0x20001a43        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.LT        0x20001a44        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
  .bss.LT_ANALOG
-                0x20001a45        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.LT_init   0x20001a46        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.LX        0x20001a47        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
+                0x20001a45        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.LT_init   0x20001a46        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.LX        0x20001a47        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
  .bss.LX_center
-                0x20001a48        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.LY        0x20001a49        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
+                0x20001a48        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.LY        0x20001a49        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
  .bss.LY_center
-                0x20001a4a        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.RT        0x20001a4b        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
+                0x20001a4a        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.RT        0x20001a4b        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
  .bss.RT_ANALOG
-                0x20001a4c        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.RT_init   0x20001a4d        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.RX        0x20001a4e        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
+                0x20001a4c        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.RT_init   0x20001a4d        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.RX        0x20001a4e        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
  .bss.RX_center
-                0x20001a4f        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.RY        0x20001a50        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
+                0x20001a4f        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.RY        0x20001a50        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
  .bss.RY_center
-                0x20001a51        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.ZL        0x20001a52        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
- .bss.ZR        0x20001a53        0x1 CMakeFiles/wiiClassic.dir/main.c.obj
+                0x20001a51        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.ZL        0x20001a52        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .bss.ZR        0x20001a53        0x1 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
  .bss._app_driver_count
                 0x20001a54        0x1 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._sof_enable
@@ -3180,6 +3183,7 @@ LOAD c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/..
                 0x20042000                PROVIDE (__stack = __StackTop)
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed)
                 0x00000001                ASSERT (((__binary_info_header_end - __logical_binary_start) <= 0x100), Binary info must be in first 256 bytes of the binary)
+LOAD CMakeFiles/wiiClassic.dir/ClassicController.c.obj
 LOAD CMakeFiles/wiiClassic.dir/main.c.obj
 LOAD CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 LOAD CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
@@ -3251,7 +3255,7 @@ LOAD CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.
 LOAD CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 LOAD CMakeFiles/wiiClassic.dir/8d8a2d8311ce17a0548f1f869bb50710/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 LOAD CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-LOAD C:\Users\ghand\AppData\Local\Temp\cc4FfIXf.o
+LOAD C:\Users\ghand\AppData\Local\Temp\cc4txSdB.o
 LOAD c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++.a
 LOAD c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libm.a
 START GROUP
@@ -3276,107 +3280,110 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000001e       0x2c c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
  .ARM.attributes
-                0x0000004a       0x2c CMakeFiles/wiiClassic.dir/main.c.obj
+                0x0000004a       0x2c CMakeFiles/wiiClassic.dir/ClassicController.c.obj
  .ARM.attributes
-                0x00000076       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x00000076       0x2c CMakeFiles/wiiClassic.dir/main.c.obj
  .ARM.attributes
-                0x000000a2       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x000000a2       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .ARM.attributes
-                0x000000ce       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x000000ce       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
  .ARM.attributes
-                0x000000fa       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x000000fa       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
  .ARM.attributes
-                0x00000126       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000126       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
  .ARM.attributes
-                0x00000152       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+                0x00000152       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .ARM.attributes
-                0x00000174       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x0000017e       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
  .ARM.attributes
-                0x000001a0       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x000001a0       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
  .ARM.attributes
-                0x000001cc       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x000001cc       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
  .ARM.attributes
-                0x000001f8       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x000001f8       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
  .ARM.attributes
-                0x00000224       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000224       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
  .ARM.attributes
-                0x00000250       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x00000250       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .ARM.attributes
-                0x0000027c       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000027c       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
  .ARM.attributes
-                0x000002a8       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x000002a8       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .ARM.attributes
-                0x000002d4       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x000002d4       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
  .ARM.attributes
-                0x00000300       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x00000300       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
  .ARM.attributes
-                0x0000032c       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000032c       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
  .ARM.attributes
-                0x00000358       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x00000358       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .ARM.attributes
-                0x00000384       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x00000384       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .ARM.attributes
-                0x000003a6       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x000003b0       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .ARM.attributes
-                0x000003d2       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x000003d2       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
  .ARM.attributes
-                0x000003f4       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x000003fe       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
  .ARM.attributes
-                0x00000416       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x00000420       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .ARM.attributes
-                0x00000442       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x00000442       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .ARM.attributes
-                0x00000464       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x0000046e       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .ARM.attributes
-                0x00000486       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x00000490       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
  .ARM.attributes
-                0x000004a8       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x000004b2       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .ARM.attributes
-                0x000004d4       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x000004d4       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
  .ARM.attributes
-                0x000004f6       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x00000500       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
  .ARM.attributes
-                0x00000518       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x00000522       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .ARM.attributes
-                0x0000053a       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000544       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
  .ARM.attributes
-                0x00000566       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000566       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .ARM.attributes
-                0x00000592       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000592       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .ARM.attributes
-                0x000005be       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x000005be       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .ARM.attributes
-                0x000005ea       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x000005ea       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .ARM.attributes
-                0x00000616       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x00000616       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .ARM.attributes
-                0x00000642       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x00000642       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .ARM.attributes
-                0x0000066e       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000066e       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .ARM.attributes
-                0x0000069a       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000069a       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .ARM.attributes
-                0x000006c6       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000006c6       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .ARM.attributes
-                0x000006f2       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x000006f2       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .ARM.attributes
-                0x0000071e       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000071e       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .ARM.attributes
-                0x0000074a       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x0000074a       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
  .ARM.attributes
-                0x00000776       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x00000776       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .ARM.attributes
-                0x000007a2       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x000007a2       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .ARM.attributes
-                0x000007ce       0x22 C:\Users\ghand\AppData\Local\Temp\cc4FfIXf.o
+                0x000007ce       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .ARM.attributes
-                0x000007f0       0x1e c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+                0x000007fa       0x22 C:\Users\ghand\AppData\Local\Temp\cc4txSdB.o
  .ARM.attributes
-                0x0000080e       0x2c c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg.a(lib_a-strlen-stub.o)
+                0x0000081c       0x1e c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x0000083a       0x2c c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg.a(lib_a-strlen-stub.o)
 
 .comment        0x00000000       0x49
- .comment       0x00000000       0x49 CMakeFiles/wiiClassic.dir/main.c.obj
+ .comment       0x00000000       0x49 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
                                  0x4a (size before relaxing)
+ .comment       0x00000049       0x4a CMakeFiles/wiiClassic.dir/main.c.obj
  .comment       0x00000049       0x4a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .comment       0x00000049       0x4a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
  .comment       0x00000049       0x4a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
@@ -3413,102 +3420,105 @@ LOAD linker stubs
  .comment       0x00000049       0x4a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .comment       0x00000049       0x4a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
-.debug_info     0x00000000    0x26c18
- .debug_info    0x00000000     0x1535 CMakeFiles/wiiClassic.dir/main.c.obj
- .debug_info    0x00001535     0x187e CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_info    0x00002db3      0x1e3 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_info    0x00002f96      0x6be CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_info    0x00003654      0x58e CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_info    0x00003be2     0x1c9e CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_info    0x00005880      0x1a4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_info    0x00005a24     0x20d5 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_info    0x00007af9      0x2d1 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
- .debug_info    0x00007dca     0x4068 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- .debug_info    0x0000be32     0x13f0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_info    0x0000d222     0x123b CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_info    0x0000e45d      0xfcf CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_info    0x0000f42c      0x51b CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_info    0x0000f947      0x4ee CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_info    0x0000fe35      0x1d8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_info    0x0001000d     0x1053 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_info    0x00011060     0x1a5f CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_info    0x00012abf       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_info    0x00012ae1      0x27c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_info    0x00012d5d       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_info    0x00012d7f       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_info    0x00012da1      0x2d1 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_info    0x00013072       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_info    0x00013094       0x26 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_info    0x000130ba       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_info    0x000130dc      0x2eb CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_info    0x000133c7       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_info    0x000133e9       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_info    0x0001340b       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_info    0x0001342d      0x2fb CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_info    0x00013728     0x1827 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_info    0x00014f4f      0x79f CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
- .debug_info    0x000156ee     0x1b69 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .debug_info    0x00017257      0x5fc CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- .debug_info    0x00017853      0x257 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
- .debug_info    0x00017aaa      0xf3a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .debug_info    0x000189e4     0x2080 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .debug_info    0x0001aa64      0xfe4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- .debug_info    0x0001ba48     0x3c23 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .debug_info    0x0001f66b      0x8be CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
- .debug_info    0x0001ff29     0x19bd CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
- .debug_info    0x000218e6     0x14db CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
- .debug_info    0x00022dc1     0x2851 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
- .debug_info    0x00025612     0x1606 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+.debug_info     0x00000000    0x26fe4
+ .debug_info    0x00000000      0xe90 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .debug_info    0x00000e90      0xa71 CMakeFiles/wiiClassic.dir/main.c.obj
+ .debug_info    0x00001901     0x187e CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_info    0x0000317f      0x1e3 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_info    0x00003362      0x6be CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_info    0x00003a20      0x58e CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_info    0x00003fae     0x1c9e CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_info    0x00005c4c      0x1a4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_info    0x00005df0     0x20d5 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_info    0x00007ec5      0x2d1 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
+ .debug_info    0x00008196     0x4068 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_info    0x0000c1fe     0x13f0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_info    0x0000d5ee     0x123b CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_info    0x0000e829      0xfcf CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_info    0x0000f7f8      0x51b CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_info    0x0000fd13      0x4ee CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_info    0x00010201      0x1d8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_info    0x000103d9     0x1053 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_info    0x0001142c     0x1a5f CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_info    0x00012e8b       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_info    0x00012ead      0x27c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_info    0x00013129       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_info    0x0001314b       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_info    0x0001316d      0x2d1 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_info    0x0001343e       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_info    0x00013460       0x26 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_info    0x00013486       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_info    0x000134a8      0x2eb CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_info    0x00013793       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_info    0x000137b5       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_info    0x000137d7       0x22 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_info    0x000137f9      0x2fb CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_info    0x00013af4     0x1827 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_info    0x0001531b      0x79f CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+ .debug_info    0x00015aba     0x1b69 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .debug_info    0x00017623      0x5fc CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ .debug_info    0x00017c1f      0x257 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .debug_info    0x00017e76      0xf3a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_info    0x00018db0     0x2080 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .debug_info    0x0001ae30      0xfe4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ .debug_info    0x0001be14     0x3c23 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .debug_info    0x0001fa37      0x8be CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+ .debug_info    0x000202f5     0x19bd CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ .debug_info    0x00021cb2     0x14db CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ .debug_info    0x0002318d     0x2851 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+ .debug_info    0x000259de     0x1606 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
-.debug_abbrev   0x00000000     0x6de9
- .debug_abbrev  0x00000000      0x31a CMakeFiles/wiiClassic.dir/main.c.obj
- .debug_abbrev  0x0000031a      0x379 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_abbrev  0x00000693       0xeb CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_abbrev  0x0000077e      0x2e9 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_abbrev  0x00000a67      0x21b CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_abbrev  0x00000c82      0x4e7 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_abbrev  0x00001169      0x116 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_abbrev  0x0000127f      0x397 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_abbrev  0x00001616      0x1aa CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
- .debug_abbrev  0x000017c0      0x571 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- .debug_abbrev  0x00001d31      0x3b8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_abbrev  0x000020e9      0x297 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_abbrev  0x00002380      0x3c7 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_abbrev  0x00002747      0x1ea CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_abbrev  0x00002931      0x1a8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_abbrev  0x00002ad9      0x109 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_abbrev  0x00002be2      0x4cb CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_abbrev  0x000030ad      0x384 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_abbrev  0x00003431       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_abbrev  0x00003443      0x13b CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_abbrev  0x0000357e       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_abbrev  0x00003590       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_abbrev  0x000035a2      0x179 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_abbrev  0x0000371b       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_abbrev  0x0000372d       0x14 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_abbrev  0x00003741       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_abbrev  0x00003753      0x18c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_abbrev  0x000038df       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_abbrev  0x000038f1       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_abbrev  0x00003903       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_abbrev  0x00003915       0xad CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_abbrev  0x000039c2      0x4a5 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_abbrev  0x00003e67      0x2b2 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
- .debug_abbrev  0x00004119      0x4c7 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .debug_abbrev  0x000045e0      0x14e CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- .debug_abbrev  0x0000472e      0x163 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
- .debug_abbrev  0x00004891      0x2b6 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .debug_abbrev  0x00004b47      0x4ff CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .debug_abbrev  0x00005046      0x40d CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- .debug_abbrev  0x00005453      0x561 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .debug_abbrev  0x000059b4      0x309 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
- .debug_abbrev  0x00005cbd      0x463 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
- .debug_abbrev  0x00006120      0x41c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
- .debug_abbrev  0x0000653c      0x437 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
- .debug_abbrev  0x00006973      0x476 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+.debug_abbrev   0x00000000     0x6f05
+ .debug_abbrev  0x00000000      0x239 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .debug_abbrev  0x00000239      0x1fd CMakeFiles/wiiClassic.dir/main.c.obj
+ .debug_abbrev  0x00000436      0x379 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_abbrev  0x000007af       0xeb CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_abbrev  0x0000089a      0x2e9 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_abbrev  0x00000b83      0x21b CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_abbrev  0x00000d9e      0x4e7 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_abbrev  0x00001285      0x116 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_abbrev  0x0000139b      0x397 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_abbrev  0x00001732      0x1aa CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
+ .debug_abbrev  0x000018dc      0x571 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_abbrev  0x00001e4d      0x3b8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_abbrev  0x00002205      0x297 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_abbrev  0x0000249c      0x3c7 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_abbrev  0x00002863      0x1ea CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_abbrev  0x00002a4d      0x1a8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_abbrev  0x00002bf5      0x109 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_abbrev  0x00002cfe      0x4cb CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_abbrev  0x000031c9      0x384 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_abbrev  0x0000354d       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_abbrev  0x0000355f      0x13b CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_abbrev  0x0000369a       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_abbrev  0x000036ac       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_abbrev  0x000036be      0x179 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_abbrev  0x00003837       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_abbrev  0x00003849       0x14 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_abbrev  0x0000385d       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_abbrev  0x0000386f      0x18c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_abbrev  0x000039fb       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_abbrev  0x00003a0d       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_abbrev  0x00003a1f       0x12 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_abbrev  0x00003a31       0xad CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_abbrev  0x00003ade      0x4a5 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_abbrev  0x00003f83      0x2b2 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+ .debug_abbrev  0x00004235      0x4c7 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .debug_abbrev  0x000046fc      0x14e CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ .debug_abbrev  0x0000484a      0x163 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .debug_abbrev  0x000049ad      0x2b6 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_abbrev  0x00004c63      0x4ff CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .debug_abbrev  0x00005162      0x40d CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ .debug_abbrev  0x0000556f      0x561 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .debug_abbrev  0x00005ad0      0x309 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+ .debug_abbrev  0x00005dd9      0x463 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ .debug_abbrev  0x0000623c      0x41c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ .debug_abbrev  0x00006658      0x437 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+ .debug_abbrev  0x00006a8f      0x476 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
 .debug_loc      0x00000000    0x19861
- .debug_loc     0x00000000      0x315 CMakeFiles/wiiClassic.dir/main.c.obj
+ .debug_loc     0x00000000      0x149 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .debug_loc     0x00000149      0x1cc CMakeFiles/wiiClassic.dir/main.c.obj
  .debug_loc     0x00000315     0x1237 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .debug_loc     0x0000154c       0xe9 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
  .debug_loc     0x00001635      0x45f CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
@@ -3544,316 +3554,323 @@ LOAD linker stubs
  .debug_loc     0x0001597a     0x2b8e CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .debug_loc     0x00018508     0x1359 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
-.debug_aranges  0x00000000     0x1590
+.debug_aranges  0x00000000     0x15a8
  .debug_aranges
-                0x00000000       0xe8 CMakeFiles/wiiClassic.dir/main.c.obj
+                0x00000000       0xe0 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
  .debug_aranges
-                0x000000e8      0x100 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x000000e0       0x20 CMakeFiles/wiiClassic.dir/main.c.obj
  .debug_aranges
-                0x000001e8       0x28 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x00000100      0x100 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .debug_aranges
-                0x00000210       0x48 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x00000200       0x28 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
  .debug_aranges
-                0x00000258       0x58 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x00000228       0x48 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
  .debug_aranges
-                0x000002b0       0xc8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000270       0x58 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
  .debug_aranges
-                0x00000378       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x000002c8       0xc8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .debug_aranges
-                0x00000398       0x90 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x00000390       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
  .debug_aranges
-                0x00000428       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x000003b0       0x90 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
  .debug_aranges
-                0x00000458       0xe8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000440       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
  .debug_aranges
-                0x00000540       0x88 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000470       0xe8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
  .debug_aranges
-                0x000005c8       0x78 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x00000558       0x88 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .debug_aranges
-                0x00000640       0x70 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x000005e0       0x78 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
  .debug_aranges
-                0x000006b0       0x28 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x00000658       0x70 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .debug_aranges
-                0x000006d8       0x58 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x000006c8       0x28 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
  .debug_aranges
-                0x00000730       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x000006f0       0x58 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
  .debug_aranges
-                0x00000760       0x88 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x00000748       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
  .debug_aranges
-                0x000007e8       0x90 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x00000778       0x88 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .debug_aranges
-                0x00000878       0x68 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x00000800       0x90 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .debug_aranges
-                0x000008e0       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x00000890       0x68 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .debug_aranges
-                0x00000910       0x40 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x000008f8       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
  .debug_aranges
-                0x00000950      0x140 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000928       0x40 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
  .debug_aranges
-                0x00000a90       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x00000968      0x140 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .debug_aranges
-                0x00000ab0       0xc8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x00000aa8       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .debug_aranges
-                0x00000b78       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x00000ac8       0xc8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .debug_aranges
-                0x00000b98      0x130 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x00000b90       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
  .debug_aranges
-                0x00000cc8       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x00000bb0      0x130 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .debug_aranges
-                0x00000ce8       0x50 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x00000ce0       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
  .debug_aranges
-                0x00000d38       0x38 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x00000d00       0x50 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
  .debug_aranges
-                0x00000d70       0x28 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x00000d50       0x38 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .debug_aranges
-                0x00000d98       0x18 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000d88       0x28 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
  .debug_aranges
-                0x00000db0      0x100 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000db0       0x18 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .debug_aranges
-                0x00000eb0       0x58 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000dc8      0x100 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .debug_aranges
-                0x00000f08       0x60 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x00000ec8       0x58 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .debug_aranges
-                0x00000f68       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x00000f20       0x60 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .debug_aranges
-                0x00000f98       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x00000f80       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .debug_aranges
-                0x00000fc8       0x50 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x00000fb0       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .debug_aranges
-                0x00001018       0xe0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000fe0       0x50 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .debug_aranges
-                0x000010f8       0x70 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x00001030       0xe0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .debug_aranges
-                0x00001168      0x118 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00001110       0x70 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .debug_aranges
-                0x00001280       0x50 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x00001180      0x118 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .debug_aranges
-                0x000012d0       0xa8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x00001298       0x50 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .debug_aranges
-                0x00001378       0x98 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x000012e8       0xa8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
  .debug_aranges
-                0x00001410      0x108 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x00001390       0x98 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .debug_aranges
-                0x00001518       0x78 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x00001428      0x108 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+ .debug_aranges
+                0x00001530       0x78 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
-.debug_ranges   0x00000000     0x4bb8
- .debug_ranges  0x00000000       0xd8 CMakeFiles/wiiClassic.dir/main.c.obj
- .debug_ranges  0x000000d8      0x150 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_ranges  0x00000228       0x18 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_ranges  0x00000240       0xd8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_ranges  0x00000318       0xf0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_ranges  0x00000408      0x400 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_ranges  0x00000808       0x10 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_ranges  0x00000818      0xac0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_ranges  0x000012d8       0x38 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
- .debug_ranges  0x00001310      0xcb8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- .debug_ranges  0x00001fc8      0x3d0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_ranges  0x00002398      0x248 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_ranges  0x000025e0       0x60 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_ranges  0x00002640       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_ranges  0x00002670       0x48 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_ranges  0x000026b8       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_ranges  0x000026d8      0x168 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_ranges  0x00002840      0x108 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_ranges  0x00002948       0x60 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_ranges  0x000029a8       0x38 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_ranges  0x000029e0       0x38 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_ranges  0x00002a18      0x138 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_ranges  0x00002b50       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_ranges  0x00002b80       0xc0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_ranges  0x00002c40      0x128 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_ranges  0x00002d68       0x28 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_ranges  0x00002d90       0x48 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_ranges  0x00002dd8       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_ranges  0x00002e08       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_ranges  0x00002e28      0x258 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_ranges  0x00003080       0x48 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
- .debug_ranges  0x000030c8      0x470 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .debug_ranges  0x00003538       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- .debug_ranges  0x00003558       0x38 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
- .debug_ranges  0x00003590       0x58 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .debug_ranges  0x000035e8      0x1b8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .debug_ranges  0x000037a0       0x78 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- .debug_ranges  0x00003818      0xb78 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .debug_ranges  0x00004390       0x88 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
- .debug_ranges  0x00004418      0x128 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
- .debug_ranges  0x00004540      0x170 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
- .debug_ranges  0x000046b0      0x370 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
- .debug_ranges  0x00004a20      0x198 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+.debug_ranges   0x00000000     0x4bc0
+ .debug_ranges  0x00000000       0xd0 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .debug_ranges  0x000000d0       0x10 CMakeFiles/wiiClassic.dir/main.c.obj
+ .debug_ranges  0x000000e0      0x150 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_ranges  0x00000230       0x18 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_ranges  0x00000248       0xd8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_ranges  0x00000320       0xf0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_ranges  0x00000410      0x400 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_ranges  0x00000810       0x10 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_ranges  0x00000820      0xac0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_ranges  0x000012e0       0x38 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
+ .debug_ranges  0x00001318      0xcb8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_ranges  0x00001fd0      0x3d0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_ranges  0x000023a0      0x248 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_ranges  0x000025e8       0x60 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_ranges  0x00002648       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_ranges  0x00002678       0x48 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_ranges  0x000026c0       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_ranges  0x000026e0      0x168 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_ranges  0x00002848      0x108 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_ranges  0x00002950       0x60 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_ranges  0x000029b0       0x38 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_ranges  0x000029e8       0x38 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_ranges  0x00002a20      0x138 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_ranges  0x00002b58       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_ranges  0x00002b88       0xc0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_ranges  0x00002c48      0x128 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_ranges  0x00002d70       0x28 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_ranges  0x00002d98       0x48 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_ranges  0x00002de0       0x30 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_ranges  0x00002e10       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_ranges  0x00002e30      0x258 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_ranges  0x00003088       0x48 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+ .debug_ranges  0x000030d0      0x470 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .debug_ranges  0x00003540       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ .debug_ranges  0x00003560       0x38 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .debug_ranges  0x00003598       0x58 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_ranges  0x000035f0      0x1b8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .debug_ranges  0x000037a8       0x78 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ .debug_ranges  0x00003820      0xb78 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .debug_ranges  0x00004398       0x88 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+ .debug_ranges  0x00004420      0x128 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ .debug_ranges  0x00004548      0x170 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ .debug_ranges  0x000046b8      0x370 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+ .debug_ranges  0x00004a28      0x198 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
-.debug_line     0x00000000    0x19b70
- .debug_line    0x00000000      0xbcc CMakeFiles/wiiClassic.dir/main.c.obj
- .debug_line    0x00000bcc      0xe0f CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_line    0x000019db      0x339 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_line    0x00001d14      0x54a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_line    0x0000225e      0x547 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_line    0x000027a5     0x11a9 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_line    0x0000394e      0x2da CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_line    0x00003c28     0x11e4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_line    0x00004e0c      0x365 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
- .debug_line    0x00005171     0x1d3d CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- .debug_line    0x00006eae      0xd85 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_line    0x00007c33      0x946 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_line    0x00008579      0xb71 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_line    0x000090ea      0x683 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_line    0x0000976d      0x4a2 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_line    0x00009c0f      0x346 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_line    0x00009f55      0xcb7 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_line    0x0000ac0c     0x12c9 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_line    0x0000bed5      0x168 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_line    0x0000c03d      0x2ad CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_line    0x0000c2ea      0x2f1 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_line    0x0000c5db      0x446 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_line    0x0000ca21      0x424 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_line    0x0000ce45      0x6be CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_line    0x0000d503       0xb8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_line    0x0000d5bb      0x3fc CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_line    0x0000d9b7      0x416 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_line    0x0000ddcd      0x1e8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_line    0x0000dfb5       0xe2 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_line    0x0000e097       0xf0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_line    0x0000e187      0x258 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_line    0x0000e3df     0x106d CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_line    0x0000f44c      0x547 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
- .debug_line    0x0000f993      0xfad CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .debug_line    0x00010940      0x397 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- .debug_line    0x00010cd7      0x494 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
- .debug_line    0x0001116b      0x8ef CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .debug_line    0x00011a5a      0xff2 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .debug_line    0x00012a4c      0xb56 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- .debug_line    0x000135a2     0x2119 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .debug_line    0x000156bb      0x501 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
- .debug_line    0x00015bbc      0xefc CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
- .debug_line    0x00016ab8      0xcb1 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
- .debug_line    0x00017769     0x15ed CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
- .debug_line    0x00018d56      0xe1a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+.debug_line     0x00000000    0x19f35
+ .debug_line    0x00000000      0x984 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .debug_line    0x00000984      0x60d CMakeFiles/wiiClassic.dir/main.c.obj
+ .debug_line    0x00000f91      0xe0f CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_line    0x00001da0      0x339 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_line    0x000020d9      0x54a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_line    0x00002623      0x547 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_line    0x00002b6a     0x11a9 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_line    0x00003d13      0x2da CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_line    0x00003fed     0x11e4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_line    0x000051d1      0x365 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
+ .debug_line    0x00005536     0x1d3d CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_line    0x00007273      0xd85 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_line    0x00007ff8      0x946 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_line    0x0000893e      0xb71 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_line    0x000094af      0x683 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_line    0x00009b32      0x4a2 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_line    0x00009fd4      0x346 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_line    0x0000a31a      0xcb7 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_line    0x0000afd1     0x12c9 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_line    0x0000c29a      0x168 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_line    0x0000c402      0x2ad CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_line    0x0000c6af      0x2f1 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_line    0x0000c9a0      0x446 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_line    0x0000cde6      0x424 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_line    0x0000d20a      0x6be CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_line    0x0000d8c8       0xb8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_line    0x0000d980      0x3fc CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_line    0x0000dd7c      0x416 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_line    0x0000e192      0x1e8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_line    0x0000e37a       0xe2 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_line    0x0000e45c       0xf0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_line    0x0000e54c      0x258 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_line    0x0000e7a4     0x106d CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_line    0x0000f811      0x547 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+ .debug_line    0x0000fd58      0xfad CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .debug_line    0x00010d05      0x397 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ .debug_line    0x0001109c      0x494 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .debug_line    0x00011530      0x8ef CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_line    0x00011e1f      0xff2 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .debug_line    0x00012e11      0xb56 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ .debug_line    0x00013967     0x2119 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .debug_line    0x00015a80      0x501 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+ .debug_line    0x00015f81      0xefc CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ .debug_line    0x00016e7d      0xcb1 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ .debug_line    0x00017b2e     0x15ed CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+ .debug_line    0x0001911b      0xe1a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
-.debug_str      0x00000000     0x7b03
- .debug_str     0x00000000      0xa4e CMakeFiles/wiiClassic.dir/main.c.obj
-                                0xadb (size before relaxing)
- .debug_str     0x00000a4e      0x53f CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+.debug_str      0x00000000     0x7b5b
+ .debug_str     0x00000000      0x837 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+                                0x8a5 (size before relaxing)
+ .debug_str     0x00000837      0x26f CMakeFiles/wiiClassic.dir/main.c.obj
+                                0x691 (size before relaxing)
+ .debug_str     0x00000aa6      0x53f CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
                                 0xa3d (size before relaxing)
- .debug_str     0x00000f8d       0xa2 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_str     0x00000fe5       0xa2 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
                                 0x264 (size before relaxing)
- .debug_str     0x0000102f      0x1dd CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_str     0x00001087      0x1dd CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
                                 0x3a8 (size before relaxing)
- .debug_str     0x0000120c      0x10d CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_str     0x00001264      0x10d CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
                                 0x38f (size before relaxing)
- .debug_str     0x00001319      0x410 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_str     0x00001371      0x410 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
                                 0x80d (size before relaxing)
- .debug_str     0x00001729       0x7d CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_str     0x00001781       0x7d CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
                                 0x245 (size before relaxing)
- .debug_str     0x000017a6      0x280 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_str     0x000017fe      0x280 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
                                 0x637 (size before relaxing)
- .debug_str     0x00001a26       0xec CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
+ .debug_str     0x00001a7e       0xec CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
                                 0x305 (size before relaxing)
- .debug_str     0x00001b12      0x728 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_str     0x00001b6a      0x728 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
                                 0xc99 (size before relaxing)
- .debug_str     0x0000223a      0x16c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_str     0x00002292      0x16c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
                                 0x761 (size before relaxing)
- .debug_str     0x000023a6      0x107 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_str     0x000023fe      0x107 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
                                 0x42e (size before relaxing)
- .debug_str     0x000024ad      0x351 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_str     0x00002505      0x351 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
                                 0x6fe (size before relaxing)
- .debug_str     0x000027fe       0xe4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_str     0x00002856       0xe4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
                                 0x320 (size before relaxing)
- .debug_str     0x000028e2      0x139 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_str     0x0000293a      0x139 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
                                 0x366 (size before relaxing)
- .debug_str     0x00002a1b       0x8c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_str     0x00002a73       0x8c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
                                 0x263 (size before relaxing)
- .debug_str     0x00002aa7      0x2fc CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_str     0x00002aff      0x2fc CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                 0x826 (size before relaxing)
- .debug_str     0x00002da3      0x282 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_str     0x00002dfb      0x282 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
                                 0x4c4 (size before relaxing)
- .debug_str     0x00003025       0x76 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_str     0x0000307d       0x76 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
                                  0xc0 (size before relaxing)
- .debug_str     0x0000309b       0xe5 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_str     0x000030f3       0xe5 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
                                 0x29e (size before relaxing)
- .debug_str     0x00003180       0x62 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_str     0x000031d8       0x62 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
                                  0xba (size before relaxing)
- .debug_str     0x000031e2       0x66 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_str     0x0000323a       0x66 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
                                  0xbe (size before relaxing)
- .debug_str     0x00003248       0xbe CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_str     0x000032a0       0xbe CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
                                 0x2dd (size before relaxing)
- .debug_str     0x00003306       0x6c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_str     0x0000335e       0x6c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
                                  0xc4 (size before relaxing)
- .debug_str     0x00003372       0x71 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_str     0x000033ca       0x71 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
                                  0xc9 (size before relaxing)
- .debug_str     0x000033e3       0x64 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_str     0x0000343b       0x64 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
                                  0xbc (size before relaxing)
- .debug_str     0x00003447       0xa2 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_str     0x0000349f       0xa2 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
                                 0x2f9 (size before relaxing)
- .debug_str     0x000034e9       0x6a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_str     0x00003541       0x6a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
                                  0xc2 (size before relaxing)
- .debug_str     0x00003553       0x68 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_str     0x000035ab       0x68 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
                                  0xc0 (size before relaxing)
- .debug_str     0x000035bb       0x65 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_str     0x00003613       0x65 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
                                  0xbd (size before relaxing)
- .debug_str     0x00003620      0x265 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_str     0x00003678      0x265 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
                                 0x426 (size before relaxing)
- .debug_str     0x00003885      0x4cd CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_str     0x000038dd      0x4cd CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
                                 0x9fc (size before relaxing)
- .debug_str     0x00003d52      0x56f CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+ .debug_str     0x00003daa      0x56f CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
                                 0x7aa (size before relaxing)
- .debug_str     0x000042c1      0x35f CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .debug_str     0x00004319      0x35f CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
                                 0xb30 (size before relaxing)
- .debug_str     0x00004620      0xb03 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ .debug_str     0x00004678      0xb03 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
                                 0xe95 (size before relaxing)
- .debug_str     0x00005123       0xe1 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .debug_str     0x0000517b       0xe1 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
                                 0x2b7 (size before relaxing)
- .debug_str     0x00005204      0x323 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_str     0x0000525c      0x323 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
                                 0x63a (size before relaxing)
- .debug_str     0x00005527      0xa36 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .debug_str     0x0000557f      0xa36 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
                                 0xef4 (size before relaxing)
- .debug_str     0x00005f5d      0x166 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ .debug_str     0x00005fb5      0x166 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
                                 0x855 (size before relaxing)
- .debug_str     0x000060c3      0x955 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .debug_str     0x0000611b      0x955 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
                                0x171b (size before relaxing)
- .debug_str     0x00006a18      0x10c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+ .debug_str     0x00006a70      0x10c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
                                 0x55f (size before relaxing)
- .debug_str     0x00006b24      0x73d CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ .debug_str     0x00006b7c      0x73d CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
                                0x154c (size before relaxing)
- .debug_str     0x00007261      0x23a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ .debug_str     0x000072b9      0x23a CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
                                 0xb05 (size before relaxing)
- .debug_str     0x0000749b      0x3d0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+ .debug_str     0x000074f3      0x3d0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
                                 0x787 (size before relaxing)
- .debug_str     0x0000786b      0x298 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .debug_str     0x000078c3      0x298 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
                                 0x95f (size before relaxing)
 
-.debug_frame    0x00000000     0x2ca0
- .debug_frame   0x00000000      0x1f0 CMakeFiles/wiiClassic.dir/main.c.obj
- .debug_frame   0x000001f0      0x278 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_frame   0x00000468       0x38 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_frame   0x000004a0       0x9c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_frame   0x0000053c       0xc4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_frame   0x00000600      0x20c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_frame   0x0000080c       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_frame   0x0000082c      0x1b0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_frame   0x000009dc       0x50 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
- .debug_frame   0x00000a2c      0x2dc CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- .debug_frame   0x00000d08      0x15c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_frame   0x00000e64      0x164 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_frame   0x00000fc8      0x130 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_frame   0x000010f8       0x44 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_frame   0x0000113c       0xa8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_frame   0x000011e4       0x40 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_frame   0x00001224      0x150 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_frame   0x00001374      0x1f8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_frame   0x0000156c       0x64 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_frame   0x000015d0       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_frame   0x000015fc       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_frame   0x00001628      0x2d8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_frame   0x00001900       0xac CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
- .debug_frame   0x000019ac       0xfc CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .debug_frame   0x00001aa8       0x48 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- .debug_frame   0x00001af0       0x58 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
- .debug_frame   0x00001b48       0xe4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .debug_frame   0x00001c2c      0x268 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .debug_frame   0x00001e94      0x120 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- .debug_frame   0x00001fb4      0x35c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .debug_frame   0x00002310       0xcc CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
- .debug_frame   0x000023dc      0x1f4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
- .debug_frame   0x000025d0      0x1c4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
- .debug_frame   0x00002794      0x33c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
- .debug_frame   0x00002ad0      0x1a8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
- .debug_frame   0x00002c78       0x28 c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg.a(lib_a-strlen-stub.o)
+.debug_frame    0x00000000     0x2cb0
+ .debug_frame   0x00000000      0x1d4 CMakeFiles/wiiClassic.dir/ClassicController.c.obj
+ .debug_frame   0x000001d4       0x2c CMakeFiles/wiiClassic.dir/main.c.obj
+ .debug_frame   0x00000200      0x278 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_frame   0x00000478       0x38 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_frame   0x000004b0       0x9c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_frame   0x0000054c       0xc4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_frame   0x00000610      0x20c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_frame   0x0000081c       0x20 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_frame   0x0000083c      0x1b0 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_frame   0x000009ec       0x50 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/critical_section.c.obj
+ .debug_frame   0x00000a3c      0x2dc CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_frame   0x00000d18      0x15c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_frame   0x00000e74      0x164 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_frame   0x00000fd8      0x130 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_frame   0x00001108       0x44 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_frame   0x0000114c       0xa8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_frame   0x000011f4       0x40 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_frame   0x00001234      0x150 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_frame   0x00001384      0x1f8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_frame   0x0000157c       0x64 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_frame   0x000015e0       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_frame   0x0000160c       0x2c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_frame   0x00001638      0x2d8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_frame   0x00001910       0xac CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+ .debug_frame   0x000019bc       0xfc CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .debug_frame   0x00001ab8       0x48 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ .debug_frame   0x00001b00       0x58 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+ .debug_frame   0x00001b58       0xe4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .debug_frame   0x00001c3c      0x268 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .debug_frame   0x00001ea4      0x120 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ .debug_frame   0x00001fc4      0x35c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .debug_frame   0x00002320       0xcc CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+ .debug_frame   0x000023ec      0x1f4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+ .debug_frame   0x000025e0      0x1c4 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj
+ .debug_frame   0x000027a4      0x33c CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+ .debug_frame   0x00002ae0      0x1a8 CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .debug_frame   0x00002c88       0x28 c:/users/ghand/documents/codes/pico/pico_sdk_1.5.1/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg.a(lib_a-strlen-stub.o)

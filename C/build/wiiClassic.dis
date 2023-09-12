@@ -31,21 +31,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  13 .comment      00000049  00000000  00000000  0000bce8  2**0
                   CONTENTS, READONLY
- 14 .debug_info   00026c18  00000000  00000000  0000bd31  2**0
+ 14 .debug_info   00026fe4  00000000  00000000  0000bd31  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_abbrev 00006de9  00000000  00000000  00032949  2**0
+ 15 .debug_abbrev 00006f05  00000000  00000000  00032d15  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_loc    00019861  00000000  00000000  00039732  2**0
+ 16 .debug_loc    00019861  00000000  00000000  00039c1a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_aranges 00001590  00000000  00000000  00052f98  2**3
+ 17 .debug_aranges 000015a8  00000000  00000000  00053480  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_ranges 00004bb8  00000000  00000000  00054528  2**3
+ 18 .debug_ranges 00004bc0  00000000  00000000  00054a28  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_line   00019b70  00000000  00000000  000590e0  2**0
+ 19 .debug_line   00019f35  00000000  00000000  000595e8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_str    00007b03  00000000  00000000  00072c50  2**0
+ 20 .debug_str    00007b5b  00000000  00000000  0007351d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_frame  00002ca0  00000000  00000000  0007a754  2**2
+ 21 .debug_frame  00002cb0  00000000  00000000  0007b078  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 C:/Users/ghand/Documents/Codes/Pico/wii-classic-controller-rp2040/C/build/wiiClassic.elf:     file format elf32-littlearm
@@ -328,426 +328,426 @@ Disassembly of section .text:
 100002fc:	20000dcc 	.word	0x20000dcc
 10000300:	100076e8 	.word	0x100076e8
 
-10000304 <ClassicController_update>:
-10000304:	b530      	push	{r4, r5, lr}
-10000306:	b085      	sub	sp, #20
-10000308:	0004      	movs	r4, r0
-1000030a:	2500      	movs	r5, #0
-1000030c:	9500      	str	r5, [sp, #0]
-1000030e:	2301      	movs	r3, #1
-10000310:	4a3c      	ldr	r2, [pc, #240]	; (10000404 <ClassicController_update+0x100>)
-10000312:	2152      	movs	r1, #82	; 0x52
-10000314:	f007 f930 	bl	10007578 <i2c_write_blocking>
-10000318:	20fa      	movs	r0, #250	; 0xfa
-1000031a:	0040      	lsls	r0, r0, #1
-1000031c:	2100      	movs	r1, #0
-1000031e:	f001 fc43 	bl	10001ba8 <sleep_us>
-10000322:	9500      	str	r5, [sp, #0]
-10000324:	2308      	movs	r3, #8
-10000326:	aa02      	add	r2, sp, #8
-10000328:	2152      	movs	r1, #82	; 0x52
-1000032a:	0020      	movs	r0, r4
-1000032c:	f007 f930 	bl	10007590 <i2c_read_blocking>
-10000330:	2808      	cmp	r0, #8
-10000332:	d162      	bne.n	100003fa <ClassicController_update+0xf6>
-10000334:	a802      	add	r0, sp, #8
-10000336:	7802      	ldrb	r2, [r0, #0]
-10000338:	4b33      	ldr	r3, [pc, #204]	; (10000408 <ClassicController_update+0x104>)
-1000033a:	701a      	strb	r2, [r3, #0]
-1000033c:	7842      	ldrb	r2, [r0, #1]
-1000033e:	4b33      	ldr	r3, [pc, #204]	; (1000040c <ClassicController_update+0x108>)
-10000340:	701a      	strb	r2, [r3, #0]
-10000342:	7882      	ldrb	r2, [r0, #2]
-10000344:	4b32      	ldr	r3, [pc, #200]	; (10000410 <ClassicController_update+0x10c>)
-10000346:	701a      	strb	r2, [r3, #0]
-10000348:	78c2      	ldrb	r2, [r0, #3]
-1000034a:	4b32      	ldr	r3, [pc, #200]	; (10000414 <ClassicController_update+0x110>)
-1000034c:	701a      	strb	r2, [r3, #0]
-1000034e:	7902      	ldrb	r2, [r0, #4]
-10000350:	4b31      	ldr	r3, [pc, #196]	; (10000418 <ClassicController_update+0x114>)
-10000352:	701a      	strb	r2, [r3, #0]
-10000354:	7942      	ldrb	r2, [r0, #5]
-10000356:	4b31      	ldr	r3, [pc, #196]	; (1000041c <ClassicController_update+0x118>)
-10000358:	701a      	strb	r2, [r3, #0]
-1000035a:	7981      	ldrb	r1, [r0, #6]
-1000035c:	09cb      	lsrs	r3, r1, #7
-1000035e:	425a      	negs	r2, r3
-10000360:	4153      	adcs	r3, r2
-10000362:	4a2f      	ldr	r2, [pc, #188]	; (10000420 <ClassicController_update+0x11c>)
-10000364:	7013      	strb	r3, [r2, #0]
-10000366:	098c      	lsrs	r4, r1, #6
-10000368:	2201      	movs	r2, #1
-1000036a:	4054      	eors	r4, r2
-1000036c:	2301      	movs	r3, #1
-1000036e:	401c      	ands	r4, r3
-10000370:	4d2c      	ldr	r5, [pc, #176]	; (10000424 <ClassicController_update+0x120>)
-10000372:	702c      	strb	r4, [r5, #0]
-10000374:	094c      	lsrs	r4, r1, #5
-10000376:	4054      	eors	r4, r2
-10000378:	401c      	ands	r4, r3
-1000037a:	4d2b      	ldr	r5, [pc, #172]	; (10000428 <ClassicController_update+0x124>)
-1000037c:	702c      	strb	r4, [r5, #0]
-1000037e:	090c      	lsrs	r4, r1, #4
-10000380:	4054      	eors	r4, r2
-10000382:	401c      	ands	r4, r3
-10000384:	4d29      	ldr	r5, [pc, #164]	; (1000042c <ClassicController_update+0x128>)
-10000386:	702c      	strb	r4, [r5, #0]
-10000388:	08cc      	lsrs	r4, r1, #3
-1000038a:	4054      	eors	r4, r2
-1000038c:	401c      	ands	r4, r3
-1000038e:	4d28      	ldr	r5, [pc, #160]	; (10000430 <ClassicController_update+0x12c>)
-10000390:	702c      	strb	r4, [r5, #0]
-10000392:	088c      	lsrs	r4, r1, #2
-10000394:	4054      	eors	r4, r2
-10000396:	401c      	ands	r4, r3
-10000398:	4d26      	ldr	r5, [pc, #152]	; (10000434 <ClassicController_update+0x130>)
-1000039a:	702c      	strb	r4, [r5, #0]
-1000039c:	0849      	lsrs	r1, r1, #1
-1000039e:	4051      	eors	r1, r2
-100003a0:	4019      	ands	r1, r3
-100003a2:	4c25      	ldr	r4, [pc, #148]	; (10000438 <ClassicController_update+0x134>)
-100003a4:	7021      	strb	r1, [r4, #0]
-100003a6:	79c1      	ldrb	r1, [r0, #7]
-100003a8:	09c8      	lsrs	r0, r1, #7
-100003aa:	4244      	negs	r4, r0
-100003ac:	4160      	adcs	r0, r4
-100003ae:	4c23      	ldr	r4, [pc, #140]	; (1000043c <ClassicController_update+0x138>)
-100003b0:	7020      	strb	r0, [r4, #0]
-100003b2:	0988      	lsrs	r0, r1, #6
-100003b4:	4050      	eors	r0, r2
-100003b6:	4018      	ands	r0, r3
-100003b8:	4c21      	ldr	r4, [pc, #132]	; (10000440 <ClassicController_update+0x13c>)
-100003ba:	7020      	strb	r0, [r4, #0]
-100003bc:	0948      	lsrs	r0, r1, #5
-100003be:	4050      	eors	r0, r2
-100003c0:	4018      	ands	r0, r3
-100003c2:	4c20      	ldr	r4, [pc, #128]	; (10000444 <ClassicController_update+0x140>)
-100003c4:	7020      	strb	r0, [r4, #0]
-100003c6:	0908      	lsrs	r0, r1, #4
-100003c8:	4050      	eors	r0, r2
-100003ca:	4018      	ands	r0, r3
-100003cc:	4c1e      	ldr	r4, [pc, #120]	; (10000448 <ClassicController_update+0x144>)
-100003ce:	7020      	strb	r0, [r4, #0]
-100003d0:	08c8      	lsrs	r0, r1, #3
-100003d2:	4050      	eors	r0, r2
-100003d4:	4018      	ands	r0, r3
-100003d6:	4c1d      	ldr	r4, [pc, #116]	; (1000044c <ClassicController_update+0x148>)
-100003d8:	7020      	strb	r0, [r4, #0]
-100003da:	0888      	lsrs	r0, r1, #2
-100003dc:	4050      	eors	r0, r2
-100003de:	4018      	ands	r0, r3
-100003e0:	4c1b      	ldr	r4, [pc, #108]	; (10000450 <ClassicController_update+0x14c>)
-100003e2:	7020      	strb	r0, [r4, #0]
-100003e4:	0848      	lsrs	r0, r1, #1
-100003e6:	4050      	eors	r0, r2
-100003e8:	4018      	ands	r0, r3
-100003ea:	4c1a      	ldr	r4, [pc, #104]	; (10000454 <ClassicController_update+0x150>)
-100003ec:	7020      	strb	r0, [r4, #0]
-100003ee:	404a      	eors	r2, r1
-100003f0:	4013      	ands	r3, r2
-100003f2:	4a19      	ldr	r2, [pc, #100]	; (10000458 <ClassicController_update+0x154>)
-100003f4:	7013      	strb	r3, [r2, #0]
-100003f6:	b005      	add	sp, #20
-100003f8:	bd30      	pop	{r4, r5, pc}
-100003fa:	4818      	ldr	r0, [pc, #96]	; (1000045c <ClassicController_update+0x158>)
-100003fc:	f004 fbc8 	bl	10004b90 <__wrap_puts>
-10000400:	e798      	b.n	10000334 <ClassicController_update+0x30>
-10000402:	46c0      	nop			; (mov r8, r8)
-10000404:	10007802 	.word	0x10007802
-10000408:	20001a47 	.word	0x20001a47
-1000040c:	20001a4e 	.word	0x20001a4e
-10000410:	20001a49 	.word	0x20001a49
-10000414:	20001a50 	.word	0x20001a50
-10000418:	20001a45 	.word	0x20001a45
-1000041c:	20001a4c 	.word	0x20001a4c
-10000420:	20001a3d 	.word	0x20001a3d
-10000424:	20001a3b 	.word	0x20001a3b
-10000428:	20001a44 	.word	0x20001a44
-1000042c:	20001a40 	.word	0x20001a40
-10000430:	20001a3f 	.word	0x20001a3f
-10000434:	20001a41 	.word	0x20001a41
-10000438:	20001a4b 	.word	0x20001a4b
-1000043c:	20001a52 	.word	0x20001a52
-10000440:	20001a3a 	.word	0x20001a3a
-10000444:	20001a43 	.word	0x20001a43
-10000448:	20001a39 	.word	0x20001a39
-1000044c:	20001a42 	.word	0x20001a42
-10000450:	20001a53 	.word	0x20001a53
-10000454:	20001a3c 	.word	0x20001a3c
-10000458:	20001a3e 	.word	0x20001a3e
-1000045c:	100076e8 	.word	0x100076e8
+10000304 <ClassicController_joy_LX>:
+10000304:	4b02      	ldr	r3, [pc, #8]	; (10000310 <ClassicController_joy_LX+0xc>)
+10000306:	7818      	ldrb	r0, [r3, #0]
+10000308:	4b02      	ldr	r3, [pc, #8]	; (10000314 <ClassicController_joy_LX+0x10>)
+1000030a:	781b      	ldrb	r3, [r3, #0]
+1000030c:	1ac0      	subs	r0, r0, r3
+1000030e:	4770      	bx	lr
+10000310:	20001a47 	.word	0x20001a47
+10000314:	20001a48 	.word	0x20001a48
 
-10000460 <ClassicController_calibrate>:
-10000460:	b510      	push	{r4, lr}
-10000462:	f7ff ff4f 	bl	10000304 <ClassicController_update>
-10000466:	4b0c      	ldr	r3, [pc, #48]	; (10000498 <ClassicController_calibrate+0x38>)
-10000468:	781a      	ldrb	r2, [r3, #0]
-1000046a:	4b0c      	ldr	r3, [pc, #48]	; (1000049c <ClassicController_calibrate+0x3c>)
-1000046c:	701a      	strb	r2, [r3, #0]
-1000046e:	4b0c      	ldr	r3, [pc, #48]	; (100004a0 <ClassicController_calibrate+0x40>)
-10000470:	781a      	ldrb	r2, [r3, #0]
-10000472:	4b0c      	ldr	r3, [pc, #48]	; (100004a4 <ClassicController_calibrate+0x44>)
-10000474:	701a      	strb	r2, [r3, #0]
-10000476:	4b0c      	ldr	r3, [pc, #48]	; (100004a8 <ClassicController_calibrate+0x48>)
-10000478:	781a      	ldrb	r2, [r3, #0]
-1000047a:	4b0c      	ldr	r3, [pc, #48]	; (100004ac <ClassicController_calibrate+0x4c>)
+10000318 <ClassicController_joy_LY>:
+10000318:	4b02      	ldr	r3, [pc, #8]	; (10000324 <ClassicController_joy_LY+0xc>)
+1000031a:	7818      	ldrb	r0, [r3, #0]
+1000031c:	4b02      	ldr	r3, [pc, #8]	; (10000328 <ClassicController_joy_LY+0x10>)
+1000031e:	781b      	ldrb	r3, [r3, #0]
+10000320:	1ac0      	subs	r0, r0, r3
+10000322:	4770      	bx	lr
+10000324:	20001a49 	.word	0x20001a49
+10000328:	20001a4a 	.word	0x20001a4a
+
+1000032c <ClassicController_joy_RX>:
+1000032c:	4b02      	ldr	r3, [pc, #8]	; (10000338 <ClassicController_joy_RX+0xc>)
+1000032e:	7818      	ldrb	r0, [r3, #0]
+10000330:	4b02      	ldr	r3, [pc, #8]	; (1000033c <ClassicController_joy_RX+0x10>)
+10000332:	781b      	ldrb	r3, [r3, #0]
+10000334:	1ac0      	subs	r0, r0, r3
+10000336:	4770      	bx	lr
+10000338:	20001a4e 	.word	0x20001a4e
+1000033c:	20001a4f 	.word	0x20001a4f
+
+10000340 <ClassicController_joy_RY>:
+10000340:	4b02      	ldr	r3, [pc, #8]	; (1000034c <ClassicController_joy_RY+0xc>)
+10000342:	7818      	ldrb	r0, [r3, #0]
+10000344:	4b02      	ldr	r3, [pc, #8]	; (10000350 <ClassicController_joy_RY+0x10>)
+10000346:	781b      	ldrb	r3, [r3, #0]
+10000348:	1ac0      	subs	r0, r0, r3
+1000034a:	4770      	bx	lr
+1000034c:	20001a50 	.word	0x20001a50
+10000350:	20001a51 	.word	0x20001a51
+
+10000354 <ClassicController_LT_analog>:
+10000354:	4b04      	ldr	r3, [pc, #16]	; (10000368 <ClassicController_LT_analog+0x14>)
+10000356:	781b      	ldrb	r3, [r3, #0]
+10000358:	4a04      	ldr	r2, [pc, #16]	; (1000036c <ClassicController_LT_analog+0x18>)
+1000035a:	7810      	ldrb	r0, [r2, #0]
+1000035c:	4283      	cmp	r3, r0
+1000035e:	d801      	bhi.n	10000364 <ClassicController_LT_analog+0x10>
+10000360:	1ac0      	subs	r0, r0, r3
+10000362:	4770      	bx	lr
+10000364:	2000      	movs	r0, #0
+10000366:	e7fc      	b.n	10000362 <ClassicController_LT_analog+0xe>
+10000368:	20001a46 	.word	0x20001a46
+1000036c:	20001a45 	.word	0x20001a45
+
+10000370 <ClassicController_RT_analog>:
+10000370:	4b04      	ldr	r3, [pc, #16]	; (10000384 <ClassicController_RT_analog+0x14>)
+10000372:	781b      	ldrb	r3, [r3, #0]
+10000374:	4a04      	ldr	r2, [pc, #16]	; (10000388 <ClassicController_RT_analog+0x18>)
+10000376:	7810      	ldrb	r0, [r2, #0]
+10000378:	4283      	cmp	r3, r0
+1000037a:	d801      	bhi.n	10000380 <ClassicController_RT_analog+0x10>
+1000037c:	1ac0      	subs	r0, r0, r3
+1000037e:	4770      	bx	lr
+10000380:	2000      	movs	r0, #0
+10000382:	e7fc      	b.n	1000037e <ClassicController_RT_analog+0xe>
+10000384:	20001a4d 	.word	0x20001a4d
+10000388:	20001a4c 	.word	0x20001a4c
+
+1000038c <ClassicController_button_A>:
+1000038c:	4b01      	ldr	r3, [pc, #4]	; (10000394 <ClassicController_button_A+0x8>)
+1000038e:	7818      	ldrb	r0, [r3, #0]
+10000390:	4770      	bx	lr
+10000392:	46c0      	nop			; (mov r8, r8)
+10000394:	20001a39 	.word	0x20001a39
+
+10000398 <ClassicController_button_B>:
+10000398:	4b01      	ldr	r3, [pc, #4]	; (100003a0 <ClassicController_button_B+0x8>)
+1000039a:	7818      	ldrb	r0, [r3, #0]
+1000039c:	4770      	bx	lr
+1000039e:	46c0      	nop			; (mov r8, r8)
+100003a0:	20001a3a 	.word	0x20001a3a
+
+100003a4 <ClassicController_button_X>:
+100003a4:	4b01      	ldr	r3, [pc, #4]	; (100003ac <ClassicController_button_X+0x8>)
+100003a6:	7818      	ldrb	r0, [r3, #0]
+100003a8:	4770      	bx	lr
+100003aa:	46c0      	nop			; (mov r8, r8)
+100003ac:	20001a42 	.word	0x20001a42
+
+100003b0 <ClassicController_button_Y>:
+100003b0:	4b01      	ldr	r3, [pc, #4]	; (100003b8 <ClassicController_button_Y+0x8>)
+100003b2:	7818      	ldrb	r0, [r3, #0]
+100003b4:	4770      	bx	lr
+100003b6:	46c0      	nop			; (mov r8, r8)
+100003b8:	20001a43 	.word	0x20001a43
+
+100003bc <ClassicController_button_UP>:
+100003bc:	4b01      	ldr	r3, [pc, #4]	; (100003c4 <ClassicController_button_UP+0x8>)
+100003be:	7818      	ldrb	r0, [r3, #0]
+100003c0:	4770      	bx	lr
+100003c2:	46c0      	nop			; (mov r8, r8)
+100003c4:	20001a3e 	.word	0x20001a3e
+
+100003c8 <ClassicController_button_DOWN>:
+100003c8:	4b01      	ldr	r3, [pc, #4]	; (100003d0 <ClassicController_button_DOWN+0x8>)
+100003ca:	7818      	ldrb	r0, [r3, #0]
+100003cc:	4770      	bx	lr
+100003ce:	46c0      	nop			; (mov r8, r8)
+100003d0:	20001a3b 	.word	0x20001a3b
+
+100003d4 <ClassicController_button_LEFT>:
+100003d4:	4b01      	ldr	r3, [pc, #4]	; (100003dc <ClassicController_button_LEFT+0x8>)
+100003d6:	7818      	ldrb	r0, [r3, #0]
+100003d8:	4770      	bx	lr
+100003da:	46c0      	nop			; (mov r8, r8)
+100003dc:	20001a3c 	.word	0x20001a3c
+
+100003e0 <ClassicController_button_RIGHT>:
+100003e0:	4b01      	ldr	r3, [pc, #4]	; (100003e8 <ClassicController_button_RIGHT+0x8>)
+100003e2:	7818      	ldrb	r0, [r3, #0]
+100003e4:	4770      	bx	lr
+100003e6:	46c0      	nop			; (mov r8, r8)
+100003e8:	20001a3d 	.word	0x20001a3d
+
+100003ec <ClassicController_button_ZL>:
+100003ec:	4b01      	ldr	r3, [pc, #4]	; (100003f4 <ClassicController_button_ZL+0x8>)
+100003ee:	7818      	ldrb	r0, [r3, #0]
+100003f0:	4770      	bx	lr
+100003f2:	46c0      	nop			; (mov r8, r8)
+100003f4:	20001a52 	.word	0x20001a52
+
+100003f8 <ClassicController_button_ZR>:
+100003f8:	4b01      	ldr	r3, [pc, #4]	; (10000400 <ClassicController_button_ZR+0x8>)
+100003fa:	7818      	ldrb	r0, [r3, #0]
+100003fc:	4770      	bx	lr
+100003fe:	46c0      	nop			; (mov r8, r8)
+10000400:	20001a53 	.word	0x20001a53
+
+10000404 <ClassicController_button_LT>:
+10000404:	4b01      	ldr	r3, [pc, #4]	; (1000040c <ClassicController_button_LT+0x8>)
+10000406:	7818      	ldrb	r0, [r3, #0]
+10000408:	4770      	bx	lr
+1000040a:	46c0      	nop			; (mov r8, r8)
+1000040c:	20001a44 	.word	0x20001a44
+
+10000410 <ClassicController_button_RT>:
+10000410:	4b01      	ldr	r3, [pc, #4]	; (10000418 <ClassicController_button_RT+0x8>)
+10000412:	7818      	ldrb	r0, [r3, #0]
+10000414:	4770      	bx	lr
+10000416:	46c0      	nop			; (mov r8, r8)
+10000418:	20001a4b 	.word	0x20001a4b
+
+1000041c <ClassicController_button_START>:
+1000041c:	4b01      	ldr	r3, [pc, #4]	; (10000424 <ClassicController_button_START+0x8>)
+1000041e:	7818      	ldrb	r0, [r3, #0]
+10000420:	4770      	bx	lr
+10000422:	46c0      	nop			; (mov r8, r8)
+10000424:	20001a41 	.word	0x20001a41
+
+10000428 <ClassicController_button_SELECT>:
+10000428:	4b01      	ldr	r3, [pc, #4]	; (10000430 <ClassicController_button_SELECT+0x8>)
+1000042a:	7818      	ldrb	r0, [r3, #0]
+1000042c:	4770      	bx	lr
+1000042e:	46c0      	nop			; (mov r8, r8)
+10000430:	20001a40 	.word	0x20001a40
+
+10000434 <ClassicController_button_HOME>:
+10000434:	4b01      	ldr	r3, [pc, #4]	; (1000043c <ClassicController_button_HOME+0x8>)
+10000436:	7818      	ldrb	r0, [r3, #0]
+10000438:	4770      	bx	lr
+1000043a:	46c0      	nop			; (mov r8, r8)
+1000043c:	20001a3f 	.word	0x20001a3f
+
+10000440 <ClassicController_update>:
+10000440:	b530      	push	{r4, r5, lr}
+10000442:	b085      	sub	sp, #20
+10000444:	0004      	movs	r4, r0
+10000446:	2500      	movs	r5, #0
+10000448:	9500      	str	r5, [sp, #0]
+1000044a:	2301      	movs	r3, #1
+1000044c:	4a3c      	ldr	r2, [pc, #240]	; (10000540 <ClassicController_update+0x100>)
+1000044e:	2152      	movs	r1, #82	; 0x52
+10000450:	f007 f892 	bl	10007578 <i2c_write_blocking>
+10000454:	20fa      	movs	r0, #250	; 0xfa
+10000456:	0040      	lsls	r0, r0, #1
+10000458:	2100      	movs	r1, #0
+1000045a:	f001 fba5 	bl	10001ba8 <sleep_us>
+1000045e:	9500      	str	r5, [sp, #0]
+10000460:	2308      	movs	r3, #8
+10000462:	aa02      	add	r2, sp, #8
+10000464:	2152      	movs	r1, #82	; 0x52
+10000466:	0020      	movs	r0, r4
+10000468:	f007 f892 	bl	10007590 <i2c_read_blocking>
+1000046c:	2808      	cmp	r0, #8
+1000046e:	d162      	bne.n	10000536 <ClassicController_update+0xf6>
+10000470:	a802      	add	r0, sp, #8
+10000472:	7802      	ldrb	r2, [r0, #0]
+10000474:	4b33      	ldr	r3, [pc, #204]	; (10000544 <ClassicController_update+0x104>)
+10000476:	701a      	strb	r2, [r3, #0]
+10000478:	7842      	ldrb	r2, [r0, #1]
+1000047a:	4b33      	ldr	r3, [pc, #204]	; (10000548 <ClassicController_update+0x108>)
 1000047c:	701a      	strb	r2, [r3, #0]
-1000047e:	4b0c      	ldr	r3, [pc, #48]	; (100004b0 <ClassicController_calibrate+0x50>)
-10000480:	781a      	ldrb	r2, [r3, #0]
-10000482:	4b0c      	ldr	r3, [pc, #48]	; (100004b4 <ClassicController_calibrate+0x54>)
-10000484:	701a      	strb	r2, [r3, #0]
-10000486:	4b0c      	ldr	r3, [pc, #48]	; (100004b8 <ClassicController_calibrate+0x58>)
-10000488:	781a      	ldrb	r2, [r3, #0]
-1000048a:	4b0c      	ldr	r3, [pc, #48]	; (100004bc <ClassicController_calibrate+0x5c>)
-1000048c:	701a      	strb	r2, [r3, #0]
-1000048e:	4b0c      	ldr	r3, [pc, #48]	; (100004c0 <ClassicController_calibrate+0x60>)
-10000490:	781a      	ldrb	r2, [r3, #0]
-10000492:	4b0c      	ldr	r3, [pc, #48]	; (100004c4 <ClassicController_calibrate+0x64>)
+1000047e:	7882      	ldrb	r2, [r0, #2]
+10000480:	4b32      	ldr	r3, [pc, #200]	; (1000054c <ClassicController_update+0x10c>)
+10000482:	701a      	strb	r2, [r3, #0]
+10000484:	78c2      	ldrb	r2, [r0, #3]
+10000486:	4b32      	ldr	r3, [pc, #200]	; (10000550 <ClassicController_update+0x110>)
+10000488:	701a      	strb	r2, [r3, #0]
+1000048a:	7902      	ldrb	r2, [r0, #4]
+1000048c:	4b31      	ldr	r3, [pc, #196]	; (10000554 <ClassicController_update+0x114>)
+1000048e:	701a      	strb	r2, [r3, #0]
+10000490:	7942      	ldrb	r2, [r0, #5]
+10000492:	4b31      	ldr	r3, [pc, #196]	; (10000558 <ClassicController_update+0x118>)
 10000494:	701a      	strb	r2, [r3, #0]
-10000496:	bd10      	pop	{r4, pc}
-10000498:	20001a47 	.word	0x20001a47
-1000049c:	20001a48 	.word	0x20001a48
-100004a0:	20001a49 	.word	0x20001a49
-100004a4:	20001a4a 	.word	0x20001a4a
-100004a8:	20001a4e 	.word	0x20001a4e
-100004ac:	20001a4f 	.word	0x20001a4f
-100004b0:	20001a50 	.word	0x20001a50
-100004b4:	20001a51 	.word	0x20001a51
-100004b8:	20001a44 	.word	0x20001a44
-100004bc:	20001a46 	.word	0x20001a46
-100004c0:	20001a4b 	.word	0x20001a4b
-100004c4:	20001a4d 	.word	0x20001a4d
+10000496:	7981      	ldrb	r1, [r0, #6]
+10000498:	09cb      	lsrs	r3, r1, #7
+1000049a:	425a      	negs	r2, r3
+1000049c:	4153      	adcs	r3, r2
+1000049e:	4a2f      	ldr	r2, [pc, #188]	; (1000055c <ClassicController_update+0x11c>)
+100004a0:	7013      	strb	r3, [r2, #0]
+100004a2:	098c      	lsrs	r4, r1, #6
+100004a4:	2201      	movs	r2, #1
+100004a6:	4054      	eors	r4, r2
+100004a8:	2301      	movs	r3, #1
+100004aa:	401c      	ands	r4, r3
+100004ac:	4d2c      	ldr	r5, [pc, #176]	; (10000560 <ClassicController_update+0x120>)
+100004ae:	702c      	strb	r4, [r5, #0]
+100004b0:	094c      	lsrs	r4, r1, #5
+100004b2:	4054      	eors	r4, r2
+100004b4:	401c      	ands	r4, r3
+100004b6:	4d2b      	ldr	r5, [pc, #172]	; (10000564 <ClassicController_update+0x124>)
+100004b8:	702c      	strb	r4, [r5, #0]
+100004ba:	090c      	lsrs	r4, r1, #4
+100004bc:	4054      	eors	r4, r2
+100004be:	401c      	ands	r4, r3
+100004c0:	4d29      	ldr	r5, [pc, #164]	; (10000568 <ClassicController_update+0x128>)
+100004c2:	702c      	strb	r4, [r5, #0]
+100004c4:	08cc      	lsrs	r4, r1, #3
+100004c6:	4054      	eors	r4, r2
+100004c8:	401c      	ands	r4, r3
+100004ca:	4d28      	ldr	r5, [pc, #160]	; (1000056c <ClassicController_update+0x12c>)
+100004cc:	702c      	strb	r4, [r5, #0]
+100004ce:	088c      	lsrs	r4, r1, #2
+100004d0:	4054      	eors	r4, r2
+100004d2:	401c      	ands	r4, r3
+100004d4:	4d26      	ldr	r5, [pc, #152]	; (10000570 <ClassicController_update+0x130>)
+100004d6:	702c      	strb	r4, [r5, #0]
+100004d8:	0849      	lsrs	r1, r1, #1
+100004da:	4051      	eors	r1, r2
+100004dc:	4019      	ands	r1, r3
+100004de:	4c25      	ldr	r4, [pc, #148]	; (10000574 <ClassicController_update+0x134>)
+100004e0:	7021      	strb	r1, [r4, #0]
+100004e2:	79c1      	ldrb	r1, [r0, #7]
+100004e4:	09c8      	lsrs	r0, r1, #7
+100004e6:	4244      	negs	r4, r0
+100004e8:	4160      	adcs	r0, r4
+100004ea:	4c23      	ldr	r4, [pc, #140]	; (10000578 <ClassicController_update+0x138>)
+100004ec:	7020      	strb	r0, [r4, #0]
+100004ee:	0988      	lsrs	r0, r1, #6
+100004f0:	4050      	eors	r0, r2
+100004f2:	4018      	ands	r0, r3
+100004f4:	4c21      	ldr	r4, [pc, #132]	; (1000057c <ClassicController_update+0x13c>)
+100004f6:	7020      	strb	r0, [r4, #0]
+100004f8:	0948      	lsrs	r0, r1, #5
+100004fa:	4050      	eors	r0, r2
+100004fc:	4018      	ands	r0, r3
+100004fe:	4c20      	ldr	r4, [pc, #128]	; (10000580 <ClassicController_update+0x140>)
+10000500:	7020      	strb	r0, [r4, #0]
+10000502:	0908      	lsrs	r0, r1, #4
+10000504:	4050      	eors	r0, r2
+10000506:	4018      	ands	r0, r3
+10000508:	4c1e      	ldr	r4, [pc, #120]	; (10000584 <ClassicController_update+0x144>)
+1000050a:	7020      	strb	r0, [r4, #0]
+1000050c:	08c8      	lsrs	r0, r1, #3
+1000050e:	4050      	eors	r0, r2
+10000510:	4018      	ands	r0, r3
+10000512:	4c1d      	ldr	r4, [pc, #116]	; (10000588 <ClassicController_update+0x148>)
+10000514:	7020      	strb	r0, [r4, #0]
+10000516:	0888      	lsrs	r0, r1, #2
+10000518:	4050      	eors	r0, r2
+1000051a:	4018      	ands	r0, r3
+1000051c:	4c1b      	ldr	r4, [pc, #108]	; (1000058c <ClassicController_update+0x14c>)
+1000051e:	7020      	strb	r0, [r4, #0]
+10000520:	0848      	lsrs	r0, r1, #1
+10000522:	4050      	eors	r0, r2
+10000524:	4018      	ands	r0, r3
+10000526:	4c1a      	ldr	r4, [pc, #104]	; (10000590 <ClassicController_update+0x150>)
+10000528:	7020      	strb	r0, [r4, #0]
+1000052a:	404a      	eors	r2, r1
+1000052c:	4013      	ands	r3, r2
+1000052e:	4a19      	ldr	r2, [pc, #100]	; (10000594 <ClassicController_update+0x154>)
+10000530:	7013      	strb	r3, [r2, #0]
+10000532:	b005      	add	sp, #20
+10000534:	bd30      	pop	{r4, r5, pc}
+10000536:	4818      	ldr	r0, [pc, #96]	; (10000598 <ClassicController_update+0x158>)
+10000538:	f004 fb2a 	bl	10004b90 <__wrap_puts>
+1000053c:	e798      	b.n	10000470 <ClassicController_update+0x30>
+1000053e:	46c0      	nop			; (mov r8, r8)
+10000540:	100077ee 	.word	0x100077ee
+10000544:	20001a47 	.word	0x20001a47
+10000548:	20001a4e 	.word	0x20001a4e
+1000054c:	20001a49 	.word	0x20001a49
+10000550:	20001a50 	.word	0x20001a50
+10000554:	20001a45 	.word	0x20001a45
+10000558:	20001a4c 	.word	0x20001a4c
+1000055c:	20001a3d 	.word	0x20001a3d
+10000560:	20001a3b 	.word	0x20001a3b
+10000564:	20001a44 	.word	0x20001a44
+10000568:	20001a40 	.word	0x20001a40
+1000056c:	20001a3f 	.word	0x20001a3f
+10000570:	20001a41 	.word	0x20001a41
+10000574:	20001a4b 	.word	0x20001a4b
+10000578:	20001a52 	.word	0x20001a52
+1000057c:	20001a3a 	.word	0x20001a3a
+10000580:	20001a43 	.word	0x20001a43
+10000584:	20001a39 	.word	0x20001a39
+10000588:	20001a42 	.word	0x20001a42
+1000058c:	20001a53 	.word	0x20001a53
+10000590:	20001a3c 	.word	0x20001a3c
+10000594:	20001a3e 	.word	0x20001a3e
+10000598:	100076e8 	.word	0x100076e8
 
-100004c8 <ClassicController_init>:
-100004c8:	b570      	push	{r4, r5, r6, lr}
-100004ca:	b082      	sub	sp, #8
-100004cc:	0004      	movs	r4, r0
-100004ce:	000e      	movs	r6, r1
-100004d0:	0015      	movs	r5, r2
-100004d2:	0019      	movs	r1, r3
-100004d4:	f007 f824 	bl	10007520 <i2c_init>
-100004d8:	2103      	movs	r1, #3
-100004da:	0030      	movs	r0, r6
-100004dc:	f000 f9e6 	bl	100008ac <gpio_set_function>
-100004e0:	2103      	movs	r1, #3
-100004e2:	0028      	movs	r0, r5
-100004e4:	f000 f9e2 	bl	100008ac <gpio_set_function>
-100004e8:	2200      	movs	r2, #0
-100004ea:	2101      	movs	r1, #1
-100004ec:	0030      	movs	r0, r6
-100004ee:	f000 f9f5 	bl	100008dc <gpio_set_pulls>
-100004f2:	2200      	movs	r2, #0
-100004f4:	2101      	movs	r1, #1
-100004f6:	0028      	movs	r0, r5
-100004f8:	f000 f9f0 	bl	100008dc <gpio_set_pulls>
-100004fc:	2001      	movs	r0, #1
-100004fe:	f001 fb7f 	bl	10001c00 <sleep_ms>
-10000502:	2500      	movs	r5, #0
-10000504:	9500      	str	r5, [sp, #0]
-10000506:	2302      	movs	r3, #2
-10000508:	4a10      	ldr	r2, [pc, #64]	; (1000054c <ClassicController_init+0x84>)
-1000050a:	2152      	movs	r1, #82	; 0x52
-1000050c:	0020      	movs	r0, r4
-1000050e:	f007 f833 	bl	10007578 <i2c_write_blocking>
-10000512:	2001      	movs	r0, #1
-10000514:	f001 fb74 	bl	10001c00 <sleep_ms>
-10000518:	9500      	str	r5, [sp, #0]
-1000051a:	2302      	movs	r3, #2
-1000051c:	4a0c      	ldr	r2, [pc, #48]	; (10000550 <ClassicController_init+0x88>)
-1000051e:	2152      	movs	r1, #82	; 0x52
-10000520:	0020      	movs	r0, r4
-10000522:	f007 f829 	bl	10007578 <i2c_write_blocking>
-10000526:	2001      	movs	r0, #1
-10000528:	f001 fb6a 	bl	10001c00 <sleep_ms>
-1000052c:	9500      	str	r5, [sp, #0]
-1000052e:	2302      	movs	r3, #2
-10000530:	4a08      	ldr	r2, [pc, #32]	; (10000554 <ClassicController_init+0x8c>)
-10000532:	2152      	movs	r1, #82	; 0x52
-10000534:	0020      	movs	r0, r4
-10000536:	f007 f81f 	bl	10007578 <i2c_write_blocking>
-1000053a:	200a      	movs	r0, #10
-1000053c:	f001 fb60 	bl	10001c00 <sleep_ms>
-10000540:	0020      	movs	r0, r4
-10000542:	f7ff ff8d 	bl	10000460 <ClassicController_calibrate>
-10000546:	b002      	add	sp, #8
-10000548:	bd70      	pop	{r4, r5, r6, pc}
-1000054a:	46c0      	nop			; (mov r8, r8)
-1000054c:	100077fc 	.word	0x100077fc
-10000550:	10007800 	.word	0x10007800
-10000554:	20000bb0 	.word	0x20000bb0
+1000059c <ClassicController_calibrate>:
+1000059c:	b510      	push	{r4, lr}
+1000059e:	f7ff ff4f 	bl	10000440 <ClassicController_update>
+100005a2:	4b0c      	ldr	r3, [pc, #48]	; (100005d4 <ClassicController_calibrate+0x38>)
+100005a4:	781a      	ldrb	r2, [r3, #0]
+100005a6:	4b0c      	ldr	r3, [pc, #48]	; (100005d8 <ClassicController_calibrate+0x3c>)
+100005a8:	701a      	strb	r2, [r3, #0]
+100005aa:	4b0c      	ldr	r3, [pc, #48]	; (100005dc <ClassicController_calibrate+0x40>)
+100005ac:	781a      	ldrb	r2, [r3, #0]
+100005ae:	4b0c      	ldr	r3, [pc, #48]	; (100005e0 <ClassicController_calibrate+0x44>)
+100005b0:	701a      	strb	r2, [r3, #0]
+100005b2:	4b0c      	ldr	r3, [pc, #48]	; (100005e4 <ClassicController_calibrate+0x48>)
+100005b4:	781a      	ldrb	r2, [r3, #0]
+100005b6:	4b0c      	ldr	r3, [pc, #48]	; (100005e8 <ClassicController_calibrate+0x4c>)
+100005b8:	701a      	strb	r2, [r3, #0]
+100005ba:	4b0c      	ldr	r3, [pc, #48]	; (100005ec <ClassicController_calibrate+0x50>)
+100005bc:	781a      	ldrb	r2, [r3, #0]
+100005be:	4b0c      	ldr	r3, [pc, #48]	; (100005f0 <ClassicController_calibrate+0x54>)
+100005c0:	701a      	strb	r2, [r3, #0]
+100005c2:	4b0c      	ldr	r3, [pc, #48]	; (100005f4 <ClassicController_calibrate+0x58>)
+100005c4:	781a      	ldrb	r2, [r3, #0]
+100005c6:	4b0c      	ldr	r3, [pc, #48]	; (100005f8 <ClassicController_calibrate+0x5c>)
+100005c8:	701a      	strb	r2, [r3, #0]
+100005ca:	4b0c      	ldr	r3, [pc, #48]	; (100005fc <ClassicController_calibrate+0x60>)
+100005cc:	781a      	ldrb	r2, [r3, #0]
+100005ce:	4b0c      	ldr	r3, [pc, #48]	; (10000600 <ClassicController_calibrate+0x64>)
+100005d0:	701a      	strb	r2, [r3, #0]
+100005d2:	bd10      	pop	{r4, pc}
+100005d4:	20001a47 	.word	0x20001a47
+100005d8:	20001a48 	.word	0x20001a48
+100005dc:	20001a49 	.word	0x20001a49
+100005e0:	20001a4a 	.word	0x20001a4a
+100005e4:	20001a4e 	.word	0x20001a4e
+100005e8:	20001a4f 	.word	0x20001a4f
+100005ec:	20001a50 	.word	0x20001a50
+100005f0:	20001a51 	.word	0x20001a51
+100005f4:	20001a44 	.word	0x20001a44
+100005f8:	20001a46 	.word	0x20001a46
+100005fc:	20001a4b 	.word	0x20001a4b
+10000600:	20001a4d 	.word	0x20001a4d
 
-10000558 <ClassicController_joy_LX>:
-10000558:	4b02      	ldr	r3, [pc, #8]	; (10000564 <ClassicController_joy_LX+0xc>)
-1000055a:	7818      	ldrb	r0, [r3, #0]
-1000055c:	4b02      	ldr	r3, [pc, #8]	; (10000568 <ClassicController_joy_LX+0x10>)
-1000055e:	781b      	ldrb	r3, [r3, #0]
-10000560:	1ac0      	subs	r0, r0, r3
-10000562:	4770      	bx	lr
-10000564:	20001a47 	.word	0x20001a47
-10000568:	20001a48 	.word	0x20001a48
-
-1000056c <ClassicController_joy_LY>:
-1000056c:	4b02      	ldr	r3, [pc, #8]	; (10000578 <ClassicController_joy_LY+0xc>)
-1000056e:	7818      	ldrb	r0, [r3, #0]
-10000570:	4b02      	ldr	r3, [pc, #8]	; (1000057c <ClassicController_joy_LY+0x10>)
-10000572:	781b      	ldrb	r3, [r3, #0]
-10000574:	1ac0      	subs	r0, r0, r3
-10000576:	4770      	bx	lr
-10000578:	20001a49 	.word	0x20001a49
-1000057c:	20001a4a 	.word	0x20001a4a
-
-10000580 <ClassicController_joy_RX>:
-10000580:	4b02      	ldr	r3, [pc, #8]	; (1000058c <ClassicController_joy_RX+0xc>)
-10000582:	7818      	ldrb	r0, [r3, #0]
-10000584:	4b02      	ldr	r3, [pc, #8]	; (10000590 <ClassicController_joy_RX+0x10>)
-10000586:	781b      	ldrb	r3, [r3, #0]
-10000588:	1ac0      	subs	r0, r0, r3
-1000058a:	4770      	bx	lr
-1000058c:	20001a4e 	.word	0x20001a4e
-10000590:	20001a4f 	.word	0x20001a4f
-
-10000594 <ClassicController_joy_RY>:
-10000594:	4b02      	ldr	r3, [pc, #8]	; (100005a0 <ClassicController_joy_RY+0xc>)
-10000596:	7818      	ldrb	r0, [r3, #0]
-10000598:	4b02      	ldr	r3, [pc, #8]	; (100005a4 <ClassicController_joy_RY+0x10>)
-1000059a:	781b      	ldrb	r3, [r3, #0]
-1000059c:	1ac0      	subs	r0, r0, r3
-1000059e:	4770      	bx	lr
-100005a0:	20001a50 	.word	0x20001a50
-100005a4:	20001a51 	.word	0x20001a51
-
-100005a8 <ClassicController_LT_analog>:
-100005a8:	4b04      	ldr	r3, [pc, #16]	; (100005bc <ClassicController_LT_analog+0x14>)
-100005aa:	781b      	ldrb	r3, [r3, #0]
-100005ac:	4a04      	ldr	r2, [pc, #16]	; (100005c0 <ClassicController_LT_analog+0x18>)
-100005ae:	7810      	ldrb	r0, [r2, #0]
-100005b0:	4283      	cmp	r3, r0
-100005b2:	d801      	bhi.n	100005b8 <ClassicController_LT_analog+0x10>
-100005b4:	1ac0      	subs	r0, r0, r3
-100005b6:	4770      	bx	lr
-100005b8:	2000      	movs	r0, #0
-100005ba:	e7fc      	b.n	100005b6 <ClassicController_LT_analog+0xe>
-100005bc:	20001a46 	.word	0x20001a46
-100005c0:	20001a45 	.word	0x20001a45
-
-100005c4 <ClassicController_RT_analog>:
-100005c4:	4b04      	ldr	r3, [pc, #16]	; (100005d8 <ClassicController_RT_analog+0x14>)
-100005c6:	781b      	ldrb	r3, [r3, #0]
-100005c8:	4a04      	ldr	r2, [pc, #16]	; (100005dc <ClassicController_RT_analog+0x18>)
-100005ca:	7810      	ldrb	r0, [r2, #0]
-100005cc:	4283      	cmp	r3, r0
-100005ce:	d801      	bhi.n	100005d4 <ClassicController_RT_analog+0x10>
-100005d0:	1ac0      	subs	r0, r0, r3
-100005d2:	4770      	bx	lr
-100005d4:	2000      	movs	r0, #0
-100005d6:	e7fc      	b.n	100005d2 <ClassicController_RT_analog+0xe>
-100005d8:	20001a4d 	.word	0x20001a4d
-100005dc:	20001a4c 	.word	0x20001a4c
-
-100005e0 <ClassicController_button_A>:
-100005e0:	4b01      	ldr	r3, [pc, #4]	; (100005e8 <ClassicController_button_A+0x8>)
-100005e2:	7818      	ldrb	r0, [r3, #0]
-100005e4:	4770      	bx	lr
-100005e6:	46c0      	nop			; (mov r8, r8)
-100005e8:	20001a39 	.word	0x20001a39
-
-100005ec <ClassicController_button_B>:
-100005ec:	4b01      	ldr	r3, [pc, #4]	; (100005f4 <ClassicController_button_B+0x8>)
-100005ee:	7818      	ldrb	r0, [r3, #0]
-100005f0:	4770      	bx	lr
-100005f2:	46c0      	nop			; (mov r8, r8)
-100005f4:	20001a3a 	.word	0x20001a3a
-
-100005f8 <ClassicController_button_X>:
-100005f8:	4b01      	ldr	r3, [pc, #4]	; (10000600 <ClassicController_button_X+0x8>)
-100005fa:	7818      	ldrb	r0, [r3, #0]
-100005fc:	4770      	bx	lr
-100005fe:	46c0      	nop			; (mov r8, r8)
-10000600:	20001a42 	.word	0x20001a42
-
-10000604 <ClassicController_button_Y>:
-10000604:	4b01      	ldr	r3, [pc, #4]	; (1000060c <ClassicController_button_Y+0x8>)
-10000606:	7818      	ldrb	r0, [r3, #0]
-10000608:	4770      	bx	lr
-1000060a:	46c0      	nop			; (mov r8, r8)
-1000060c:	20001a43 	.word	0x20001a43
-
-10000610 <ClassicController_button_UP>:
-10000610:	4b01      	ldr	r3, [pc, #4]	; (10000618 <ClassicController_button_UP+0x8>)
-10000612:	7818      	ldrb	r0, [r3, #0]
-10000614:	4770      	bx	lr
-10000616:	46c0      	nop			; (mov r8, r8)
-10000618:	20001a3e 	.word	0x20001a3e
-
-1000061c <ClassicController_button_DOWN>:
-1000061c:	4b01      	ldr	r3, [pc, #4]	; (10000624 <ClassicController_button_DOWN+0x8>)
-1000061e:	7818      	ldrb	r0, [r3, #0]
-10000620:	4770      	bx	lr
-10000622:	46c0      	nop			; (mov r8, r8)
-10000624:	20001a3b 	.word	0x20001a3b
-
-10000628 <ClassicController_button_LEFT>:
-10000628:	4b01      	ldr	r3, [pc, #4]	; (10000630 <ClassicController_button_LEFT+0x8>)
-1000062a:	7818      	ldrb	r0, [r3, #0]
-1000062c:	4770      	bx	lr
-1000062e:	46c0      	nop			; (mov r8, r8)
-10000630:	20001a3c 	.word	0x20001a3c
-
-10000634 <ClassicController_button_RIGHT>:
-10000634:	4b01      	ldr	r3, [pc, #4]	; (1000063c <ClassicController_button_RIGHT+0x8>)
-10000636:	7818      	ldrb	r0, [r3, #0]
-10000638:	4770      	bx	lr
-1000063a:	46c0      	nop			; (mov r8, r8)
-1000063c:	20001a3d 	.word	0x20001a3d
-
-10000640 <ClassicController_button_ZL>:
-10000640:	4b01      	ldr	r3, [pc, #4]	; (10000648 <ClassicController_button_ZL+0x8>)
-10000642:	7818      	ldrb	r0, [r3, #0]
-10000644:	4770      	bx	lr
-10000646:	46c0      	nop			; (mov r8, r8)
-10000648:	20001a52 	.word	0x20001a52
-
-1000064c <ClassicController_button_ZR>:
-1000064c:	4b01      	ldr	r3, [pc, #4]	; (10000654 <ClassicController_button_ZR+0x8>)
-1000064e:	7818      	ldrb	r0, [r3, #0]
-10000650:	4770      	bx	lr
-10000652:	46c0      	nop			; (mov r8, r8)
-10000654:	20001a53 	.word	0x20001a53
-
-10000658 <ClassicController_button_LT>:
-10000658:	4b01      	ldr	r3, [pc, #4]	; (10000660 <ClassicController_button_LT+0x8>)
-1000065a:	7818      	ldrb	r0, [r3, #0]
-1000065c:	4770      	bx	lr
-1000065e:	46c0      	nop			; (mov r8, r8)
-10000660:	20001a44 	.word	0x20001a44
-
-10000664 <ClassicController_button_RT>:
-10000664:	4b01      	ldr	r3, [pc, #4]	; (1000066c <ClassicController_button_RT+0x8>)
-10000666:	7818      	ldrb	r0, [r3, #0]
-10000668:	4770      	bx	lr
-1000066a:	46c0      	nop			; (mov r8, r8)
-1000066c:	20001a4b 	.word	0x20001a4b
-
-10000670 <ClassicController_button_START>:
-10000670:	4b01      	ldr	r3, [pc, #4]	; (10000678 <ClassicController_button_START+0x8>)
-10000672:	7818      	ldrb	r0, [r3, #0]
-10000674:	4770      	bx	lr
-10000676:	46c0      	nop			; (mov r8, r8)
-10000678:	20001a41 	.word	0x20001a41
-
-1000067c <ClassicController_button_SELECT>:
-1000067c:	4b01      	ldr	r3, [pc, #4]	; (10000684 <ClassicController_button_SELECT+0x8>)
-1000067e:	7818      	ldrb	r0, [r3, #0]
-10000680:	4770      	bx	lr
-10000682:	46c0      	nop			; (mov r8, r8)
-10000684:	20001a40 	.word	0x20001a40
-
-10000688 <ClassicController_button_HOME>:
-10000688:	4b01      	ldr	r3, [pc, #4]	; (10000690 <ClassicController_button_HOME+0x8>)
-1000068a:	7818      	ldrb	r0, [r3, #0]
-1000068c:	4770      	bx	lr
-1000068e:	46c0      	nop			; (mov r8, r8)
-10000690:	20001a3f 	.word	0x20001a3f
+10000604 <ClassicController_init>:
+10000604:	b570      	push	{r4, r5, r6, lr}
+10000606:	b082      	sub	sp, #8
+10000608:	0004      	movs	r4, r0
+1000060a:	000e      	movs	r6, r1
+1000060c:	0015      	movs	r5, r2
+1000060e:	0019      	movs	r1, r3
+10000610:	f006 ff86 	bl	10007520 <i2c_init>
+10000614:	2103      	movs	r1, #3
+10000616:	0030      	movs	r0, r6
+10000618:	f000 f948 	bl	100008ac <gpio_set_function>
+1000061c:	2103      	movs	r1, #3
+1000061e:	0028      	movs	r0, r5
+10000620:	f000 f944 	bl	100008ac <gpio_set_function>
+10000624:	2200      	movs	r2, #0
+10000626:	2101      	movs	r1, #1
+10000628:	0030      	movs	r0, r6
+1000062a:	f000 f957 	bl	100008dc <gpio_set_pulls>
+1000062e:	2200      	movs	r2, #0
+10000630:	2101      	movs	r1, #1
+10000632:	0028      	movs	r0, r5
+10000634:	f000 f952 	bl	100008dc <gpio_set_pulls>
+10000638:	2001      	movs	r0, #1
+1000063a:	f001 fae1 	bl	10001c00 <sleep_ms>
+1000063e:	2500      	movs	r5, #0
+10000640:	9500      	str	r5, [sp, #0]
+10000642:	2302      	movs	r3, #2
+10000644:	4a10      	ldr	r2, [pc, #64]	; (10000688 <ClassicController_init+0x84>)
+10000646:	2152      	movs	r1, #82	; 0x52
+10000648:	0020      	movs	r0, r4
+1000064a:	f006 ff95 	bl	10007578 <i2c_write_blocking>
+1000064e:	2001      	movs	r0, #1
+10000650:	f001 fad6 	bl	10001c00 <sleep_ms>
+10000654:	9500      	str	r5, [sp, #0]
+10000656:	2302      	movs	r3, #2
+10000658:	4a0c      	ldr	r2, [pc, #48]	; (1000068c <ClassicController_init+0x88>)
+1000065a:	2152      	movs	r1, #82	; 0x52
+1000065c:	0020      	movs	r0, r4
+1000065e:	f006 ff8b 	bl	10007578 <i2c_write_blocking>
+10000662:	2001      	movs	r0, #1
+10000664:	f001 facc 	bl	10001c00 <sleep_ms>
+10000668:	9500      	str	r5, [sp, #0]
+1000066a:	2302      	movs	r3, #2
+1000066c:	4a08      	ldr	r2, [pc, #32]	; (10000690 <ClassicController_init+0x8c>)
+1000066e:	2152      	movs	r1, #82	; 0x52
+10000670:	0020      	movs	r0, r4
+10000672:	f006 ff81 	bl	10007578 <i2c_write_blocking>
+10000676:	200a      	movs	r0, #10
+10000678:	f001 fac2 	bl	10001c00 <sleep_ms>
+1000067c:	0020      	movs	r0, r4
+1000067e:	f7ff ff8d 	bl	1000059c <ClassicController_calibrate>
+10000682:	b002      	add	sp, #8
+10000684:	bd70      	pop	{r4, r5, r6, pc}
+10000686:	46c0      	nop			; (mov r8, r8)
+10000688:	100077e8 	.word	0x100077e8
+1000068c:	100077ec 	.word	0x100077ec
+10000690:	20000bb0 	.word	0x20000bb0
 
 10000694 <ClassicController_button_report>:
 10000694:	b570      	push	{r4, r5, r6, lr}
@@ -756,71 +756,71 @@ Disassembly of section .text:
 1000069a:	f004 faa9 	bl	10004bf0 <__wrap_printf>
 1000069e:	484f      	ldr	r0, [pc, #316]	; (100007dc <ClassicController_button_report+0x148>)
 100006a0:	f004 fa76 	bl	10004b90 <__wrap_puts>
-100006a4:	f7ff ff58 	bl	10000558 <ClassicController_joy_LX>
+100006a4:	f7ff fe2e 	bl	10000304 <ClassicController_joy_LX>
 100006a8:	0004      	movs	r4, r0
-100006aa:	f7ff ff5f 	bl	1000056c <ClassicController_joy_LY>
+100006aa:	f7ff fe35 	bl	10000318 <ClassicController_joy_LY>
 100006ae:	0005      	movs	r5, r0
-100006b0:	f7ff ff66 	bl	10000580 <ClassicController_joy_RX>
+100006b0:	f7ff fe3c 	bl	1000032c <ClassicController_joy_RX>
 100006b4:	0006      	movs	r6, r0
-100006b6:	f7ff ff6d 	bl	10000594 <ClassicController_joy_RY>
+100006b6:	f7ff fe43 	bl	10000340 <ClassicController_joy_RY>
 100006ba:	9000      	str	r0, [sp, #0]
 100006bc:	0033      	movs	r3, r6
 100006be:	002a      	movs	r2, r5
 100006c0:	0021      	movs	r1, r4
 100006c2:	4847      	ldr	r0, [pc, #284]	; (100007e0 <ClassicController_button_report+0x14c>)
 100006c4:	f004 fa94 	bl	10004bf0 <__wrap_printf>
-100006c8:	f7ff ff6e 	bl	100005a8 <ClassicController_LT_analog>
+100006c8:	f7ff fe44 	bl	10000354 <ClassicController_LT_analog>
 100006cc:	0004      	movs	r4, r0
-100006ce:	f7ff ff79 	bl	100005c4 <ClassicController_RT_analog>
+100006ce:	f7ff fe4f 	bl	10000370 <ClassicController_RT_analog>
 100006d2:	0002      	movs	r2, r0
 100006d4:	0021      	movs	r1, r4
 100006d6:	4843      	ldr	r0, [pc, #268]	; (100007e4 <ClassicController_button_report+0x150>)
 100006d8:	f004 fa8a 	bl	10004bf0 <__wrap_printf>
 100006dc:	4842      	ldr	r0, [pc, #264]	; (100007e8 <ClassicController_button_report+0x154>)
 100006de:	f004 fa57 	bl	10004b90 <__wrap_puts>
-100006e2:	f7ff ff95 	bl	10000610 <ClassicController_button_UP>
+100006e2:	f7ff fe6b 	bl	100003bc <ClassicController_button_UP>
 100006e6:	2800      	cmp	r0, #0
 100006e8:	d139      	bne.n	1000075e <ClassicController_button_report+0xca>
-100006ea:	f7ff ff97 	bl	1000061c <ClassicController_button_DOWN>
+100006ea:	f7ff fe6d 	bl	100003c8 <ClassicController_button_DOWN>
 100006ee:	2800      	cmp	r0, #0
 100006f0:	d139      	bne.n	10000766 <ClassicController_button_report+0xd2>
-100006f2:	f7ff ff99 	bl	10000628 <ClassicController_button_LEFT>
+100006f2:	f7ff fe6f 	bl	100003d4 <ClassicController_button_LEFT>
 100006f6:	2800      	cmp	r0, #0
 100006f8:	d139      	bne.n	1000076e <ClassicController_button_report+0xda>
-100006fa:	f7ff ff9b 	bl	10000634 <ClassicController_button_RIGHT>
+100006fa:	f7ff fe71 	bl	100003e0 <ClassicController_button_RIGHT>
 100006fe:	2800      	cmp	r0, #0
 10000700:	d139      	bne.n	10000776 <ClassicController_button_report+0xe2>
-10000702:	f7ff ff6d 	bl	100005e0 <ClassicController_button_A>
+10000702:	f7ff fe43 	bl	1000038c <ClassicController_button_A>
 10000706:	2800      	cmp	r0, #0
 10000708:	d139      	bne.n	1000077e <ClassicController_button_report+0xea>
-1000070a:	f7ff ff6f 	bl	100005ec <ClassicController_button_B>
+1000070a:	f7ff fe45 	bl	10000398 <ClassicController_button_B>
 1000070e:	2800      	cmp	r0, #0
 10000710:	d139      	bne.n	10000786 <ClassicController_button_report+0xf2>
-10000712:	f7ff ff71 	bl	100005f8 <ClassicController_button_X>
+10000712:	f7ff fe47 	bl	100003a4 <ClassicController_button_X>
 10000716:	2800      	cmp	r0, #0
 10000718:	d139      	bne.n	1000078e <ClassicController_button_report+0xfa>
-1000071a:	f7ff ff73 	bl	10000604 <ClassicController_button_Y>
+1000071a:	f7ff fe49 	bl	100003b0 <ClassicController_button_Y>
 1000071e:	2800      	cmp	r0, #0
 10000720:	d139      	bne.n	10000796 <ClassicController_button_report+0x102>
-10000722:	f7ff ffa5 	bl	10000670 <ClassicController_button_START>
+10000722:	f7ff fe7b 	bl	1000041c <ClassicController_button_START>
 10000726:	2800      	cmp	r0, #0
 10000728:	d139      	bne.n	1000079e <ClassicController_button_report+0x10a>
-1000072a:	f7ff ffa7 	bl	1000067c <ClassicController_button_SELECT>
+1000072a:	f7ff fe7d 	bl	10000428 <ClassicController_button_SELECT>
 1000072e:	2800      	cmp	r0, #0
 10000730:	d139      	bne.n	100007a6 <ClassicController_button_report+0x112>
-10000732:	f7ff ffa9 	bl	10000688 <ClassicController_button_HOME>
+10000732:	f7ff fe7f 	bl	10000434 <ClassicController_button_HOME>
 10000736:	2800      	cmp	r0, #0
 10000738:	d139      	bne.n	100007ae <ClassicController_button_report+0x11a>
-1000073a:	f7ff ff81 	bl	10000640 <ClassicController_button_ZL>
+1000073a:	f7ff fe57 	bl	100003ec <ClassicController_button_ZL>
 1000073e:	2800      	cmp	r0, #0
 10000740:	d139      	bne.n	100007b6 <ClassicController_button_report+0x122>
-10000742:	f7ff ff83 	bl	1000064c <ClassicController_button_ZR>
+10000742:	f7ff fe59 	bl	100003f8 <ClassicController_button_ZR>
 10000746:	2800      	cmp	r0, #0
 10000748:	d139      	bne.n	100007be <ClassicController_button_report+0x12a>
-1000074a:	f7ff ff85 	bl	10000658 <ClassicController_button_LT>
+1000074a:	f7ff fe5b 	bl	10000404 <ClassicController_button_LT>
 1000074e:	2800      	cmp	r0, #0
 10000750:	d139      	bne.n	100007c6 <ClassicController_button_report+0x132>
-10000752:	f7ff ff87 	bl	10000664 <ClassicController_button_RT>
+10000752:	f7ff fe5d 	bl	10000410 <ClassicController_button_RT>
 10000756:	2800      	cmp	r0, #0
 10000758:	d139      	bne.n	100007ce <ClassicController_button_report+0x13a>
 1000075a:	b002      	add	sp, #8
@@ -926,7 +926,7 @@ Disassembly of section .text:
 10000872:	2207      	movs	r2, #7
 10000874:	2106      	movs	r1, #6
 10000876:	480c      	ldr	r0, [pc, #48]	; (100008a8 <main+0x80>)
-10000878:	f7ff fe26 	bl	100004c8 <ClassicController_init>
+10000878:	f7ff fec4 	bl	10000604 <ClassicController_init>
 1000087c:	24d0      	movs	r4, #208	; 0xd0
 1000087e:	0624      	lsls	r4, r4, #24
 10000880:	2580      	movs	r5, #128	; 0x80
@@ -935,13 +935,13 @@ Disassembly of section .text:
 10000886:	2001      	movs	r0, #1
 10000888:	f001 f9ba 	bl	10001c00 <sleep_ms>
 1000088c:	4806      	ldr	r0, [pc, #24]	; (100008a8 <main+0x80>)
-1000088e:	f7ff fd39 	bl	10000304 <ClassicController_update>
+1000088e:	f7ff fdd7 	bl	10000440 <ClassicController_update>
 10000892:	f7ff feff 	bl	10000694 <ClassicController_button_report>
 10000896:	61a5      	str	r5, [r4, #24]
 10000898:	200a      	movs	r0, #10
 1000089a:	f001 f9b1 	bl	10001c00 <sleep_ms>
 1000089e:	e7ed      	b.n	1000087c <main+0x54>
-100008a0:	100077e8 	.word	0x100077e8
+100008a0:	100077f0 	.word	0x100077f0
 100008a4:	000186a0 	.word	0x000186a0
 100008a8:	20000c98 	.word	0x20000c98
 
@@ -8981,7 +8981,7 @@ Disassembly of section .text:
 10004a58:	2b00      	cmp	r3, #0
 10004a5a:	db0d      	blt.n	10004a78 <stdout_serialize_begin+0x38>
 10004a5c:	480a      	ldr	r0, [pc, #40]	; (10004a88 <stdout_serialize_begin+0x48>)
-10004a5e:	f002 fe13 	bl	10007688 <__mutex_try_enter_block_until_veneer>
+10004a5e:	f002 fe1b 	bl	10007698 <__mutex_try_enter_block_until_veneer>
 10004a62:	bd10      	pop	{r4, pc}
 10004a64:	4b09      	ldr	r3, [pc, #36]	; (10004a8c <stdout_serialize_begin+0x4c>)
 10004a66:	4a0a      	ldr	r2, [pc, #40]	; (10004a90 <stdout_serialize_begin+0x50>)
@@ -9617,7 +9617,7 @@ Disassembly of section .text:
 10004fd2:	2b00      	cmp	r3, #0
 10004fd4:	db23      	blt.n	1000501e <stdio_usb_in_chars+0x7a>
 10004fd6:	481f      	ldr	r0, [pc, #124]	; (10005054 <stdio_usb_in_chars+0xb0>)
-10004fd8:	f002 fb56 	bl	10007688 <__mutex_try_enter_block_until_veneer>
+10004fd8:	f002 fb5e 	bl	10007698 <__mutex_try_enter_block_until_veneer>
 10004fdc:	2800      	cmp	r0, #0
 10004fde:	d034      	beq.n	1000504a <stdio_usb_in_chars+0xa6>
 10004fe0:	f7ff ffda 	bl	10004f98 <stdio_usb_connected>
@@ -9695,7 +9695,7 @@ Disassembly of section .text:
 10005088:	2b00      	cmp	r3, #0
 1000508a:	db11      	blt.n	100050b0 <stdio_usb_out_chars+0x48>
 1000508c:	4834      	ldr	r0, [pc, #208]	; (10005160 <stdio_usb_out_chars+0xf8>)
-1000508e:	f002 fafb 	bl	10007688 <__mutex_try_enter_block_until_veneer>
+1000508e:	f002 fb03 	bl	10007698 <__mutex_try_enter_block_until_veneer>
 10005092:	2800      	cmp	r0, #0
 10005094:	d112      	bne.n	100050bc <stdio_usb_out_chars+0x54>
 10005096:	bc80      	pop	{r7}
@@ -10261,7 +10261,7 @@ Disassembly of section .text:
 1000556c:	2280      	movs	r2, #128	; 0x80
 1000556e:	0112      	lsls	r2, r2, #4
 10005570:	2100      	movs	r1, #0
-10005572:	f002 f8a9 	bl	100076c8 <___hw_endpoint_buffer_control_update32_veneer>
+10005572:	f002 f8b1 	bl	100076d8 <___hw_endpoint_buffer_control_update32_veneer>
 10005576:	bd10      	pop	{r4, pc}
 10005578:	2201      	movs	r2, #1
 1000557a:	e7f3      	b.n	10005564 <dcd_edpt_stall+0x10>
@@ -10278,7 +10278,7 @@ Disassembly of section .text:
 10005590:	70c3      	strb	r3, [r0, #3]
 10005592:	2200      	movs	r2, #0
 10005594:	4901      	ldr	r1, [pc, #4]	; (1000559c <dcd_edpt_clear_stall+0x1c>)
-10005596:	f002 f897 	bl	100076c8 <___hw_endpoint_buffer_control_update32_veneer>
+10005596:	f002 f89f 	bl	100076d8 <___hw_endpoint_buffer_control_update32_veneer>
 1000559a:	e7f5      	b.n	10005588 <dcd_edpt_clear_stall+0x8>
 1000559c:	fffff7ff 	.word	0xfffff7ff
 
@@ -10339,16 +10339,16 @@ Disassembly of section .text:
 10005616:	0289      	lsls	r1, r1, #10
 10005618:	50d1      	str	r1, [r2, r3]
 1000561a:	0020      	movs	r0, r4
-1000561c:	f002 f85c 	bl	100076d8 <__e15_is_critical_frame_period_veneer>
+1000561c:	f002 f834 	bl	10007688 <__e15_is_critical_frame_period_veneer>
 10005620:	2800      	cmp	r0, #0
 10005622:	d005      	beq.n	10005630 <hw_endpoint_xfer_start+0x44>
 10005624:	2301      	movs	r3, #1
 10005626:	7723      	strb	r3, [r4, #28]
 10005628:	bd70      	pop	{r4, r5, r6, pc}
-1000562a:	f002 f83d 	bl	100076a8 <__hw_endpoint_reset_transfer_veneer>
+1000562a:	f002 f84d 	bl	100076c8 <__hw_endpoint_reset_transfer_veneer>
 1000562e:	e7e4      	b.n	100055fa <hw_endpoint_xfer_start+0xe>
 10005630:	0020      	movs	r0, r4
-10005632:	f002 f831 	bl	10007698 <__hw_endpoint_start_next_buffer_veneer>
+10005632:	f002 f839 	bl	100076a8 <__hw_endpoint_start_next_buffer_veneer>
 10005636:	e7f7      	b.n	10005628 <hw_endpoint_xfer_start+0x3c>
 10005638:	50112000 	.word	0x50112000
 
@@ -14336,32 +14336,32 @@ Disassembly of section .text:
 10007682:	bf00      	nop
 10007684:	2000091d 	.word	0x2000091d
 
-10007688 <__mutex_try_enter_block_until_veneer>:
+10007688 <__e15_is_critical_frame_period_veneer>:
 10007688:	b401      	push	{r0}
-1000768a:	4802      	ldr	r0, [pc, #8]	; (10007694 <__mutex_try_enter_block_until_veneer+0xc>)
+1000768a:	4802      	ldr	r0, [pc, #8]	; (10007694 <__e15_is_critical_frame_period_veneer+0xc>)
 1000768c:	4684      	mov	ip, r0
 1000768e:	bc01      	pop	{r0}
 10007690:	4760      	bx	ip
 10007692:	bf00      	nop
-10007694:	20000195 	.word	0x20000195
+10007694:	20000699 	.word	0x20000699
 
-10007698 <__hw_endpoint_start_next_buffer_veneer>:
+10007698 <__mutex_try_enter_block_until_veneer>:
 10007698:	b401      	push	{r0}
-1000769a:	4802      	ldr	r0, [pc, #8]	; (100076a4 <__hw_endpoint_start_next_buffer_veneer+0xc>)
+1000769a:	4802      	ldr	r0, [pc, #8]	; (100076a4 <__mutex_try_enter_block_until_veneer+0xc>)
 1000769c:	4684      	mov	ip, r0
 1000769e:	bc01      	pop	{r0}
 100076a0:	4760      	bx	ip
 100076a2:	bf00      	nop
-100076a4:	20000845 	.word	0x20000845
+100076a4:	20000195 	.word	0x20000195
 
-100076a8 <__hw_endpoint_reset_transfer_veneer>:
+100076a8 <__hw_endpoint_start_next_buffer_veneer>:
 100076a8:	b401      	push	{r0}
-100076aa:	4802      	ldr	r0, [pc, #8]	; (100076b4 <__hw_endpoint_reset_transfer_veneer+0xc>)
+100076aa:	4802      	ldr	r0, [pc, #8]	; (100076b4 <__hw_endpoint_start_next_buffer_veneer+0xc>)
 100076ac:	4684      	mov	ip, r0
 100076ae:	bc01      	pop	{r0}
 100076b0:	4760      	bx	ip
 100076b2:	bf00      	nop
-100076b4:	200007e1 	.word	0x200007e1
+100076b4:	20000845 	.word	0x20000845
 
 100076b8 <__e15_is_bulkin_ep_veneer>:
 100076b8:	b401      	push	{r0}
@@ -14372,23 +14372,23 @@ Disassembly of section .text:
 100076c2:	bf00      	nop
 100076c4:	2000066d 	.word	0x2000066d
 
-100076c8 <___hw_endpoint_buffer_control_update32_veneer>:
+100076c8 <__hw_endpoint_reset_transfer_veneer>:
 100076c8:	b401      	push	{r0}
-100076ca:	4802      	ldr	r0, [pc, #8]	; (100076d4 <___hw_endpoint_buffer_control_update32_veneer+0xc>)
+100076ca:	4802      	ldr	r0, [pc, #8]	; (100076d4 <__hw_endpoint_reset_transfer_veneer+0xc>)
 100076cc:	4684      	mov	ip, r0
 100076ce:	bc01      	pop	{r0}
 100076d0:	4760      	bx	ip
 100076d2:	bf00      	nop
-100076d4:	200007ed 	.word	0x200007ed
+100076d4:	200007e1 	.word	0x200007e1
 
-100076d8 <__e15_is_critical_frame_period_veneer>:
+100076d8 <___hw_endpoint_buffer_control_update32_veneer>:
 100076d8:	b401      	push	{r0}
-100076da:	4802      	ldr	r0, [pc, #8]	; (100076e4 <__e15_is_critical_frame_period_veneer+0xc>)
+100076da:	4802      	ldr	r0, [pc, #8]	; (100076e4 <___hw_endpoint_buffer_control_update32_veneer+0xc>)
 100076dc:	4684      	mov	ip, r0
 100076de:	bc01      	pop	{r0}
 100076e0:	4760      	bx	ip
 100076e2:	bf00      	nop
-100076e4:	20000699 	.word	0x20000699
+100076e4:	200007ed 	.word	0x200007ed
 
 Disassembly of section .data:
 
@@ -14460,7 +14460,7 @@ Disassembly of section .data:
 2000014a:	f38c 8810 	msr	PRIMASK, ip
 2000014e:	0038      	movs	r0, r7
 20000150:	4641      	mov	r1, r8
-20000152:	f000 fced 	bl	20000b30 <__best_effort_wfe_or_timeout_veneer>
+20000152:	f000 fd25 	bl	20000ba0 <__best_effort_wfe_or_timeout_veneer>
 20000156:	2800      	cmp	r0, #0
 20000158:	d0e5      	beq.n	20000126 <mutex_enter_block_until+0x1e>
 2000015a:	2000      	movs	r0, #0
@@ -14469,7 +14469,7 @@ Disassembly of section .data:
 20000160:	4a0a      	ldr	r2, [pc, #40]	; (2000018c <mutex_enter_block_until+0x84>)
 20000162:	2185      	movs	r1, #133	; 0x85
 20000164:	480a      	ldr	r0, [pc, #40]	; (20000190 <mutex_enter_block_until+0x88>)
-20000166:	f000 fd0b 	bl	20000b80 <____assert_func_veneer>
+20000166:	f000 fd03 	bl	20000b70 <____assert_func_veneer>
 2000016a:	464b      	mov	r3, r9
 2000016c:	7123      	strb	r3, [r4, #4]
 2000016e:	6823      	ldr	r3, [r4, #0]
@@ -14517,7 +14517,7 @@ Disassembly of section .data:
 200001c8:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
 200001ca:	0006      	movs	r6, r0
 200001cc:	000f      	movs	r7, r1
-200001ce:	f000 fcb7 	bl	20000b40 <__time_us_64_veneer>
+200001ce:	f000 fcc7 	bl	20000b60 <__time_us_64_veneer>
 200001d2:	0004      	movs	r4, r0
 200001d4:	1e0d      	subs	r5, r1, #0
 200001d6:	db12      	blt.n	200001fe <mutex_enter_timeout_ms+0x36>
@@ -14542,7 +14542,7 @@ Disassembly of section .data:
 20000200:	4a08      	ldr	r2, [pc, #32]	; (20000224 <mutex_enter_timeout_ms+0x5c>)
 20000202:	213f      	movs	r1, #63	; 0x3f
 20000204:	4808      	ldr	r0, [pc, #32]	; (20000228 <mutex_enter_timeout_ms+0x60>)
-20000206:	f000 fcbb 	bl	20000b80 <____assert_func_veneer>
+20000206:	f000 fcb3 	bl	20000b70 <____assert_func_veneer>
 2000020a:	2201      	movs	r2, #1
 2000020c:	4252      	negs	r2, r2
 2000020e:	4b07      	ldr	r3, [pc, #28]	; (2000022c <mutex_enter_timeout_ms+0x64>)
@@ -14551,7 +14551,7 @@ Disassembly of section .data:
 20000214:	4a03      	ldr	r2, [pc, #12]	; (20000224 <mutex_enter_timeout_ms+0x5c>)
 20000216:	213f      	movs	r1, #63	; 0x3f
 20000218:	4803      	ldr	r0, [pc, #12]	; (20000228 <mutex_enter_timeout_ms+0x60>)
-2000021a:	f000 fcb1 	bl	20000b80 <____assert_func_veneer>
+2000021a:	f000 fca9 	bl	20000b70 <____assert_func_veneer>
 2000021e:	46c0      	nop			; (mov r8, r8)
 20000220:	10007b78 	.word	0x10007b78
 20000224:	10007c58 	.word	0x10007c58
@@ -14584,7 +14584,7 @@ Disassembly of section .data:
 20000264:	4a03      	ldr	r2, [pc, #12]	; (20000274 <mutex_exit+0x44>)
 20000266:	21b4      	movs	r1, #180	; 0xb4
 20000268:	4803      	ldr	r0, [pc, #12]	; (20000278 <mutex_exit+0x48>)
-2000026a:	f000 fc89 	bl	20000b80 <____assert_func_veneer>
+2000026a:	f000 fc81 	bl	20000b70 <____assert_func_veneer>
 2000026e:	46c0      	nop			; (mov r8, r8)
 20000270:	10007bfc 	.word	0x10007bfc
 20000274:	10007c34 	.word	0x10007c34
@@ -14693,7 +14693,7 @@ Disassembly of section .data:
 20000344:	4a1b      	ldr	r2, [pc, #108]	; (200003b4 <flash_do_cmd+0xd0>)
 20000346:	2180      	movs	r1, #128	; 0x80
 20000348:	481b      	ldr	r0, [pc, #108]	; (200003b8 <flash_do_cmd+0xd4>)
-2000034a:	f000 fc19 	bl	20000b80 <____assert_func_veneer>
+2000034a:	f000 fc11 	bl	20000b70 <____assert_func_veneer>
 2000034e:	2b00      	cmp	r3, #0
 20000350:	d007      	beq.n	20000362 <flash_do_cmd+0x7e>
 20000352:	2a00      	cmp	r2, #0
@@ -14761,7 +14761,7 @@ Disassembly of section .data:
 200003da:	0092      	lsls	r2, r2, #2
 200003dc:	2100      	movs	r1, #0
 200003de:	4804      	ldr	r0, [pc, #16]	; (200003f0 <reset_non_control_endpoints+0x34>)
-200003e0:	f000 fbc6 	bl	20000b70 <____wrap_memset_veneer>
+200003e0:	f000 fbae 	bl	20000b40 <____wrap_memset_veneer>
 200003e4:	4b03      	ldr	r3, [pc, #12]	; (200003f4 <reset_non_control_endpoints+0x38>)
 200003e6:	4a04      	ldr	r2, [pc, #16]	; (200003f8 <reset_non_control_endpoints+0x3c>)
 200003e8:	601a      	str	r2, [r3, #0]
@@ -14824,7 +14824,7 @@ Disassembly of section .data:
 20000460:	220c      	movs	r2, #12
 20000462:	2100      	movs	r1, #0
 20000464:	a801      	add	r0, sp, #4
-20000466:	f000 fb83 	bl	20000b70 <____wrap_memset_veneer>
+20000466:	f000 fb6b 	bl	20000b40 <____wrap_memset_veneer>
 2000046a:	2307      	movs	r3, #7
 2000046c:	466a      	mov	r2, sp
 2000046e:	7153      	strb	r3, [r2, #5]
@@ -14920,7 +14920,7 @@ Disassembly of section .data:
 2000052a:	220c      	movs	r2, #12
 2000052c:	2100      	movs	r1, #0
 2000052e:	a801      	add	r0, sp, #4
-20000530:	f000 fb1e 	bl	20000b70 <____wrap_memset_veneer>
+20000530:	f000 fb06 	bl	20000b40 <____wrap_memset_veneer>
 20000534:	2300      	movs	r3, #0
 20000536:	466a      	mov	r2, sp
 20000538:	7113      	strb	r3, [r2, #4]
@@ -14950,7 +14950,7 @@ Disassembly of section .data:
 2000056c:	e7f0      	b.n	20000550 <dcd_rp2040_irq+0xb0>
 2000056e:	ab01      	add	r3, sp, #4
 20000570:	5d98      	ldrb	r0, [r3, r6]
-20000572:	f000 faed 	bl	20000b50 <__hw_endpoint_get_by_addr_veneer>
+20000572:	f000 fadd 	bl	20000b30 <__hw_endpoint_get_by_addr_veneer>
 20000576:	2301      	movs	r3, #1
 20000578:	70c3      	strb	r3, [r0, #3]
 2000057a:	3601      	adds	r6, #1
@@ -14960,7 +14960,7 @@ Disassembly of section .data:
 20000582:	220c      	movs	r2, #12
 20000584:	2100      	movs	r1, #0
 20000586:	0030      	movs	r0, r6
-20000588:	f000 faf2 	bl	20000b70 <____wrap_memset_veneer>
+20000588:	f000 fada 	bl	20000b40 <____wrap_memset_veneer>
 2000058c:	2306      	movs	r3, #6
 2000058e:	7073      	strb	r3, [r6, #1]
 20000590:	4a34      	ldr	r2, [pc, #208]	; (20000664 <dcd_rp2040_irq+0x1c4>)
@@ -14995,7 +14995,7 @@ Disassembly of section .data:
 200005ce:	220c      	movs	r2, #12
 200005d0:	2100      	movs	r1, #0
 200005d2:	0030      	movs	r0, r6
-200005d4:	f000 facc 	bl	20000b70 <____wrap_memset_veneer>
+200005d4:	f000 fab4 	bl	20000b40 <____wrap_memset_veneer>
 200005d8:	2301      	movs	r3, #1
 200005da:	7073      	strb	r3, [r6, #1]
 200005dc:	2101      	movs	r1, #1
@@ -15013,7 +15013,7 @@ Disassembly of section .data:
 200005f6:	220c      	movs	r2, #12
 200005f8:	2100      	movs	r1, #0
 200005fa:	0030      	movs	r0, r6
-200005fc:	f000 fab8 	bl	20000b70 <____wrap_memset_veneer>
+200005fc:	f000 faa0 	bl	20000b40 <____wrap_memset_veneer>
 20000600:	2304      	movs	r3, #4
 20000602:	7073      	strb	r3, [r6, #1]
 20000604:	2101      	movs	r1, #1
@@ -15030,7 +15030,7 @@ Disassembly of section .data:
 2000061c:	220c      	movs	r2, #12
 2000061e:	2100      	movs	r1, #0
 20000620:	0030      	movs	r0, r6
-20000622:	f000 faa5 	bl	20000b70 <____wrap_memset_veneer>
+20000622:	f000 fa8d 	bl	20000b40 <____wrap_memset_veneer>
 20000626:	2305      	movs	r3, #5
 20000628:	7073      	strb	r3, [r6, #1]
 2000062a:	2101      	movs	r1, #1
@@ -15044,7 +15044,7 @@ Disassembly of section .data:
 2000063c:	0021      	movs	r1, r4
 2000063e:	4069      	eors	r1, r5
 20000640:	4809      	ldr	r0, [pc, #36]	; (20000668 <dcd_rp2040_irq+0x1c8>)
-20000642:	f000 faad 	bl	20000ba0 <__panic_veneer>
+20000642:	f000 fa9d 	bl	20000b80 <__panic_veneer>
 20000646:	46c0      	nop			; (mov r8, r8)
 20000648:	50110000 	.word	0x50110000
 2000064c:	40054000 	.word	0x40054000
@@ -15148,7 +15148,7 @@ Disassembly of section .data:
 2000071e:	4460      	add	r0, ip
 20000720:	0032      	movs	r2, r6
 20000722:	6921      	ldr	r1, [r4, #16]
-20000724:	f000 fa1c 	bl	20000b60 <____wrap_memcpy_veneer>
+20000724:	f000 f9fc 	bl	20000b20 <____wrap_memcpy_veneer>
 20000728:	6923      	ldr	r3, [r4, #16]
 2000072a:	469c      	mov	ip, r3
 2000072c:	4466      	add	r6, ip
@@ -15188,7 +15188,7 @@ Disassembly of section .data:
 2000076c:	4a0f      	ldr	r2, [pc, #60]	; (200007ac <sync_ep_buffer+0x74>)
 2000076e:	0049      	lsls	r1, r1, #1
 20000770:	480f      	ldr	r0, [pc, #60]	; (200007b0 <sync_ep_buffer+0x78>)
-20000772:	f000 fa05 	bl	20000b80 <____assert_func_veneer>
+20000772:	f000 f9fd 	bl	20000b70 <____assert_func_veneer>
 20000776:	041b      	lsls	r3, r3, #16
 20000778:	d50e      	bpl.n	20000798 <sync_ep_buffer+0x60>
 2000077a:	0189      	lsls	r1, r1, #6
@@ -15197,7 +15197,7 @@ Disassembly of section .data:
 20000780:	4461      	add	r1, ip
 20000782:	002a      	movs	r2, r5
 20000784:	6920      	ldr	r0, [r4, #16]
-20000786:	f000 f9eb 	bl	20000b60 <____wrap_memcpy_veneer>
+20000786:	f000 f9cb 	bl	20000b20 <____wrap_memcpy_veneer>
 2000078a:	8ae3      	ldrh	r3, [r4, #22]
 2000078c:	195b      	adds	r3, r3, r5
 2000078e:	82e3      	strh	r3, [r4, #22]
@@ -15210,7 +15210,7 @@ Disassembly of section .data:
 2000079c:	4a03      	ldr	r2, [pc, #12]	; (200007ac <sync_ep_buffer+0x74>)
 2000079e:	31ff      	adds	r1, #255	; 0xff
 200007a0:	4803      	ldr	r0, [pc, #12]	; (200007b0 <sync_ep_buffer+0x78>)
-200007a2:	f000 f9ed 	bl	20000b80 <____assert_func_veneer>
+200007a2:	f000 f9e5 	bl	20000b70 <____assert_func_veneer>
 200007a6:	46c0      	nop			; (mov r8, r8)
 200007a8:	10008dc8 	.word	0x10008dc8
 200007ac:	10008ed4 	.word	0x10008ed4
@@ -15281,7 +15281,7 @@ Disassembly of section .data:
 2000082c:	4a03      	ldr	r2, [pc, #12]	; (2000083c <_hw_endpoint_buffer_control_update32+0x50>)
 2000082e:	589a      	ldr	r2, [r3, r2]
 20000830:	4803      	ldr	r0, [pc, #12]	; (20000840 <_hw_endpoint_buffer_control_update32+0x54>)
-20000832:	f000 f9b5 	bl	20000ba0 <__panic_veneer>
+20000832:	f000 f9a5 	bl	20000b80 <__panic_veneer>
 20000836:	46c0      	nop			; (mov r8, r8)
 20000838:	fffffbff 	.word	0xfffffbff
 2000083c:	20000c68 	.word	0x20000c68
@@ -15371,7 +15371,7 @@ Disassembly of section .data:
 200008ee:	4a09      	ldr	r2, [pc, #36]	; (20000914 <hw_endpoint_xfer_continue+0x48>)
 200008f0:	589a      	ldr	r2, [r3, r2]
 200008f2:	4809      	ldr	r0, [pc, #36]	; (20000918 <hw_endpoint_xfer_continue+0x4c>)
-200008f4:	f000 f954 	bl	20000ba0 <__panic_veneer>
+200008f4:	f000 f944 	bl	20000b80 <__panic_veneer>
 200008f8:	0020      	movs	r0, r4
 200008fa:	f7ff fecd 	bl	20000698 <e15_is_critical_frame_period>
 200008fe:	1e05      	subs	r5, r0, #0
@@ -15429,7 +15429,7 @@ Disassembly of section .data:
 2000096c:	6048      	str	r0, [r1, #4]
 2000096e:	0029      	movs	r1, r5
 20000970:	0020      	movs	r0, r4
-20000972:	f000 f8d5 	bl	20000b20 <__tu_fifo_write_veneer>
+20000972:	f000 f8ed 	bl	20000b50 <__tu_fifo_write_veneer>
 20000976:	6962      	ldr	r2, [r4, #20]
 20000978:	69a3      	ldr	r3, [r4, #24]
 2000097a:	f3bf 8f5f 	dmb	sy
@@ -15466,7 +15466,7 @@ Disassembly of section .data:
 200009c0:	6048      	str	r0, [r1, #4]
 200009c2:	0029      	movs	r1, r5
 200009c4:	0020      	movs	r0, r4
-200009c6:	f000 f8ab 	bl	20000b20 <__tu_fifo_write_veneer>
+200009c6:	f000 f8c3 	bl	20000b50 <__tu_fifo_write_veneer>
 200009ca:	6962      	ldr	r2, [r4, #20]
 200009cc:	69a3      	ldr	r3, [r4, #24]
 200009ce:	f3bf 8f5f 	dmb	sy
@@ -15498,7 +15498,7 @@ Disassembly of section .data:
 20000a0a:	6048      	str	r0, [r1, #4]
 20000a0c:	0029      	movs	r1, r5
 20000a0e:	0020      	movs	r0, r4
-20000a10:	f000 f886 	bl	20000b20 <__tu_fifo_write_veneer>
+20000a10:	f000 f89e 	bl	20000b50 <__tu_fifo_write_veneer>
 20000a14:	6962      	ldr	r2, [r4, #20]
 20000a16:	69a3      	ldr	r3, [r4, #24]
 20000a18:	f3bf 8f5f 	dmb	sy
@@ -15556,7 +15556,7 @@ Disassembly of section .data:
 20000a84:	220c      	movs	r2, #12
 20000a86:	2100      	movs	r1, #0
 20000a88:	a801      	add	r0, sp, #4
-20000a8a:	f000 f871 	bl	20000b70 <____wrap_memset_veneer>
+20000a8a:	f000 f859 	bl	20000b40 <____wrap_memset_veneer>
 20000a8e:	782b      	ldrb	r3, [r5, #0]
 20000a90:	466a      	mov	r2, sp
 20000a92:	7113      	strb	r3, [r2, #4]
@@ -15576,7 +15576,7 @@ Disassembly of section .data:
 20000ab2:	6048      	str	r0, [r1, #4]
 20000ab4:	a901      	add	r1, sp, #4
 20000ab6:	0020      	movs	r0, r4
-20000ab8:	f000 f832 	bl	20000b20 <__tu_fifo_write_veneer>
+20000ab8:	f000 f84a 	bl	20000b50 <__tu_fifo_write_veneer>
 20000abc:	6962      	ldr	r2, [r4, #20]
 20000abe:	69a3      	ldr	r3, [r4, #24]
 20000ac0:	f3bf 8f5f 	dmb	sy
@@ -15598,7 +15598,7 @@ Disassembly of section .data:
 20000ae8:	6048      	str	r0, [r1, #4]
 20000aea:	0029      	movs	r1, r5
 20000aec:	0020      	movs	r0, r4
-20000aee:	f000 f817 	bl	20000b20 <__tu_fifo_write_veneer>
+20000aee:	f000 f82f 	bl	20000b50 <__tu_fifo_write_veneer>
 20000af2:	6962      	ldr	r2, [r4, #20]
 20000af4:	69a3      	ldr	r3, [r4, #24]
 20000af6:	f3bf 8f5f 	dmb	sy
@@ -15617,68 +15617,68 @@ Disassembly of section .data:
 20000b1c:	4770      	bx	lr
 20000b1e:	46c0      	nop			; (mov r8, r8)
 
-20000b20 <__tu_fifo_write_veneer>:
+20000b20 <____wrap_memcpy_veneer>:
 20000b20:	b401      	push	{r0}
-20000b22:	4802      	ldr	r0, [pc, #8]	; (20000b2c <__tu_fifo_write_veneer+0xc>)
+20000b22:	4802      	ldr	r0, [pc, #8]	; (20000b2c <____wrap_memcpy_veneer+0xc>)
 20000b24:	4684      	mov	ip, r0
 20000b26:	bc01      	pop	{r0}
 20000b28:	4760      	bx	ip
 20000b2a:	bf00      	nop
-20000b2c:	10007119 	.word	0x10007119
+20000b2c:	10004941 	.word	0x10004941
 
-20000b30 <__best_effort_wfe_or_timeout_veneer>:
+20000b30 <__hw_endpoint_get_by_addr_veneer>:
 20000b30:	b401      	push	{r0}
-20000b32:	4802      	ldr	r0, [pc, #8]	; (20000b3c <__best_effort_wfe_or_timeout_veneer+0xc>)
+20000b32:	4802      	ldr	r0, [pc, #8]	; (20000b3c <__hw_endpoint_get_by_addr_veneer+0xc>)
 20000b34:	4684      	mov	ip, r0
 20000b36:	bc01      	pop	{r0}
 20000b38:	4760      	bx	ip
 20000b3a:	bf00      	nop
-20000b3c:	10001c15 	.word	0x10001c15
+20000b3c:	100052b1 	.word	0x100052b1
 
-20000b40 <__time_us_64_veneer>:
+20000b40 <____wrap_memset_veneer>:
 20000b40:	b401      	push	{r0}
-20000b42:	4802      	ldr	r0, [pc, #8]	; (20000b4c <__time_us_64_veneer+0xc>)
+20000b42:	4802      	ldr	r0, [pc, #8]	; (20000b4c <____wrap_memset_veneer+0xc>)
 20000b44:	4684      	mov	ip, r0
 20000b46:	bc01      	pop	{r0}
 20000b48:	4760      	bx	ip
 20000b4a:	bf00      	nop
-20000b4c:	10001d69 	.word	0x10001d69
+20000b4c:	10004935 	.word	0x10004935
 
-20000b50 <__hw_endpoint_get_by_addr_veneer>:
+20000b50 <__tu_fifo_write_veneer>:
 20000b50:	b401      	push	{r0}
-20000b52:	4802      	ldr	r0, [pc, #8]	; (20000b5c <__hw_endpoint_get_by_addr_veneer+0xc>)
+20000b52:	4802      	ldr	r0, [pc, #8]	; (20000b5c <__tu_fifo_write_veneer+0xc>)
 20000b54:	4684      	mov	ip, r0
 20000b56:	bc01      	pop	{r0}
 20000b58:	4760      	bx	ip
 20000b5a:	bf00      	nop
-20000b5c:	100052b1 	.word	0x100052b1
+20000b5c:	10007119 	.word	0x10007119
 
-20000b60 <____wrap_memcpy_veneer>:
+20000b60 <__time_us_64_veneer>:
 20000b60:	b401      	push	{r0}
-20000b62:	4802      	ldr	r0, [pc, #8]	; (20000b6c <____wrap_memcpy_veneer+0xc>)
+20000b62:	4802      	ldr	r0, [pc, #8]	; (20000b6c <__time_us_64_veneer+0xc>)
 20000b64:	4684      	mov	ip, r0
 20000b66:	bc01      	pop	{r0}
 20000b68:	4760      	bx	ip
 20000b6a:	bf00      	nop
-20000b6c:	10004941 	.word	0x10004941
+20000b6c:	10001d69 	.word	0x10001d69
 
-20000b70 <____wrap_memset_veneer>:
+20000b70 <____assert_func_veneer>:
 20000b70:	b401      	push	{r0}
-20000b72:	4802      	ldr	r0, [pc, #8]	; (20000b7c <____wrap_memset_veneer+0xc>)
+20000b72:	4802      	ldr	r0, [pc, #8]	; (20000b7c <____assert_func_veneer+0xc>)
 20000b74:	4684      	mov	ip, r0
 20000b76:	bc01      	pop	{r0}
 20000b78:	4760      	bx	ip
 20000b7a:	bf00      	nop
-20000b7c:	10004935 	.word	0x10004935
+20000b7c:	100027ed 	.word	0x100027ed
 
-20000b80 <____assert_func_veneer>:
+20000b80 <__panic_veneer>:
 20000b80:	b401      	push	{r0}
-20000b82:	4802      	ldr	r0, [pc, #8]	; (20000b8c <____assert_func_veneer+0xc>)
+20000b82:	4802      	ldr	r0, [pc, #8]	; (20000b8c <__panic_veneer+0xc>)
 20000b84:	4684      	mov	ip, r0
 20000b86:	bc01      	pop	{r0}
 20000b88:	4760      	bx	ip
 20000b8a:	bf00      	nop
-20000b8c:	100027ed 	.word	0x100027ed
+20000b8c:	10002921 	.word	0x10002921
 
 20000b90 <____wrap___aeabi_lmul_veneer>:
 20000b90:	b401      	push	{r0}
@@ -15689,14 +15689,14 @@ Disassembly of section .data:
 20000b9a:	bf00      	nop
 20000b9c:	100047c1 	.word	0x100047c1
 
-20000ba0 <__panic_veneer>:
+20000ba0 <__best_effort_wfe_or_timeout_veneer>:
 20000ba0:	b401      	push	{r0}
-20000ba2:	4802      	ldr	r0, [pc, #8]	; (20000bac <__panic_veneer+0xc>)
+20000ba2:	4802      	ldr	r0, [pc, #8]	; (20000bac <__best_effort_wfe_or_timeout_veneer+0xc>)
 20000ba4:	4684      	mov	ip, r0
 20000ba6:	bc01      	pop	{r0}
 20000ba8:	4760      	bx	ip
 20000baa:	bf00      	nop
-20000bac:	10002921 	.word	0x10002921
+20000bac:	10001c15 	.word	0x10001c15
 
 20000bb0 <DATA_MODE_MSG>:
 20000bb0:	                                         ..

@@ -78,6 +78,7 @@
 1941	2233	7161577299103091	CMakeFiles/read_controller_i2c.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj	617724e6cc611242
 1654	2247	7161577299273922	CMakeFiles/read_controller_i2c.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj	c4d103beeeb0ed45
 1887	2262	7161577299632490	CMakeFiles/read_controller_i2c.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj	79a6764ff925c858
+34	210	7161845281210544	CMakeFiles/wiiClassic.dir/ClassicController.c.obj	a1c4f4b242cba58b
 2033	2329	7161577300457865	CMakeFiles/read_controller_i2c.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj	7220dc59f5841929
 2004	2334	7161577300373839	CMakeFiles/read_controller_i2c.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj	273f4153d41f35bc
 2046	2335	7161577300477338	CMakeFiles/read_controller_i2c.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj	48b93335c7498a6
@@ -99,7 +100,7 @@
 1092	1748	7161610934937732	CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj	d9f5f5c131158364
 92	393	7161610921587663	CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_time/timeout_helper.c.obj	406c83ccd06ea50e
 63	415	7161610921777127	CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/sem.c.obj	bb10a6190ded6719
-32	214	7161816451441332	CMakeFiles/wiiClassic.dir/main.c.obj	a733e02565113b48
+17	162	7161848745059268	CMakeFiles/wiiClassic.dir/main.c.obj	a733e02565113b48
 74	458	7161610922209262	CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj	3b6ffc71c5b968cb
 332	643	7161610924137134	CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj	4668cd57a42106dc
 282	672	7161610924137134	CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/common/pico_util/datetime.c.obj	58f52663aae16c53
@@ -114,7 +115,7 @@
 672	909	7161610926736649	CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj	164f09ebe3051204
 1736	2128	7161610939110022	CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/tusb.c.obj	63dd0de59a6c479c
 846	1012	7161610927753985	CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj	f402d41079fb19dd
-215	517	7161816453117135	wiiClassic.elf	b184bdb551889803
+26	416	7161857684959885	wiiClassic.elf	a4c2c8196583f025
 452	1020	7161610927753985	CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj	17e2127bdaa509b4
 733	1027	7161610927938315	CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj	8b66a12c4805ffd7
 662	1038	7161610927753985	CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj	f519ead72da983b3
@@ -148,11 +149,7 @@
 1773	2068	7161610938571585	CMakeFiles/wiiClassic.dir/8d8a2d8311ce17a0548f1f869bb50710/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj	23d80ca19a2529e5
 1806	2108	7161610938982618	CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj	51f871bb757b9de8
 1748	2185	7161610939768957	CMakeFiles/wiiClassic.dir/C_/Users/ghand/Documents/Codes/Pico/Pico_SDK_1.5.1/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj	d2d2c721fd7943f8
-28	202	7161819821354496	CMakeFiles/wiiClassic.dir/main.c.obj	a733e02565113b48
-203	495	7161819822973989	wiiClassic.elf	b184bdb551889803
-32	212	7161820508562564	CMakeFiles/wiiClassic.dir/main.c.obj	a733e02565113b48
-212	487	7161820510176954	wiiClassic.elf	b184bdb551889803
-34	214	7161823479056080	CMakeFiles/wiiClassic.dir/main.c.obj	a733e02565113b48
-214	505	7161823480656400	wiiClassic.elf	b184bdb551889803
-33	216	7161824274262324	CMakeFiles/wiiClassic.dir/main.c.obj	a733e02565113b48
-216	505	7161824275956529	wiiClassic.elf	b184bdb551889803
+28	194	7161859673972294	CMakeFiles/wiiClassic.dir/ClassicController.c.obj	a1c4f4b242cba58b
+195	472	7161859675603223	wiiClassic.elf	a4c2c8196583f025
+32	177	7161859951601525	CMakeFiles/wiiClassic.dir/main.c.obj	a733e02565113b48
+177	443	7161859953195614	wiiClassic.elf	a4c2c8196583f025
