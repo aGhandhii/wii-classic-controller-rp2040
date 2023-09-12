@@ -1,5 +1,5 @@
 // Author: Alex Ghandhi
-// Last Modified: 11 September 2023
+// Last Modified: 12 September 2023
 //
 // Header file for Classic Controller API
 // Contains function definitions.
@@ -12,7 +12,7 @@
 // FUNCTION DECLARATIONS
 
 // Initialize I2C connection, then decrypt and calibrate the controller
-void ClassicController_init(i2c_inst_t *i2c, uint SDA, uint SCL, uint BAUDRATE);
+void ClassicController_init(i2c_inst_t *i2c, uint sda, uint scl, uint baudrate);
 
 // Update the button and joystick values
 void ClassicController_update(i2c_inst_t *i2c);

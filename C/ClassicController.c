@@ -1,5 +1,5 @@
 // Author: Alex Ghandhi
-// Last Modified: 11 September 2023
+// Last Modified: 12 September 2023
 
 /*
 This code reads I2C input from a Wii Classic Controller.
@@ -155,7 +155,7 @@ void ClassicController_update(i2c_inst_t *i2c) {
 
     // Read 8 bytes of data and return an array of those bytes
     i2c_write_blocking(i2c, I2C_BUS_ADDR, &REGISTER_READ_ADDR, 1, false);
-    sleep_us(500);
+    sleep_us(200);
     if (i2c_read_blocking(i2c, I2C_BUS_ADDR, controller_out, 8, false) != 8) {
         printf("\nFailed to read button data from controller\n");
     }
@@ -194,18 +194,18 @@ void ClassicController_calibrate(i2c_inst_t *i2c) {
     LY_center = LY;
     RX_center = RX;
     RY_center = RY;
-    LT_init = LT;
-    RT_init = RT;
+    LT_init   = LT;
+    RT_init   = RT;
 }
 
 // Initialize the controller
-void ClassicController_init(i2c_inst_t *i2c, uint SDA, uint SCL, uint BAUDRATE) {
+void ClassicController_init(i2c_inst_t *i2c, uint sda, uint scl, uint baudrate) {
     // Initialize I2C functionality
-    i2c_init(i2c, BAUDRATE);
-    gpio_set_function(SDA, GPIO_FUNC_I2C);
-    gpio_set_function(SCL, GPIO_FUNC_I2C);
-    gpio_pull_up(SDA);
-    gpio_pull_up(SCL);
+    i2c_init(i2c, baudrate);
+    gpio_set_function(sda, GPIO_FUNC_I2C);
+    gpio_set_function(scl, GPIO_FUNC_I2C);
+    gpio_pull_up(sda);
+    gpio_pull_up(scl);
 
     // Decrypt Controller
     sleep_ms(1);
@@ -216,7 +216,7 @@ void ClassicController_init(i2c_inst_t *i2c, uint SDA, uint SCL, uint BAUDRATE) 
 
     // Set controller to data report mode 0x03
     i2c_write_blocking(i2c, I2C_BUS_ADDR, DATA_MODE_MSG, 2, false);
-    sleep_ms(10);
+    sleep_ms(1);
 
     // Calibrate the joysticks and triggers
     ClassicController_calibrate(i2c);
