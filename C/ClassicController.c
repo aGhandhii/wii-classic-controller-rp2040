@@ -63,12 +63,12 @@ void ClassicController_update(ClassicController controller) {
     }
 
     // Update button values to reflect data from controller_out
-    controller.LX          = controller_out[0];
-    controller.RX          = controller_out[1];
-    controller.LY          = controller_out[2];
-    controller.RY          = controller_out[3];
-    controller.LT_ANALOG   = controller_out[4];
-    controller.RT_ANALOG   = controller_out[5];
+    controller.LX          = (int)controller_out[0] - LX_center;
+    controller.LY          = (int)controller_out[2] - LY_center;
+    controller.RX          = (int)controller_out[1] - RX_center;
+    controller.RY          = (int)controller_out[3] - RY_center;
+    controller.LT_ANALOG   = (LT_init > controller_out[4]) ? 0 : (int)(controller_out[4] - LT_init);
+    controller.RT_ANALOG   = (RT_init > controller_out[5]) ? 0 : (int)(controller_out[5] - RT_init);
     controller.RIGHT       = (~(controller_out[6] >> 7) & 1);
     controller.DOWN        = (~(controller_out[6] >> 6) & 1);
     controller.LT          = (~(controller_out[6] >> 5) & 1);
@@ -88,16 +88,23 @@ void ClassicController_update(ClassicController controller) {
 
 // Calibrates the joysticks and analog triggers
 void ClassicController_calibrate(ClassicController controller) {
-    // Obtain controller status
-    ClassicController_update(controller);
+    // Array to store output
+    uint8_t controller_out[6];
+
+    // Read 6 bytes of data and return an array of those bytes
+    i2c_write_blocking(controller.i2c, I2C_BUS_ADDR, &REGISTER_READ_ADDR, 1, false);
+    sleep_us(200);
+    if (i2c_read_blocking(controller.i2c, I2C_BUS_ADDR, controller_out, 6, false) != 6) {
+        printf("\nFailed to calibrate controller\n");
+    }
 
     // Update calibration variables
-    LX_center = controller.LX;
-    LY_center = controller.LY;
-    RX_center = controller.RX;
-    RY_center = controller.RY;
-    LT_init   = controller.LT;
-    RT_init   = controller.RT;
+    LX_center = controller_out[0];
+    LY_center = controller_out[2];
+    RX_center = controller_out[1];
+    RY_center = controller_out[3];
+    LT_init   = controller_out[4];
+    RT_init   = controller_out[5];
 }
 
 // Initialize the controller
