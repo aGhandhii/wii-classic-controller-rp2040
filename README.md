@@ -17,10 +17,14 @@ Call `ClassicController_init()` to initialize and decrypt the controller for use
 
 int main() {
     i2c_inst_t *i2c = i2c1;
-    ClassicController_init(i2c, 6, 7, 100000);
+    ClassicController controller;
+
+    stdio_init_all();
+
+    controller = ClassicController_init(i2c, 6, 7, 100000);
 
     while (true) {
-        ClassicController_update(i2c);
+        ClassicController_update(controller);
     }
 }
 ```
@@ -31,31 +35,31 @@ int main() {
 
 | Command | Description |
 | --- | --- |
-| `void ClassicController_init(i2c_inst_t *i2c, uint sda, uint scl, uint baudrate)` | Initialize I2C connection, then Decrypt and Calibrate the controller |
-| `void ClassicController_update(i2c_inst_t *i2c)` | Update the Button Values |
-| `void ClassicController_calibrate(i2c_inst_t *i2c)` | Calibrate the Joysticks and Analog Triggers |
-| `void ClassicController_button_report()` | Print a readable Input Report to the Console |
-| `int ClassicController_joy_LX()` | Get value for Left Joystick x-axis $\in[-128,127]$ |
-| `int ClassicController_joy_LY()` | Get value for Left Joystick y-axis $\in[-128,127]$ |
-| `int ClassicController_joy_RX()` | Get value for Right Joystick x-axis $\in[-128,127]$ |
-| `int ClassicController_joy_RY()` | Get value for Right Joystick y-axis $\in[-128,127]$ |
-| `int ClassicController_LT_analog()` | Get value for Left Analog Trigger $\in[0,255]$ |
-| `int ClassicController_RT_analog()` | Get value for Right Analog Trigger $\in[0,255]$ |
-| `bool ClassicController_button_A()` | Get value for Face Button A |
-| `bool ClassicController_button_B()` | Get value for Face Button B |
-| `bool ClassicController_button_X()` | Get value for Face Button X |
-| `bool ClassicController_button_Y()` | Get value for Face Button Y |
-| `bool ClassicController_button_UP()`   | Get value for Directional Button UP |
-| `bool ClassicController_button_DOWN()` | Get value for Directional Button DOWN |
-| `bool ClassicController_button_LEFT()` | Get value for Directional Button LEFT |
-| `bool ClassicController_button_RIGHT()`| Get value for Directional Button RIGHT |
-| `bool ClassicController_button_ZL()` | Get value for Shoulder Button ZL |
-| `bool ClassicController_button_ZR()` | Get value for Shoulder Button ZR |
-| `bool ClassicController_button_LT()` | Get value for Shoulder Button L |
-| `bool ClassicController_button_RT()` | Get value for Shoulder Button R |
-| `bool ClassicController_button_START()` | Get value for START Button |
-| `bool ClassicController_button_SELECT()` | Get value for SELECT Button |
-| `bool ClassicController_button_HOME()` | Get value for HOME Button |
+| `ClassicController ClassicController_init(i2c_inst_t *i2c, uint sda, uint scl, uint baudrate)` | Initialize I2C connection, then Decrypt and Calibrate the controller |
+| `void ClassicController_update(ClassicController controller)` | Update the Button Values |
+| `void ClassicController_calibrate(ClassicController controller)` | Calibrate the Joysticks and Analog Triggers |
+| `void ClassicController_button_report(ClassicController controller)` | Print a readable Input Report to the Console |
+| `ClassicController.LX` | Get value for Left Joystick x-axis $\in[-128,127]$ |
+| `ClassicController.LY` | Get value for Left Joystick y-axis $\in[-128,127]$ |
+| `ClassicController.RX` | Get value for Right Joystick x-axis $\in[-128,127]$ |
+| `ClassicController.RY` | Get value for Right Joystick y-axis $\in[-128,127]$ |
+| `ClassicController.LT_ANALOG` | Get value for Left Analog Trigger $\in[0,255]$ |
+| `ClassicController.RT_ANALOG` | Get value for Right Analog Trigger $\in[0,255]$ |
+| `ClassicController.A` | Get value for Face Button A |
+| `ClassicController.B` | Get value for Face Button B |
+| `ClassicController.X` | Get value for Face Button X |
+| `ClassicController.Y` | Get value for Face Button Y |
+| `ClassicController.UP`   | Get value for Directional Button UP |
+| `ClassicController.DOWN` | Get value for Directional Button DOWN |
+| `ClassicController.LEFT` | Get value for Directional Button LEFT |
+| `ClassicController.RIGHT`| Get value for Directional Button RIGHT |
+| `ClassicController.ZL` | Get value for Shoulder Button ZL |
+| `ClassicController.ZR` | Get value for Shoulder Button ZR |
+| `ClassicController.LT` | Get value for Shoulder Button L |
+| `ClassicController.RT` | Get value for Shoulder Button R |
+| `ClassicController.START` | Get value for START Button |
+| `ClassicController.SELECT` | Get value for SELECT Button |
+| `ClassicController.HOME` | Get value for HOME Button |
 
 </details>
 
