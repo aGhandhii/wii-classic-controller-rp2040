@@ -1,5 +1,5 @@
 // Author: Alex Ghandhi
-// Last Modified: 11 September 2023
+// Last Modified: 24 September 2023
 
 
 #include <stdio.h>
@@ -13,8 +13,9 @@
 // MAIN FUNCTION //
 ///////////////////
 int main() {
-    // I2C instance
+    // I2C and controller instance
     i2c_inst_t *i2c = i2c1;
+    ClassicController controller;
 
     // Initialize IO
     stdio_init_all();
@@ -34,19 +35,19 @@ int main() {
     sleep_ms(100);
 
     // Wait for device initialization
-    ClassicController_init(i2c, 6, 7, 100000);
+    controller = ClassicController_init(i2c, 6, 7, 100000);
 
     // Main logic loop:
     while (true) {
         gpio_put(25, 1);
-        sleep_ms(1);
+        sleep_us(100);
 
         // Obtain controller data
-        ClassicController_update(i2c);
-        ClassicController_button_report();
+        ClassicController_update(controller);
+        ClassicController_button_report(controller);
 
         // Wait for a short time
         gpio_put(25, 0);
-        sleep_ms(10);
+        sleep_us(100);
     }
 }

@@ -1,5 +1,5 @@
 // Author: Alex Ghandhi
-// Last Modified: 12 September 2023
+// Last Modified: 24 September 2023
 
 /*
 This code reads I2C input from a Wii Classic Controller.
@@ -18,6 +18,7 @@ Controller Client I2C info:
 
 
 #include <stdio.h>
+#include "ClassicController.h"
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
 
@@ -44,162 +45,63 @@ static uint8_t DATA_MODE_MSG[] = {0xFE, 0x03};
 // Calibrated values for joysticks and triggers
 static uint8_t LX_center, LY_center, RX_center, RY_center, LT_init, RT_init;
 
-// Face Buttons
-static bool BA, BB, BX, BY, BH, BSTART, BSELECT;
-// Directional Buttons
-static bool BDU, BDD, BDL, BDR;
-// Triggers
-static bool ZL, ZR, LT, RT;
-static uint8_t LT_ANALOG, RT_ANALOG;
-// Joysticks
-static uint8_t LX, LY, RX, RY;
-
-
-///////////////////////////////////
-// BUTTON GETTER IMPLEMENTATIONS //
-///////////////////////////////////
-
-int ClassicController_joy_LX() {
-    return (int)LX - LX_center;
-}
-
-int ClassicController_joy_LY() {
-    return (int)LY - LY_center;
-}
-
-int ClassicController_joy_RX() {
-    return (int)RX - RX_center;
-}
-
-int ClassicController_joy_RY() {
-    return (int)RY - RY_center;
-}
-
-int ClassicController_LT_analog() {
-    return (LT_init > LT_ANALOG) ? 0 : (int)(LT_ANALOG - LT_init);
-}
-
-int ClassicController_RT_analog() {
-    return (RT_init > RT_ANALOG) ? 0 : (int)(RT_ANALOG - RT_init);
-}
-
-bool ClassicController_button_A() {
-    return BA;
-}
-
-bool ClassicController_button_B() {
-    return BB;
-}
-
-bool ClassicController_button_X() {
-    return BX;
-}
-
-bool ClassicController_button_Y() {
-    return BY;
-}
-
-bool ClassicController_button_UP() {
-    return BDU;
-}
-
-bool ClassicController_button_DOWN() {
-    return BDD;
-}
-
-bool ClassicController_button_LEFT() {
-    return BDL;
-}
-
-bool ClassicController_button_RIGHT() {
-    return BDR;
-}
-
-bool ClassicController_button_ZL() {
-    return ZL;
-}
-
-bool ClassicController_button_ZR() {
-    return ZR;
-}
-
-bool ClassicController_button_LT() {
-    return LT;
-}
-
-bool ClassicController_button_RT() {
-    return RT;
-}
-
-bool ClassicController_button_START() {
-    return BSTART;
-}
-
-bool ClassicController_button_SELECT() {
-    return BSELECT;
-}
-
-bool ClassicController_button_HOME() {
-    return BH;
-}
-
 
 //////////////////////////////
 // FUNCTION IMPLEMENTATIONS //
 //////////////////////////////
 
 // Reads data from the controller and updates the button variables to reflect that data
-void ClassicController_update(i2c_inst_t *i2c) {
+void ClassicController_update(ClassicController controller) {
     // Array to store output
     uint8_t controller_out[8];
 
     // Read 8 bytes of data and return an array of those bytes
-    i2c_write_blocking(i2c, I2C_BUS_ADDR, &REGISTER_READ_ADDR, 1, false);
+    i2c_write_blocking(controller.i2c, I2C_BUS_ADDR, &REGISTER_READ_ADDR, 1, false);
     sleep_us(200);
-    if (i2c_read_blocking(i2c, I2C_BUS_ADDR, controller_out, 8, false) != 8) {
+    if (i2c_read_blocking(controller.i2c, I2C_BUS_ADDR, controller_out, 8, false) != 8) {
         printf("\nFailed to read button data from controller\n");
     }
 
     // Update button values to reflect data from controller_out
-    LX          = controller_out[0];
-    RX          = controller_out[1];
-    LY          = controller_out[2];
-    RY          = controller_out[3];
-    LT_ANALOG   = controller_out[4];
-    RT_ANALOG   = controller_out[5];
-    BDR         = (~(controller_out[6] >> 7) & 1);
-    BDD         = (~(controller_out[6] >> 6) & 1);
-    LT          = (~(controller_out[6] >> 5) & 1);
-    BSELECT     = (~(controller_out[6] >> 4) & 1);
-    BH          = (~(controller_out[6] >> 3) & 1);
-    BSTART      = (~(controller_out[6] >> 2) & 1);
-    RT          = (~(controller_out[6] >> 1) & 1);
-    ZL          = (~(controller_out[7] >> 7) & 1);
-    BB          = (~(controller_out[7] >> 6) & 1);
-    BY          = (~(controller_out[7] >> 5) & 1);
-    BA          = (~(controller_out[7] >> 4) & 1);
-    BX          = (~(controller_out[7] >> 3) & 1);
-    ZR          = (~(controller_out[7] >> 2) & 1);
-    BDL         = (~(controller_out[7] >> 1) & 1);
-    BDU         = (~controller_out[7] & 1);
+    controller.LX          = controller_out[0];
+    controller.RX          = controller_out[1];
+    controller.LY          = controller_out[2];
+    controller.RY          = controller_out[3];
+    controller.LT_ANALOG   = controller_out[4];
+    controller.RT_ANALOG   = controller_out[5];
+    controller.RIGHT       = (~(controller_out[6] >> 7) & 1);
+    controller.DOWN        = (~(controller_out[6] >> 6) & 1);
+    controller.LT          = (~(controller_out[6] >> 5) & 1);
+    controller.SELECT      = (~(controller_out[6] >> 4) & 1);
+    controller.HOME        = (~(controller_out[6] >> 3) & 1);
+    controller.START       = (~(controller_out[6] >> 2) & 1);
+    controller.RT          = (~(controller_out[6] >> 1) & 1);
+    controller.ZL          = (~(controller_out[7] >> 7) & 1);
+    controller.B           = (~(controller_out[7] >> 6) & 1);
+    controller.Y           = (~(controller_out[7] >> 5) & 1);
+    controller.A           = (~(controller_out[7] >> 4) & 1);
+    controller.X           = (~(controller_out[7] >> 3) & 1);
+    controller.ZR          = (~(controller_out[7] >> 2) & 1);
+    controller.LEFT        = (~(controller_out[7] >> 1) & 1);
+    controller.UP          = (~controller_out[7] & 1);
 }
 
 // Calibrates the joysticks and analog triggers
-void ClassicController_calibrate(i2c_inst_t *i2c) {
+void ClassicController_calibrate(ClassicController controller) {
     // Obtain controller status
-    ClassicController_update(i2c);
+    ClassicController_update(controller);
 
     // Update calibration variables
-    LX_center = LX;
-    LY_center = LY;
-    RX_center = RX;
-    RY_center = RY;
-    LT_init   = LT;
-    RT_init   = RT;
+    LX_center = controller.LX;
+    LY_center = controller.LY;
+    RX_center = controller.RX;
+    RY_center = controller.RY;
+    LT_init   = controller.LT;
+    RT_init   = controller.RT;
 }
 
 // Initialize the controller
-void ClassicController_init(i2c_inst_t *i2c, uint sda, uint scl, uint baudrate) {
+ClassicController ClassicController_init(i2c_inst_t *i2c, uint sda, uint scl, uint baudrate) {
     // Initialize I2C functionality
     i2c_init(i2c, baudrate);
     gpio_set_function(sda, GPIO_FUNC_I2C);
@@ -218,41 +120,46 @@ void ClassicController_init(i2c_inst_t *i2c, uint sda, uint scl, uint baudrate) 
     i2c_write_blocking(i2c, I2C_BUS_ADDR, DATA_MODE_MSG, 2, false);
     sleep_ms(1);
 
+    // Create a Classic_Controller instance
+    ClassicController controller;
+    controller.i2c = i2c;
+
     // Calibrate the joysticks and triggers
-    ClassicController_calibrate(i2c);
+    ClassicController_calibrate(controller);
+    return controller;
 }
 
 // Print currently pressed buttons
-void ClassicController_button_report() {
+void ClassicController_button_report(ClassicController controller) {
     printf("\e[1;1H\e[2J");  // Clear the console window
     printf("Button Report:\n");
     // Report Joystick Values
     printf("Left Joy:\tX: %d\tY: %d\nRight Joy:\tX: %d\tY: %d\n",
-            ClassicController_joy_LX(),
-            ClassicController_joy_LY(),
-            ClassicController_joy_RX(),
-            ClassicController_joy_RY()
+            controller.LX,
+            controller.LY,
+            controller.RX,
+            controller.RY
     );
     // Report Trigger Values
     printf("Left Trigger: %d\nRight Trigger: %d\n",
-            ClassicController_LT_analog(),
-            ClassicController_RT_analog()
+            controller.LT_ANALOG,
+            controller.RT_ANALOG
     );
     // Report all other buttons and trigger bottom-out values
     printf("Other Buttons:\n");
-    if(ClassicController_button_UP()) printf("UP ");
-    if(ClassicController_button_DOWN()) printf("DOWN ");
-    if(ClassicController_button_LEFT()) printf("LEFT ");
-    if(ClassicController_button_RIGHT()) printf("RIGHT ");
-    if(ClassicController_button_A()) printf("A ");
-    if(ClassicController_button_B()) printf("B ");
-    if(ClassicController_button_X()) printf("X ");
-    if(ClassicController_button_Y()) printf("Y ");
-    if(ClassicController_button_START()) printf("START ");
-    if(ClassicController_button_SELECT()) printf("SELECT ");
-    if(ClassicController_button_HOME()) printf("HOME ");
-    if(ClassicController_button_ZL()) printf("ZL ");
-    if(ClassicController_button_ZR()) printf("ZR ");
-    if(ClassicController_button_LT()) printf("LT ");
-    if(ClassicController_button_RT()) printf("RT ");
+    if(controller.UP) printf("UP ");
+    if(controller.DOWN) printf("DOWN ");
+    if(controller.LEFT) printf("LEFT ");
+    if(controller.RIGHT) printf("RIGHT ");
+    if(controller.A) printf("A ");
+    if(controller.B) printf("B ");
+    if(controller.X) printf("X ");
+    if(controller.Y) printf("Y ");
+    if(controller.START) printf("START ");
+    if(controller.SELECT) printf("SELECT ");
+    if(controller.HOME) printf("HOME ");
+    if(controller.ZL) printf("ZL ");
+    if(controller.ZR) printf("ZR ");
+    if(controller.LT) printf("LT ");
+    if(controller.RT) printf("RT ");
 }
