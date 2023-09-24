@@ -15,12 +15,12 @@
 // Controller Type Declaration
 typedef struct {
     // Buttons
-    uint8_t LX;
-    uint8_t LY;
-    uint8_t RX;
-    uint8_t RY;
-    uint8_t LT_ANALOG;
-    uint8_t RT_ANALOG;
+    int LX;
+    int LY;
+    int RX;
+    int RY;
+    int LT_ANALOG;
+    int RT_ANALOG;
     bool A;
     bool B;
     bool X;
