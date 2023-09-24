@@ -39,27 +39,27 @@ int main() {
 | `void ClassicController_update(ClassicController controller)` | Update the Button Values |
 | `void ClassicController_calibrate(ClassicController controller)` | Calibrate the Joysticks and Analog Triggers |
 | `void ClassicController_button_report(ClassicController controller)` | Print a readable Input Report to the Console |
-| `ClassicController.LX` | Get value for Left Joystick x-axis $\in[-128,127]$ |
-| `ClassicController.LY` | Get value for Left Joystick y-axis $\in[-128,127]$ |
-| `ClassicController.RX` | Get value for Right Joystick x-axis $\in[-128,127]$ |
-| `ClassicController.RY` | Get value for Right Joystick y-axis $\in[-128,127]$ |
-| `ClassicController.LT_ANALOG` | Get value for Left Analog Trigger $\in[0,255]$ |
-| `ClassicController.RT_ANALOG` | Get value for Right Analog Trigger $\in[0,255]$ |
-| `ClassicController.A` | Get value for Face Button A |
-| `ClassicController.B` | Get value for Face Button B |
-| `ClassicController.X` | Get value for Face Button X |
-| `ClassicController.Y` | Get value for Face Button Y |
-| `ClassicController.UP`   | Get value for Directional Button UP |
-| `ClassicController.DOWN` | Get value for Directional Button DOWN |
-| `ClassicController.LEFT` | Get value for Directional Button LEFT |
-| `ClassicController.RIGHT`| Get value for Directional Button RIGHT |
-| `ClassicController.ZL` | Get value for Shoulder Button ZL |
-| `ClassicController.ZR` | Get value for Shoulder Button ZR |
-| `ClassicController.LT` | Get value for Shoulder Button L |
-| `ClassicController.RT` | Get value for Shoulder Button R |
-| `ClassicController.START` | Get value for START Button |
-| `ClassicController.SELECT` | Get value for SELECT Button |
-| `ClassicController.HOME` | Get value for HOME Button |
+| `int ClassicController.LX` | Get value for Left Joystick x-axis $\in[-128,127]$ |
+| `int ClassicController.LY` | Get value for Left Joystick y-axis $\in[-128,127]$ |
+| `int ClassicController.RX` | Get value for Right Joystick x-axis $\in[-128,127]$ |
+| `int ClassicController.RY` | Get value for Right Joystick y-axis $\in[-128,127]$ |
+| `int ClassicController.LT_ANALOG` | Get value for Left Analog Trigger $\in[0,255]$ |
+| `int ClassicController.RT_ANALOG` | Get value for Right Analog Trigger $\in[0,255]$ |
+| `bool ClassicController.A` | Get value for Face Button A |
+| `bool ClassicController.B` | Get value for Face Button B |
+| `bool ClassicController.X` | Get value for Face Button X |
+| `bool ClassicController.Y` | Get value for Face Button Y |
+| `bool ClassicController.UP`   | Get value for Directional Button UP |
+| `bool ClassicController.DOWN` | Get value for Directional Button DOWN |
+| `bool ClassicController.LEFT` | Get value for Directional Button LEFT |
+| `bool ClassicController.RIGHT`| Get value for Directional Button RIGHT |
+| `bool ClassicController.ZL` | Get value for Shoulder Button ZL |
+| `bool ClassicController.ZR` | Get value for Shoulder Button ZR |
+| `bool ClassicController.LT` | Get value for Shoulder Button L |
+| `bool ClassicController.RT` | Get value for Shoulder Button R |
+| `bool ClassicController.START` | Get value for START Button |
+| `bool ClassicController.SELECT` | Get value for SELECT Button |
+| `bool ClassicController.HOME` | Get value for HOME Button |
 
 </details>
 
