@@ -115,7 +115,7 @@ controller = ClassicController(id=1, sda=6, scl=7, freq=100000)
 ## Hardware Notes
 
 When connecting the Controller to the Pico, the SDA and SCL pins require pullup resistors to $3.3V$.
-I used $5k\Omega$ resistors for each line.
+I used $4.7k\Omega$ resistors for each line.
 
 <details>
 <summary>Sample Circuit</summary>
