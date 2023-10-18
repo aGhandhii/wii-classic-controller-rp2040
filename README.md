@@ -1,6 +1,11 @@
-# ![image](https://github.com/aGhandhii/wii-classic-controller-rp2040/assets/110639969/1bc2b27c-4221-4cb0-8ee1-11edcf9ccd25) Wii Classic Controller RP2040
+<p align="center">
+    <img src="https://github.com/aGhandhii/wii-classic-controller-rp2040/assets/110639969/1bc2b27c-4221-4cb0-8ee1-11edcf9ccd25" />
+</p>
+<p align="center">
+    <img src="https://img.shields.io/badge/License-The_Unlicense-red" />
+</p>
 
-![Static Badge](https://img.shields.io/badge/License-The_Unlicense-red)
+# Wii Classic Controller RP2040
 
 Use a Wii Classic Controller with the Raspberry Pi Pico and RP2040 microcontrollers.  
 Implemented in C and MicroPython.
