@@ -1,9 +1,8 @@
-<p align="center">
-    <img src="https://github.com/aGhandhii/wii-classic-controller-rp2040/assets/110639969/1bc2b27c-4221-4cb0-8ee1-11edcf9ccd25" />
-</p>
-<p align="center">
-    <img src="https://img.shields.io/badge/License-The_Unlicense-red" />
-</p>
+<div align="center">
+
+<img src="https://github.com/aGhandhii/wii-classic-controller-rp2040/assets/110639969/1bc2b27c-4221-4cb0-8ee1-11edcf9ccd25" />
+
+<img src="https://img.shields.io/badge/License-The_Unlicense-red" />
 
 # Wii Classic Controller RP2040
 
@@ -15,6 +14,8 @@ Implemented in C and MicroPython.
 Include the `ClassicController` header and source in a project.
 
 Call `ClassicController_init()` to initialize and decrypt the controller for use.
+
+</div>
 
 *Example Code:*
 ```c
@@ -33,6 +34,8 @@ int main() {
     }
 }
 ```
+
+<div align="center">
 
 <details>
 <summary>C Command Reference</summary>
@@ -75,6 +78,8 @@ Add `ClassicController.py` to the project folder.
 
 Import the `ClassicController` class and create an instance. Initialization and decryption are performed automatically.
 
+</div>
+
 *Example Code:*
 ```python
 from ClassicController import ClassicController
@@ -83,6 +88,8 @@ controller = ClassicController(id=1, sda=6, scl=7, freq=100000)
     while (True):
         controller.update()
 ```
+
+<div align="center">
 
 <details>
 <summary>MicroPython Command Reference</summary>
@@ -135,3 +142,5 @@ I used $4.7k\Omega$ resistors for each line.
 Relies on [Wiibrew](https://wiibrew.org/wiki/Wiimote/Extension_Controllers/Classic_Controller) for specifics on the Classic Controller I2C interface.
 
 Credits to [This Digikey Article](https://www.digikey.com/en/maker/projects/raspberry-pi-pico-rp2040-i2c-example-with-micropython-and-cc/47d0c922b79342779cdbd4b37b7eb7e2) and [PicoNunchuck](https://github.com/MichaelBell/PicoNunchuck) by MichaelBell for code inspiration.
+
+</div>
